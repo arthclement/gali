@@ -17,12 +17,13 @@ services:
     image: php:7.2-apache
     volumes:
       - ./apache.conf:/etc/apache2/apache.conf
-      - ./../gali-angular/dist:/var/www/html
-    networks: 
+      - ./../gali-angular/dist:/var/www/html/
+      - ./../gali-symfony:/var/www/symfony/
+    networks:
       - gali
     ports:
       - 80:80
 
-networks: 
+networks:
   gali:
     driver: bridge
