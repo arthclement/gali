@@ -14,33 +14,46 @@
     padding-bottom: 80px;
 }
 
+.navbar{
+    padding-top:0;
+    padding-bottom: 0;
+}
+
+[id="nav-home-tab"]{
+    color: #18bef0;
+}
+[id="nav-profile-tab"]{
+    color: #18bef0;
+}
+
 /** Nav */
 
 .title {
     background-color: white;
-    box-shadow: 0px 10px 5px 0px rgba(24, 190, 240, 0.1);;
+    box-shadow: 0px 10px 5px 0px rgba(24, 190, 240, 0.1);
     text-align: center;
     position: -webkit-sticky;
     top:0;
     position: sticky;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     z-index: 1;
     
 }
 
 /** entre nav et photo */
-.galiTitle{
-    text-align: none;
-}
 
-h1 {
+span strong {
     color: #18bef0;
     font-size: 60px;
+    padding-left: 100px;
 }
 
-h4{
+span{
     color: #18bef0;
-    text-shadow: 1px 1px 1px 1px  ;
+    text-shadow: 1px 1px 1px 1px;
+    padding:0;
+    margin:0;
+    font-size: 20px;
 }
 
 
@@ -48,19 +61,22 @@ h4{
     padding-top:5px;
     padding-bottom: 5px;
     background-color: white;
-   
 }
 
 /* INPUT Navbar*/
+/*  Bouton*/
+.navbar-toggler{
+    border: none;
+    padding: 0;
+}
 .form-control{
   background-color: rgba(24, 190, 240, 0.1);  
 }
+
 [type="submit"]{
     border: 1px solid #18bef0;
     background-color:#18bef0;
-
 }
-
 
 .sousNavBar ul {
     display: flex;
@@ -68,7 +84,10 @@ h4{
     justify-content: space-around;
     padding-left:0;
     margin-bottom: 5px;
-    
+}
+
+.menu {
+    list-style: none;
 }
 
 .sousNavBar ul li a {
@@ -76,33 +95,41 @@ h4{
     color:#18bef0;
 }
 
-/** Middle Section */
+/* Middle Section */
+
+
+/* MAIN */
+
+main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Beggining Big Cube Faire CSS identitque */
+.bigCube-p-h3-1{
+    padding: 50px;
+    text-align: right;
+}
+
+.bigCube-p-h3-2{
+    padding: 50px;
+}
+
+/*End Big cube Faire CSS identitque*/
+
 
 .container-fluid{
     display: flex;
-}
-
-.menu {
-    list-style: none;
+    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
+    border-radius: 8px;
+    padding: 8px;
 }
 
 section {
-    border: 1px solid blue;
+    margin-top: 50px;
     display: flex;
-    
-}
-
-
-
-.grandP {
-    border: 1px solid blue;
-    width: 75%;
-}
-
-.grandP p {
-    padding: 10%;
-    padding-top: 35px;
-    ;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .grandP h3 {
@@ -110,16 +137,12 @@ section {
     padding-bottom: 0;
 }
 
-.petitCarreePhoto {
-    display: flex;
-}
-
-aside {
-    display: flex;
-    border: 1px solid pink;
-    width: 325px;
-    height: 325px;
-}
+.p-1{padding: 1em;}
+.p-2{padding: 2em;}
+.p-3{padding: 3em;}
+.p-4{padding: 4em;}
+.p-5{padding: 5em;}
+.br{border: 1px solid red;}
 
 .sectionMilieu div h3 {
     margin: 100px;
@@ -128,5 +151,11 @@ aside {
 }
 
 footer {
-    margin: 50px 0 50px 20px;
+    background-color: #18bef0 ;
+    padding: 50px 0 50px 0px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    margin: 50px 20px 20px 20px;
+    padding-left: 50px;
 }
