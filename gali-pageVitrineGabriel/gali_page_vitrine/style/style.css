@@ -24,6 +24,7 @@
     top:0;
     position: sticky;
     margin-bottom: 10px;
+    z-index: 1;
     
 }
 
@@ -46,6 +47,7 @@ h4{
 .sousNavBar{
     padding-top:5px;
     padding-bottom: 5px;
+    background-color: white;
    
 }
 
@@ -74,20 +76,23 @@ h4{
     color:#18bef0;
 }
 
+/** Middle Section */
 
-
+.container-fluid{
+    display: flex;
+}
 
 .menu {
     list-style: none;
 }
 
 section {
-    border: 1px solid red;
+    border: 1px solid blue;
     display: flex;
     
 }
 
-/** Middle Section */
+
 
 .grandP {
     border: 1px solid blue;
