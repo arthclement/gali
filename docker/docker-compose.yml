@@ -17,11 +17,9 @@ services:
     image: php:7.2-apache
     volumes:
       - ./apache.conf:/etc/apache2/apache.conf
-      - ./../gali-angular/dist:/var/www/html/
+      - ./../gali-angular/dist:/var/www/html
     networks: 
       - gali
-    dns:
-      - 127.0.0.1
     ports:
       - 80:80
 
