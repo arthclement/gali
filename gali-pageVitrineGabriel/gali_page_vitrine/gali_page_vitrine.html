@@ -4,6 +4,7 @@
 <head>
     <title>GALI</title>
     <meta charset="UTF-8">
+   <!-- <link rel="stylesheet" href = "path / to / font -awesome / css / font – awesome.min.css" > -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -15,12 +16,18 @@
         <article class="title">
             <header>
                 <!--Import Bootstrap>-->
-                <!--Navbar-->
+                <!-- Beginning Navbar-->
                 <nav class="navbar navbar-light navbar-1 white">
+                    
 
                     <!-- Navbar brand -->
-                    <a class="navbar-brand" href="#">LOGO GALI</a>
+                    <a class="navbar-brand" href="#">LOGO</a>
 
+                    <!-- Titre Gali + slogan dans navBar -->
+                    <div class="galiTitle">
+                        <h1>GALI</h1>
+                        <h4>Change the way of your appointements</h4>
+                     </div>
                     <!-- Collapse button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <!-- sortie propre pour le css -->
@@ -42,93 +49,72 @@
                                 <!--LogIn Form -->
                                 <form>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        <label for="exampleInputName1">Username or @email</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                     </div>
-                                    <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
+                                    
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputEmail4">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="inputPassword4">Password</label>
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                                        </div>
+
+                                <!--Register Form -->
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inpputName1">Firstname</label>
+                                        <input type="text" class="form-control" id="inputPassword4" placeholder="Firstname">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="inputAddress">Address</label>
-                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputName">Lastname</label>
+                                        <input type="text" class="form-control" id="inputPassword4" placeholder="Lastname">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="inputAddress2">Address 2</label>
-                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Birthday</label>
+                                        <input type="date" class="form-control" id="inputPassword4" placeholder="DD/MM/YYYY">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputCity">City</label>
-                                            <input type="text" class="form-control" id="inputCity">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="inputState">State</label>
-                                            <select id="inputState" class="form-control">
-                                                  <option selected>Choose...</option>
-                                                  <option>...</option>
-                                                </select>
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <label for="inputZip">Zip</label>
-                                            <input type="text" class="form-control" id="inputZip">
-                                        </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                                     </div>
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                                            <label class="form-check-label" for="gridCheck">
-                                                  Check me out
-                                                </label>
-                                        </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Sign in</button>
-                                </form>
-                                <!--Register Form-->
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Confirm Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Confirm Password">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                                Check me out
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </form>
+                               
                             </div>
                         </div>
-                        <!--Register Form-->
-
-
-                        <!-- Collapsible content -->
-
                 </nav>
-                <!--/.Navbar-->
-
+                <!-- End Navbar-->
             </header>
-
-            <!-- entre navbar et photos-->
-            <h1>GALI</h1>
-            <h4>Change the way of your appointements</h4>
-            <article class="navBar">
+            <!--  sous navbar -->
+            <article class="sousNavBar">
                 <ul>
-                    <li class="menu"><a href="#Salon">Our Salon</a></li>
-                    <li class="menu"><a href="#Services">Services</a></li>
+                    <li class="menu"><a href="#abourUs">About Us</a></li>
+                    <li class="menu"><a href="#galiServices">Gali Services</a></li>
                     <li class="menu"><a href="#Contact">Contact Us</a></li>
-
                 </ul>
             </article>
-
         </article>
 
 

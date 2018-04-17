@@ -1,43 +1,81 @@
 /** Body */
+/* #18bef0 */
+/*rgb(24, 190, 240)*/
 
 * {
     box-sizing: border-box;
     transition-duration: 0.3s;
 }
 
-
 /** Navigation bar + Menu */
 
 .navbar.navbar-1 .navbar-toggler-icon {
     background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
-    padding-bottom: 150px;
+    padding-bottom: 80px;
 }
-
 
 /** Nav */
 
 .title {
     background-color: white;
-    border: 1px solid green;
+    box-shadow: 0px 10px 5px 0px rgba(24, 190, 240, 0.1);;
     text-align: center;
-    top: 0;
     position: -webkit-sticky;
+    top:0;
     position: sticky;
+    margin-bottom: 10px;
+    
 }
 
-
 /** entre nav et photo */
+.galiTitle{
+    text-align: none;
+}
 
 h1 {
     color: #18bef0;
     font-size: 60px;
 }
 
-.navBar ul {
+h4{
+    color: #18bef0;
+    text-shadow: 1px 1px 1px 1px  ;
+}
+
+
+.sousNavBar{
+    padding-top:5px;
+    padding-bottom: 5px;
+   
+}
+
+/* INPUT Navbar*/
+.form-control{
+  background-color: rgba(24, 190, 240, 0.1);  
+}
+[type="submit"]{
+    border: 1px solid #18bef0;
+    background-color:#18bef0;
+
+}
+
+
+.sousNavBar ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-left:0;
+    margin-bottom: 5px;
+    
 }
+
+.sousNavBar ul li a {
+    font-weight: solid;
+    color:#18bef0;
+}
+
+
+
 
 .menu {
     list-style: none;
@@ -46,12 +84,8 @@ h1 {
 section {
     border: 1px solid red;
     display: flex;
-    /*probleme*/
+    
 }
-
-
-/** Form Codepen */
-
 
 /** Middle Section */
 
