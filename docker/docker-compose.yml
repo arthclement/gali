@@ -16,7 +16,7 @@ services:
   php:
     image: php:7.2-apache
     volumes:
-      - ./apache2.conf:/etc/apache2/apache2.conf
+      - ./apache.conf:/etc/apache2/apache.conf
       - ./../gali-angular/dist:/var/www/html/
       - ./../gali-symfony:/var/www/symfony/
     networks:
