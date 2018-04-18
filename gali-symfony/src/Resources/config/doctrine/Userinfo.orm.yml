@@ -1,0 +1,76 @@
+App\Entity\Userinfo:
+    type: entity
+    table: userinfo
+    id:
+        iduser:
+            associationKey: true
+    fields:
+        firstname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        lastname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        birthdate:
+            type: datetime
+            nullable: false
+        gender:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: false
+        street:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        postcode:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        city:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        streetnumber:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        country:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        phone:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    oneToOne:
+        iduser:
+            targetEntity: User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iduser:
+                    referencedColumnName: iduser
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
