@@ -15,6 +15,7 @@ services:
 
   php:
     image: php:7.2-apache
+    build: .
     volumes:
       - ./apache.conf:/etc/apache2/apache.conf
       - ./../gali-angular/dist:/var/www/html/
