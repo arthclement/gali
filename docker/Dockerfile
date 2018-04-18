@@ -1,3 +1,3 @@
 FROM php:7.2-apache
 
-RUN apt-get update && apt-get install -y git unzip zip
+RUN apt-get update && apt-get install -y git unzip zip composer
