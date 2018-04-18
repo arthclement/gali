@@ -15,16 +15,16 @@ services:
 
   php:
     image: php:7.2-apache
+    build: .
     volumes:
       - ./apache.conf:/etc/apache2/apache.conf
       - ./../gali-angular/dist:/var/www/html/
-    networks: 
+      - ./../gali-symfony:/var/www/symfony/
+    networks:
       - gali
-    dns:
-      - 127.0.0.1
     ports:
       - 80:80
 
-networks: 
+networks:
   gali:
     driver: bridge
