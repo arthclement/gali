@@ -40,6 +40,15 @@
     
 }
 
+[class="form-check form-check-inline"]{
+    margin-left: 50px;
+}
+[type="checkbox"]{
+
+    color:#18bef0;
+
+}
+
 /** entre nav et photo */
 
 span strong {
