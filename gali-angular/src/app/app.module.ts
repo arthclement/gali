@@ -5,11 +5,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
+import { CardexFormComponent } from './cardex-form/cardex-form.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardexFormComponent
   ],
   imports: [
     BrowserModule,
