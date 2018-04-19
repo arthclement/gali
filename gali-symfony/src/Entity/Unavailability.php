@@ -13,6 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
 class Unavailability
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="idunavailability", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idunavailability;
+
+    /**
      * @var \DateTime|null
      *
      * @ORM\Column(name="starttime", type="datetime", nullable=true)
@@ -34,18 +43,9 @@ class Unavailability
     private $description;
 
     /**
-     * @var int
+     * @var \User>unavailability
      *
-     * @ORM\Column(name="idunavailability", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idunavailability;
-
-    /**
-     * @var \App\Entity\User>unavailability
-     *
-     * @ORM\ManyToOne(targetEntity="App\Entity\User>unavailability")
+     * @ORM\ManyToOne(targetEntity="User>unavailability")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="iduser", referencedColumnName="iduser")
      * })

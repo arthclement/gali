@@ -13,20 +13,20 @@ use Doctrine\ORM\Mapping as ORM;
 class Role
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="idrole", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idrole;
+
+    /**
      * @var string|null
      *
      * @ORM\Column(name="label", type="string", length=255, nullable=true)
      */
     private $label;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idrole", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idrole;
 
 
 }

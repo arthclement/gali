@@ -13,6 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
 class User
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="iduser", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $iduser;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=255, nullable=false)
@@ -53,15 +62,6 @@ class User
      * @ORM\Column(name="token", type="string", length=255, nullable=true)
      */
     private $token;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="iduser", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $iduser;
 
 
 }

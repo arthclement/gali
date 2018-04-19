@@ -13,6 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
 class Appointment
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="idappointment", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idappointment;
+
+    /**
      * @var \DateTime|null
      *
      * @ORM\Column(name="date", type="datetime", nullable=true)
@@ -41,18 +50,9 @@ class Appointment
     private $approved;
 
     /**
-     * @var int
+     * @var \User
      *
-     * @ORM\Column(name="idappointment", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idappointment;
-
-    /**
-     * @var \App\Entity\User
-     *
-     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idcustomer", referencedColumnName="iduser")
      * })
@@ -60,9 +60,9 @@ class Appointment
     private $idcustomer;
 
     /**
-     * @var \App\Entity\User
+     * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idpro", referencedColumnName="iduser")
      * })

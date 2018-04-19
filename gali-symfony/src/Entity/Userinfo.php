@@ -83,11 +83,11 @@ class Userinfo
     private $phone;
 
     /**
-     * @var \App\Entity\User
+     * @var \User
      *
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
-     * @ORM\OneToOne(targetEntity="App\Entity\User")
+     * @ORM\OneToOne(targetEntity="User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="iduser", referencedColumnName="iduser")
      * })

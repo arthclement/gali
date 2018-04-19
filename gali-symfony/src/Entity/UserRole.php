@@ -15,16 +15,16 @@ class UserRole
     /**
      * @var int
      *
-     * @ORM\Column(name="iduser_role", type="integer")
+     * @ORM\Column(name="iduser_role", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $iduserRole;
 
     /**
-     * @var \App\Entity\Role
+     * @var \Role
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Role")
+     * @ORM\ManyToOne(targetEntity="Role")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="idrole", referencedColumnName="idrole")
      * })
@@ -32,9 +32,9 @@ class UserRole
     private $idrole;
 
     /**
-     * @var \App\Entity\User
+     * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="iduser", referencedColumnName="iduser")
      * })
