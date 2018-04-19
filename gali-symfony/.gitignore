@@ -1,0 +1,15 @@
+# IDE - VSCode
+.vscode
+# Composer
+composer.phar
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+.buildpath
+.project
+.settings/
+fontawesome-free-5.0.10/
+../gali-symfony/.idea/
