@@ -5,3 +5,5 @@ RUN apt-get install -y git unzip zip
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer.phar
 RUN alias composer='/usr/local/bin/composer.phar'
+RUN docker-php-ext-install pdo_mysql
+RUN rm /etc/apache2/sites-enabled/000-default.conf
