@@ -8,17 +8,18 @@ import { AppComponent } from './app.component';
 // agenda + cardex
 import { AgendaComponent } from './agenda/agenda.component';
 import { CardexComponent } from './cardex/cardex.component';
-//routing
+// routing
 import { AppRoutingModule } from './app-routing.module';
-//module layout flex = 
-import { FlexLayoutModule } from '@angular/flex-layout';
+// module layout flex = 
+//import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AgendaComponent,
-    CardexComponent
+    CardexComponent,
+    //FlexLayoutModule
   ],
   imports: [
     BrowserModule,
