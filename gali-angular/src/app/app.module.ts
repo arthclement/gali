@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //import flex-layout module
-import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,8 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { CardexComponent } from './cardex/cardex.component';
 //routing
 import { AppRoutingModule } from './app-routing.module';
+//module layout flex = 
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -20,7 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    FlexLayoutModule.forRoot()
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
