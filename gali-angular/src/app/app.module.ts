@@ -10,15 +10,26 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { CardexComponent } from './cardex/cardex.component';
 // routing
 import { AppRoutingModule } from './app-routing.module';
+
+
+
 // module layout flex = 
 //import { FlexLayoutModule } from '@angular/flex-layout';
+
+//module sidebar
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AgendaComponent,
-    CardexComponent,
+    CardexComponent
+     
+   
+    
     //FlexLayoutModule
   ],
   imports: [
