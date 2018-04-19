@@ -9,7 +9,7 @@ const routes: Routes = [
 
     // place for the paths; object {}
     {
-        path: '',
+        path: 'agenda',
         component: AgendaComponent
 
     },
