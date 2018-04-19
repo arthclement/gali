@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // import flex-layout module
-import {FlexLayoutModule} from '@angular/flex-layout';
+// import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 import { AppComponent } from './app.component';
@@ -20,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    FlexLayoutModule.forRoot()
+    // FlexLayoutModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
