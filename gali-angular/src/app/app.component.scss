@@ -1,3 +1,67 @@
-*{
-    background-color: red;
+#page_contents {
+    padding: 4.5rem 1rem 1rem 1rem;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 64pc;
+    display: flex;
+    align-items: stretch;
+}
+
+#sideNavBar {
+    clear: left;
+}
+
+nav {
+    flex-basis: 240px;
+    flex-grow: 0;
+    background: #fee;
+    padding: 1rem;
+}
+
+#content {
+    flex-grow: 1;
+    background: #eff;
+    padding: 1rem;
+}
+
+.collapse-icon {
+    display: none!important;
+}
+
+@media only screen and (max-width: 767px) {
+    .collapse-icon {
+        /* change this to whatever your header items should be */
+        display: table-cell!important;
+    }
+    nav {
+        width: 260px!important;
+        transform: translate3d(-260px, 0, 0);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: scroll;
+    }
+}
+
+.nav_open #sideNavBar,
+.nav_open header {
+    transform: translate3d(280px, 0, 0);
+}
+
+.nav_open #sideNavBar,
+.nav_open header,
+#sideNavBar,
+header {
+    transition: transform .15s cubic-bezier(.2, .3, .25, .9);
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 101;
+}
+
+nav ul li {
+    margin-left: 2em;
 }
