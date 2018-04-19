@@ -18,8 +18,7 @@ services:
     build: .
     volumes:
       - ./apache.conf:/etc/apache2/apache.conf
-      - ./../gali-angular/dist:/var/www/html/
-      - ./../gali-symfony:/var/www/symfony/
+      - ./../:/var/www/html/
     networks:
       - gali
     ports:
