@@ -9,7 +9,9 @@
 // 2. Vendors
 @import
   'vendor/normalize',
-  'vendor/bootstrap';
+  'vendor/bootstrap',
+  'node_modules/angular-calendar/css/angular-calendar.css';
+
 
 // 3. Base stuff
 @import
