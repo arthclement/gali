@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { ActivateRoute, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cardex',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardexComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit() {
   }
