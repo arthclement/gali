@@ -3,11 +3,7 @@
 //font-family: 'Natsuki';
 //src: url('../scss/fonts/natsuki/Natsuki.otf') format('opentruetype');
 //}
-// the header
-header {
-    background-color: blue;
-}
-
-.fas fa-bars {
-    color: black;
+nav {
+    display: flex;
+    justify-content: space-between;
 }
