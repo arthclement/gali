@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 // binding
 import { Cardex } from '../cardex';
 // error message can't find module
-import { userInfo } from 'os';
+//import { userInfo } from 'os';
 import { c } from '@angular/core/src/render3';
 @Component({
   //change the output
