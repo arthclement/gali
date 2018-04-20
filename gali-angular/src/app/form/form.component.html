@@ -1,5 +1,26 @@
-<!--template-->
+<!--template cardex-->
 
-<p>
-    form works!
-</p>
+<!--bind the ngSubmit-->
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <!--input elements here-->
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <div class="info">
+                    <input type="text" mdInput placeholder="Firstname" id="firstname" [(ngModel)]="cardex.firstname" name="firstname">
+
+
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <input type="text" mdInput placeholder="Lastname" id="lastname" [(ngModel)]="cardex.lastname" name="lastname">
+
+
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
