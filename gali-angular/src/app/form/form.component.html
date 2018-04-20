@@ -3,24 +3,96 @@
 <!--bind the ngSubmit-->
 <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
     <!--input elements here-->
+    <!--firstname + lastname-->
     <table class="fullwidth" cellspacing="0">
         <tr>
             <td>
                 <div class="info">
-                    <input type="text" mdInput placeholder="Firstname" id="firstname" [(ngModel)]="cardex.firstname" name="firstname">
+                    <input class="md" type="text" mdInput placeholder="Firstname" id="firstname" [(ngModel)]="cardex.firstname" name="firstname">
 
 
                 </div>
             </td>
             <td>
                 <div class="info">
-                    <input type="text" mdInput placeholder="Lastname" id="lastname" [(ngModel)]="cardex.lastname" name="lastname">
+                    <input class="md" type="text" mdInput placeholder="Lastname" id="lastname" [(ngModel)]="cardex.lastname" name="lastname">
 
 
                 </div>
             </td>
         </tr>
-
     </table>
+
+    <!--Birthdate + Gender-->
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <div class="info">
+                    <input class="md" type="datetime" mdInput placeholder="Birthdate" id="birthdate" [(ngModel)]="cardex.birthdate" name="birthdate">
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <input class="md" type="radio" mdInput placeholder="gender" id="male" [(ngModel)]="cardex.gender" name="gender" value="male">Male<br>
+                    <input class="md" type="radio" mdInput placeholder="gender" id="female" [(ngModel)]="cardex.gender" name="gender" value="female">Female<br>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--Address-->
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <div class="info">
+                    <input class="md" type="text" mdInput placeholder="street" id="street" [(ngModel)]="cardex.street" name="street">
+
+
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <input class="md" type="number" mdInput placeholder="postcode" id="postcode" [(ngModel)]="cardex.postcode" name="postcode">
+
+
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <input class="md" type="text" mdInput placeholder="city" id="city" [(ngModel)]="cardex.city" name="city">
+
+
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <input class="md" type="text" mdInput placeholder="country" id="country" [(ngModel)]="cardex.country" name="country">
+
+
+                </div>
+            </td>
+
+        </tr>
+    </table>
+    <!-- Phone number + id User-->
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <div class="info">
+                    <input class="md" type="tel" mdInput placeholder="Phone number" id="phoneNumber" [(ngModel)]="cardex.phonenumber" name="phonenumber">
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <input class="md" type="id" mdInput id="id" [(ngModel)]="cardex.id" name="id">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+
 
 </form>

@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     //error message no exported member
-    //MdInputModule,
+   // MdInputModule,
     //MdButtonModule
   ],
   providers: [],

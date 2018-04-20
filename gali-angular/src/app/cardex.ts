@@ -5,10 +5,21 @@ export class Cardex {
 //properties no ? if it is not optional
         public firstname: string,
         public lastname: string,
-        public address: string,
+
+        public birthdate: DateTimeFormat,
+        public gender: string,
+        //type gender to change
+
+        public street: string,
+        public postcode: string,
         public city: string,
         public country: string,
-        public postalcode: string
+
+        public iduser: number,
+
+        public phone: string
+
+        
 
 
     ) {}
