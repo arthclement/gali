@@ -14,7 +14,7 @@ import { c } from '@angular/core/src/render3';
 export class FormComponent  {
 
   // create new object
-  Cardex = new Cardex();
+ // Cardex = new Cardex();
 
   constructor() { }
 
