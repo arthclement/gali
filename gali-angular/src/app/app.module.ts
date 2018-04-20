@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 //form module
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 //form data entry
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     FormComponent,
+    HeaderComponent,
     
   ],
   //activation of the imports
