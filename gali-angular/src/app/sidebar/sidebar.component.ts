@@ -15,20 +15,5 @@ export class SidebarComponent implements OnInit {
 
   constructor() { }
 
-  public ngOnInit() {
-    $(document).ready(function(){
-        console.log("ok");
-        $("#sidebar .toggle-btn span").on("click", function(event){
-          event.preventDefault()
-          console.log("ok");
-          $("#sidebar").addClass("active");
-          $("#sidebar .toggle-btn span").css("display","none");
-          
-          
-        })
-        
-    
-    });
-  }
 
 }

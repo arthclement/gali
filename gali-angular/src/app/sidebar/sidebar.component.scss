@@ -12,7 +12,7 @@
     width: 200px;
     height: 100%;
     background: #EAF2F8;
-    left: -200px;
+    //left: -200px;
 }
 
 
@@ -28,23 +28,9 @@
     border-bottom: 1px solid #AED6F1;
 }
 
-#sidebar.active {
-    left: 0px;
-}
 
-#sidebar .toggle-btn {
-    position: absolute;
-    left: 230px;
-    top: 20px;
-}
 
-#sidebar .toggle-btn span {
-    display: block;
-    width: 30px;
-    height: 5px;
-    background: black;
-    margin: 3px 0px;
-}
+
 
 
 /** test hover menu color
