@@ -40,6 +40,18 @@ nav {
 }
 
 
+/** header right */
+
+
+/** Welcome + user Loggedin */
+
+p {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+
 /** Log Out */
 
 
@@ -51,6 +63,7 @@ nav {
 .btn {
     background-color: #A9CCE3;
     font-weight: bold;
+    margin-left: 20px;
 }
 
 .btn :hover {

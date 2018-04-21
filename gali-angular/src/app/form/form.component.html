@@ -1,5 +1,7 @@
 <!--template cardex-->
 
+<!-- input search cardex customer-->
+
 <!--bind the ngSubmit-->
 <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
     <!--input elements here-->
@@ -32,11 +34,13 @@
                 </div>
             </td>
             <td>
-                <div class="info">
-                    <input class="md" type="radio" mdInput placeholder="gender" id="male" [(ngModel)]="cardex.gender" name="gender" value="male">Male<br>
-                    <input class="md" type="radio" mdInput placeholder="gender" id="female" [(ngModel)]="cardex.gender" name="gender" value="female">Female<br>
-
+                <div class="gender">
+    <!-- Male + Female -->            
+                
+                    <input class="md"  type="radio" mdInput placeholder="gender" id="male" [(ngModel)]="cardex.gender" name="gender" value="male">Male<br>
+                    <input class="md"  type="radio" mdInput placeholder="gender" id="female" [(ngModel)]="cardex.gender" name="gender" value="female">Female<br>
                 </div>
+                
             </td>
         </tr>
     </table>
@@ -45,19 +49,23 @@
     <table class="fullwidth" cellspacing="0">
         <tr>
             <td>
+                <!--street-->
                 <div class="info">
                     <input class="md" type="text" mdInput placeholder="street" id="street" [(ngModel)]="cardex.street" name="street">
-
 
                 </div>
             </td>
             <td>
+                <!--postcode-->
                 <div class="info">
                     <input class="md" type="number" mdInput placeholder="postcode" id="postcode" [(ngModel)]="cardex.postcode" name="postcode">
 
 
                 </div>
             </td>
+        </tr>
+        <tr>
+            <!--city-->
             <td>
                 <div class="info">
                     <input class="md" type="text" mdInput placeholder="city" id="city" [(ngModel)]="cardex.city" name="city">
@@ -65,6 +73,7 @@
 
                 </div>
             </td>
+            <!--country-->
             <td>
                 <div class="info">
                     <input class="md" type="text" mdInput placeholder="country" id="country" [(ngModel)]="cardex.country" name="country">
@@ -72,8 +81,9 @@
 
                 </div>
             </td>
-
         </tr>
+
+
     </table>
     <!-- Phone number + id User-->
     <table class="fullwidth" cellspacing="0">

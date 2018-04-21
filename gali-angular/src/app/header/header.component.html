@@ -9,10 +9,14 @@
     </div>
 
     <div class="nav justify-content-end">
+        <!--User Account-->
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Ajax User" aria-label="Welcome">
+            <!--User Username or Login here-->
+            <!-- How to get rid of parentheses ????????-->
+            <p>Welcome <span>({{ username }})</span></p>
 
-            <button class="btn" type="submit">Log Out</button>
+
+            <button class="btn" type="submit" [value]="btnSubmit">Log Out</button>
         </form>
     </div>
 

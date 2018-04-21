@@ -1,5 +1,17 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+* {
+  
+    background-color: #D6EAF8;
+    font-family: 'Poiret One', cursive;
+    font-weight:bold;
+    color:#4D5656;
+    padding:20px;
+}
+
 .formwidth {
-    width: 500px;
+    width: 100%;
 }
 
 .fullwidth {
@@ -10,5 +22,20 @@
 .md {
     border: none;
     //change the color
-    border-bottom: solid;
+    border-bottom: 2px solid #AED6F1;
 }
+
+.md:hover{
+    background: #A9CCE3;
+
+}
+
+
+// radio buttons
+.gender{
+    width:25%;
+    margin-right:80px;
+    
+    display:flex;
+    justify-content: space-between;
+}    
