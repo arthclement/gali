@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { BodyComponent } from './body/body.component';
 //form data entry
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
@@ -31,6 +32,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     AgendaComponent,
     SidebarComponent,
+    BodyComponent,
     
   ],
   //activation of the imports
