@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+//jquery import
+import * as $ from 'jquery';
 
 
 @Component({
