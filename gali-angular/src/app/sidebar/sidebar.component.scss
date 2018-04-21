@@ -1,3 +1,5 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +9,18 @@
     position: fixed;
     width: 200px;
     height: 100%;
-    background: grey;
+    background: #EAF2F8;
     left: -200px;
 }
 
+
+/** test categories color
+#4D5656
+#7B7D7D
+*/
+
 #sidebar ul li {
-    color: red;
+    color: #4D5656;
     list-style: none;
     padding: 15px 10px;
     border-bottom: 1px solid pink;
@@ -36,7 +44,19 @@
     margin: 3px 0px;
 }
 
+
+/** test hover menu color
+#AED6F1
+#A9CCE3
+
+*/
+
 .menu li:hover {
-    background: green;
-    border-left: 5px solid wheat;
+    background: #AED6F1;
+    /** test border left menu color
+grey = deep #D0D3D4
+#A9CCE3 = Logout color 
+
+*/
+    border-left: 5px solid #A9CCE3;
 }

@@ -1,9 +1,62 @@
 //fonts
-//@font-face {
-//font-family: 'Natsuki';
-//src: url('../scss/fonts/natsuki/Natsuki.otf') format('opentruetype');
-//}
+//logo
+@font-face {
+    font-family: 'Natsuki';
+    src: url('Natsuki.ttf') format('truetype');
+}
+
+//text
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+// body
+* {
+    color: #4D5656;
+    font-family: 'Poiret One', cursive;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
+}
+
+
+/**Logo  bleu chaise ??*/
+
+.navbar-brand {
+    color: #4bcffa;
+    font-family: 'Natsuki';
+    font-size: 400%;
+    padding: 5px;
+}
+
+
+/** test nav + side background colors  : 
+                    #EBF5FB
+                    #F2F3F4;
+*/
+
+nav {
+    background-color: #EAF2F8;
+    padding: 20px;
+}
+
+
+/** Log Out */
+
+
+/** test button background color
+#D6EAF8 = light
+
+*/
+
+.btn {
+    background-color: #A9CCE3;
+    font-weight: bold;
+}
+
+.btn :hover {
+    background-color: #7FB3D5;
+}
+
+.nav justify-content-end {
+    font-weight: bold;
 }
