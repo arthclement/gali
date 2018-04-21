@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import * as $ from 'jquery';
 // for the gesture
 import 'hammerjs';
 
