@@ -12,6 +12,13 @@ import { AgendaComponent } from './agenda/agenda.component';
 import 'hammerjs';
 
 const routes: Routes = [
+    {
+        path:'sidebar',
+        component: FormComponent
+
+    },
+    
+    
 
     // place for the paths; object {}
 ];

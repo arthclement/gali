@@ -20,6 +20,11 @@ import { BodyComponent } from './body/body.component';
 //form data entry
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
+//routing
+//routerModule = responsible for the navigation
+//routes = an array, routes of informations of each page
+//import { Routes, RouterModule } from '@angular/router';
+
 
 
 

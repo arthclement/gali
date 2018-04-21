@@ -1,23 +1,22 @@
-<nav>
-    <div class="left">
-
-        <a class="navbar-brand" href="#">Gali </a>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div>
+            <a class="navbar-brand" href="#">Gali </a>
+        </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-    </button>
-    </div>
+        </button>
+    
 
-    <div class="nav justify-content-end">
+        <div class="nav justify-content-end">
         <!--User Account-->
-        <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0">
             <!--User Username or Login here-->
             <!-- How to get rid of parentheses ????????-->
-            <p>Welcome <span>({{ username }})</span></p>
-
-
-            <button class="btn" type="submit" [value]="btnSubmit">Log Out</button>
-        </form>
+                <p>Welcome <span>({{ username }})</span></p>
+                <button class="btn" type="submit" [value]="btnSubmit">Log Out</button>
+            </form>
+        </div>
     </div>
-
 </nav>
