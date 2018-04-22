@@ -17,6 +17,7 @@
 }
     /** Fonts :  Navigation + Salon */
     /** Font Présentation salon à changer*/
+
 .menu, #Connexion,.TextSalon{
 
     font-family:'Bison-Bold(PersonalUse)'; 
@@ -49,6 +50,11 @@ body{
     font-size: 200%;
     color:#18bef0;
     
+}
+
+/** Bouton Connexion */
+button{
+    color:red;
 }
 
 /** Colors */

@@ -1,6 +1,4 @@
-/** Body */
-/* #18bef0 */
-/*rgb(24, 190, 240)*/
+
 
 /** Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
@@ -25,6 +23,22 @@
 
 /** Colors */
 /** Header + Navigation bar */
+    /** menu */
+.categories ul li a{
+    text-decoration: none;
+    color:#EAF2F8;
+    
+} 
+  /** button */
+.navbar-toggler-icon{
+    color:#A9CCE3;
+}
+
+/** main */
+main{
+    color:#EAF2F8;
+}
+
 
 /** Logo */
 strong{
@@ -45,10 +59,8 @@ strong{
 
 /** Navigation Bar for the menu */
 
-.categories ul li a{
-    text-decoration: none;
-    color:#34495E;
-
+.title{
+    background-color:black;
 }
 
 /** Body */
@@ -66,10 +78,11 @@ strong{
     #F4F6F7    #AED6F1
 
     */
-    background-color:#A9CCE3;
+    
     font-family: 'Bison-Bold'; 
     font-weight:bold;
-    color:#5D6D7E;
+    
+    
 }
 
 
@@ -116,23 +129,38 @@ strong{
     
 }
 
+/**Connexion */
+#navbarSupportedContent15{
+    background-color: #A9CCE3;
+    color:#4D5656;
+}
+
 [class="form-check form-check-inline"]{
     margin-left: 50px;
 }
 [type="checkbox"]{
 
-    color:#18bef0;
+    color:#19B5FE;
 
 }
-
-/** entre nav et photo */
-
-
-
-
-
-
-
+.male, .female{
+   display:flex;
+   align-items: baseline;        
+}
+.female{
+    margin-left:70px;
+}
+.gender{
+    padding-left:5px;
+}
+#radio{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin:0;
+    padding-top:30px;
+}
 
 /* INPUT Navbar*/
 /*  Bouton*/
@@ -145,8 +173,8 @@ strong{
 }
 
 [type="submit"]{
-    border: 1px solid #18bef0;
-    background-color:#18bef0;
+    border: 1px solid #19B5FE;
+    background-color:#19B5FE;
 }
 
 .sousNavBar ul {
@@ -163,15 +191,7 @@ strong{
 
 /** menu nav list */
 
-/** test color
-#2E86C1     #2874A6
 
-*/
-.sousNavBar ul li a {
-    font-size: 150%;
-    color:#5D6D7E;
-    text-decoration: none;
-}
 
 /* Middle Section */
 
@@ -180,11 +200,20 @@ strong{
 
 main{
     margin:0;
+    position: absolute;
+    z-index: -1;
+    display
 }
 
 #aboutUs{
     margin:0;
     padding:0;
+}
+
+/** footer*/
+#contactUs{
+    background-color:black;
+
 }
 
 

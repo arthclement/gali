@@ -84,15 +84,19 @@
                                         <input type="text" class="form-control" id="inputPassword4" placeholder="Firstname">
                                     </div>
                                     <br/>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">Mister</label>
+                                    <!--radio buttons modif-->
+                                    <div class="form-group col-md-6" id="radio">
+                                        <div class="male">
+                                            <input   type="radio" name="gender" value="male" checked>
+                                            <label class="gender">Male</label>
+                                        </div>
+                                        <div class="female">
+                                            <input   type="radio" name="gender" value="female"> 
+                                            <label class="gender">Female</label>
+                                        </div>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">Madam</label>
-                                    </div>
-                                    <div class="form-group col-md-6">
+
+                                    <div class="form-group col-md-6" class="form-check form-check-inline">
                                         <label for="inputName">Lastname</label>
                                         <input type="text" class="form-control" id="inputPassword4" placeholder="Lastname">
                                     </div>
@@ -232,20 +236,21 @@
             </div>
             <!-- end big cube-->
         </section>
+        <!-- footer -->
+        <footer id="contactUs">
+            <article>
+                <h3>Gali helps you to book your appointements in a easy and intuitif way</h3>
+                <p>@Group: Gabriel, Arthur, Leslie, Ivan</p>
+                <p>Tel: 00352 11 22 33</p>
+                <p>gali@gali-team.com</p>
+    
+            </article>
+            
+        </footer>
 
 
     </main>
-    <!-- footer -->
-    <footer id="contactUs">
-        <article>
-            <h3>Gali helps you to book your appointements in a easy and intuitif way</h3>
-            <p>@Group: Gabriel, Arthur, Leslie, Ivan</p>
-            <p>Tel: 00352 11 22 33</p>
-            <p>gali@gali-team.com</p>
-
-        </article>
-        
-    </footer>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
