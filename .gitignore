@@ -1,3 +1,5 @@
 # IDE - VSCode
 .vscode
 fontawesome-free-5.0.10
+/test
+/node_modules

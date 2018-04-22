@@ -4,8 +4,17 @@
 
 * {
     box-sizing: border-box;
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
+    
 }
+
+body{
+   /* background-image: url('????????');
+    background-repeat: repeat;
+    background-size: 200vw;*/
+   
+
+    }
 
 /** Navigation bar + Menu */
 
@@ -37,6 +46,8 @@
     position: sticky;
     margin-bottom: 15px;
     z-index: 1;
+    margin-left: 8%;
+    margin-right: 9%;
     
 }
 
@@ -59,7 +70,7 @@ span strong {
 
 span{
     color: #18bef0;
-    text-shadow: 1px 1px 1px 1px;
+ 
     padding:0;
     margin:0;
     font-size: 20px;
@@ -74,6 +85,11 @@ span{
 
 /* INPUT Navbar*/
 /*  Bouton*/
+
+.form-group{
+    text-align: left;
+    
+}
 .navbar-toggler{
     border: none;
     padding: 0;
@@ -112,6 +128,7 @@ span{
 main{
     margin-left: 10%;
     margin-right: 10%;
+
 }
 
 /* Beggining Big Cube Faire CSS identitque */
@@ -126,10 +143,19 @@ main{
 
 /*End Big cube Faire CSS identitque*/
 
-
+#galiServices:hover{
+    border: vw0.3 solid #d1d1d1;
+    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
+   
+}
+#aboutUs:hover{
+    border: vw0.3 solid #d1d1d1;
+    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
+   
+}
 .container-fluid{
     display: flex;
-    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
+   /* box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);*/
     border-radius: 8px;
     padding: 8px;
 }
@@ -161,10 +187,14 @@ section {
 
 footer {
     background-color: #18bef0 ;
+    
+    box-shadow: 1px 1px 8px 15px rgba(114, 222, 255, 0.6);
     padding: 50px 0 50px 0px;
     border-radius: 10px;
     color: #fff;
     font-size: 20px;
     margin: 50px 20px 20px 20px;
     padding-left: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
