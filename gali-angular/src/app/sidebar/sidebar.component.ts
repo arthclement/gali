@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 //Router for path
 import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from '../form/form.component';
-import { BodyComponent } from '../body/body.component';
+
 import { AgendaComponent } from '../agenda/agenda.component';
 
 //config for categories navigation
