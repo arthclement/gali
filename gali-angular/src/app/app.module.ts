@@ -50,12 +50,18 @@ import { RouterModule } from '@angular/router';
    // MdInputModule,
     //MdButtonModule
     RouterModule.forRoot([
+      {
+        path:'', component: AgendaComponent
+      },
       
       {
         path: 'agenda', component: AgendaComponent
       },
       {
         path: 'form', component: FormComponent
+      },
+      {
+        path:'body', component:BodyComponent
       },
     ])
     //RouterModule.forRoot()= static method for routerModule class = defines the root route for application
