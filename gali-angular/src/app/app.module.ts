@@ -24,6 +24,7 @@ import { BodyComponent } from './body/body.component';
 //routerModule = responsible for the navigation
 //routes = an array, routes of informations of each page
 import { RouterModule } from '@angular/router';
+import { SliderComponent } from './slider/slider.component';
 
 
 
@@ -39,6 +40,7 @@ import { RouterModule } from '@angular/router';
     AgendaComponent,
     SidebarComponent,
     BodyComponent,
+    SliderComponent,
     
   ],
   //activation of the imports
