@@ -23,7 +23,7 @@ import { BodyComponent } from './body/body.component';
 //routing
 //routerModule = responsible for the navigation
 //routes = an array, routes of informations of each page
-//import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -49,6 +49,18 @@ import { BodyComponent } from './body/body.component';
     //error message no exported member
    // MdInputModule,
     //MdButtonModule
+    RouterModule.forRoot([
+      {
+        path: '', component: AgendaComponent
+      },
+      {
+        path: '', component: AgendaComponent
+      },
+      {
+        path: 'form', component: FormComponent
+      },
+    ])
+    //RouterModule.forRoot()= static method for routerModule class = defines the root route for application
   ],
   providers: [],
   bootstrap: [AppComponent]
