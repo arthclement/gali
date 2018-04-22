@@ -4,11 +4,39 @@
 /** Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
+@font-face{
+    
+    font-family: 'Natsuki';
+    src:url('fonts/Natsuki/natsuki.ttf') format('truetype');
+    
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     transition-duration: 0.3s;
-    background-color: #D4E6F1;
+    /** Nav + body colors */
+    /** color test background
+    #EAF2F8    #AED6F1
+    #A9CCE3    #D4E6F1
+    #D7DBDD   #7FB3D5
+    #D5DBDB
+
+    */
+    background-color:#D6DBDF;
 }
+
+/** Logo */
+strong{
+    font-family: 'Natsuki';
+    font-size:400%;
+    font-weight:bold;
+    color:#19B5FE;
+}
+
+
+
 
 /** Navigation bar + Menu */
 
@@ -54,19 +82,6 @@
 
 /** entre nav et photo */
 
-span strong {
-    color: #18bef0;
-    font-size: 60px;
-    padding-left: 100px;
-}
-
-span{
-    color: #18bef0;
-    text-shadow: 1px 1px 1px 1px;
-    padding:0;
-    margin:0;
-    font-size: 20px;
-}
 
 
 .sousNavBar{
