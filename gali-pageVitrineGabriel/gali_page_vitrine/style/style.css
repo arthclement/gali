@@ -1,10 +1,13 @@
 /** Body */
 /* #18bef0 */
 /*rgb(24, 190, 240)*/
+/** Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
 * {
     box-sizing: border-box;
     transition-duration: 0.3s;
+    background-color: #D4E6F1;
 }
 
 /** Navigation bar + Menu */
