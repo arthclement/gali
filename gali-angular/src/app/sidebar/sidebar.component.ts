@@ -19,7 +19,7 @@ import { AgendaComponent } from '../agenda/agenda.component';
   imports:[
     RouterModule.forRoot([
       {
-        path:'agenda', component: AgendaComponent
+        path:'', component: AgendaComponent
       },
       {
         path:'form', component: FormComponent
