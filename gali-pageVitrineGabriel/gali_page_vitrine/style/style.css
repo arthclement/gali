@@ -1,6 +1,7 @@
 /** Body */
 /* #18bef0 */
 /*rgb(24, 190, 240)*/
+
 /** Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
@@ -15,29 +16,15 @@
 
 @font-face{
 
-    font-family: 'Bison-Bold(PersonalUse)';
-    src:url('Font/Bison-Bold(PersonalUse).ttf') format('truetype');
+    font-family: 'Bison-Bold';
+    src:url('fonts/Bison/Bison-Bold.ttf') format('truetype');
     
     font-weight: bold;
     font-style: normal;
 }
 
-* {
-    box-sizing: border-box;
-    transition-duration: 0.3s;
-    /** Nav + body colors */
-    /** color test background
-    #EAF2F8    #AED6F1
-    #A9CCE3    #D4E6F1
-    #D7DBDD   #7FB3D5
-    #D5DBDB 
-    #D6DBDF   #FEF5E7
-
-    */
-    background-color:#F4F6F7;
-    font-family: 'Poiret One', cursive; 
-    font-weight:bold;s
-}
+/** Colors */
+/** Header + Navigation bar */
 
 /** Logo */
 strong{
@@ -47,6 +34,46 @@ strong{
     color:#19B5FE;
 }
 
+/** Fonts + Font Size */
+
+    /** Header + Navigation Bar = Logo exclude */
+.title{
+    font-family: 'Bison-Bold';
+    font-size: 150%;
+} 
+
+
+/** Navigation Bar for the menu */
+
+.categories ul li a{
+    text-decoration: none;
+    color:#34495E;
+
+}
+
+/** Body */
+
+* {
+    box-sizing: border-box;
+    transition-duration: 0.3s;
+    /** Nav + body colors */
+    /** color test background
+    #EAF2F8    #AED6F1
+    #A9CCE3    #D4E6F1  #D6EAF8
+    #D7DBDD   #7FB3D5
+    #D5DBDB     #D5D8DC
+    #D6DBDF   #FEF5E7
+    #F4F6F7    #AED6F1
+
+    */
+    background-color:#A9CCE3;
+    font-family: 'Bison-Bold'; 
+    font-weight:bold;
+    color:#5D6D7E;
+}
+
+
+
 
 
 
@@ -54,7 +81,7 @@ strong{
 
 .navbar.navbar-1 .navbar-toggler-icon {
     background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
-    padding-bottom: 80px;
+    
 }
 
 .navbar{
@@ -62,24 +89,30 @@ strong{
     padding-bottom: 0;
 }
 
-[id="nav-home-tab"]{
-    color: #18bef0;
-}
-[id="nav-profile-tab"]{
-    color: #18bef0;
-}
+
 
 /** Nav */
+.navbar navbar-light navbar-1{
+    padding:0;
+}
+ /** menu categories */
+ .categories ul{
+     width:1200px;
+     padding-top: 100px;
+     margin-bottom:25px;
+     display:flex;
+     justify-content: space-around;
+ }
 
 .title {
-    background-color: white;
-    box-shadow: 0px 10px 5px 0px rgba(24, 190, 240, 0.1);
+    
+    padding:0;
     text-align: center;
     position: -webkit-sticky;
     top:0;
     position: sticky;
-    margin-bottom: 15px;
-    z-index: 1;
+    margin:0;
+    
     
 }
 
@@ -96,11 +129,10 @@ strong{
 
 
 
-.sousNavBar{
-    padding-top:5px;
-    padding-bottom: 5px;
-    background-color: white;
-}
+
+
+
+
 
 /* INPUT Navbar*/
 /*  Bouton*/
@@ -121,17 +153,24 @@ strong{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left:0;
-    margin-bottom: 5px;
+    
+   
 }
 
 .menu {
     list-style: none;
 }
 
+/** menu nav list */
+
+/** test color
+#2E86C1     #2874A6
+
+*/
 .sousNavBar ul li a {
-    font-weight: solid;
-    color:#18bef0;
+    font-size: 150%;
+    color:#5D6D7E;
+    text-decoration: none;
 }
 
 /* Middle Section */
@@ -140,61 +179,12 @@ strong{
 /* MAIN */
 
 main{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin:0;
 }
 
-/* Beggining Big Cube Faire CSS identitque */
-.bigCube-p-h3-1{
-    padding: 50px;
-    text-align: right;
+#aboutUs{
+    margin:0;
+    padding:0;
 }
 
-.bigCube-p-h3-2{
-    padding: 50px;
-}
 
-/*End Big cube Faire CSS identitque*/
-
-
-.container-fluid{
-    display: flex;
-    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
-    border-radius: 8px;
-    padding: 8px;
-}
-
-section {
-    margin-top: 50px;
-    display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.grandP h3 {
-    padding: 10%;
-    padding-bottom: 0;
-}
-
-.p-1{padding: 1em;}
-.p-2{padding: 2em;}
-.p-3{padding: 3em;}
-.p-4{padding: 4em;}
-.p-5{padding: 5em;}
-.br{border: 1px solid red;}
-
-.sectionMilieu div h3 {
-    margin: 100px;
-    text-align: center;
-    padding: 150px;
-}
-
-footer {
-    background-color: #18bef0 ;
-    padding: 50px 0 50px 0px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 20px;
-    margin: 50px 20px 20px 20px;
-    padding-left: 50px;
-}
