@@ -8,7 +8,7 @@ import { FormComponent } from '../form/form.component';
 import { BodyComponent } from '../body/body.component';
 import { AgendaComponent } from '../agenda/agenda.component';
 
-//import menu categories
+//config for categories navigation
 
 @NgModule({
   declarations: [
