@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\Uuid;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 
 /**
  * User
@@ -22,7 +24,7 @@ use Ramsey\Uuid\Uuid;
  *     message="The entered email is already in use."
  * )
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -37,6 +39,7 @@ class User
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=255, nullable=false)
+     * @Assert\NotBlank()
      */
     private $username;
     
@@ -44,6 +47,10 @@ class User
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Email(
+     * message="This email is invalid"
+     * )
      */
     private $email;
     
@@ -51,6 +58,10 @@ class User
      * @var string
      *
      * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     * @Assert\Regex(
+     * pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-,]).{8,}$/",
+     * message="The password must follow: minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+     * )
      */
     private $password;
     
@@ -248,5 +259,16 @@ class User
         }
         
         return $this;
+    }
+    
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    public function eraseCredentials()
+    {
+        return;
     }
 }
