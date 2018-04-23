@@ -1,0 +1,293 @@
+/** Fonts */
+@font-face{
+    
+    font-family: 'Natsuki FREE';
+    src:url('Font/Natsuki FREE.otf') format('truetype');
+    
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+
+    font-family: 'Bison-Bold(PersonalUse)';
+    src:url('Font/Bison-Bold(PersonalUse).ttf') format('truetype');
+    
+    font-weight: bold;
+    font-style: normal;
+}
+    /** Fonts :  Navigation + Salon */
+    /** Font Présentation salon à changer*/
+
+.menu, #Connexion,.TextSalon{
+
+    font-family:'Bison-Bold(PersonalUse)'; 
+    
+}
+        
+
+/** title */
+title{
+
+    font-family: 'Natsuki FREE'; 
+}
+
+/** body */
+body{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+/** gali logo */
+.logo{
+    float:left;
+    margin:0;
+    font-family: 'Natsuki FREE';
+    text-decoration: none;   
+    font-size: 200%;
+    color:#18bef0;
+    
+}
+
+/** Bouton Connexion */
+button{
+    color:red;
+}
+
+/** Colors */
+    /** navbar + menu */
+header{
+    background-color:black;
+}    
+nav ul li a, i, #Connexion, .icon{
+    color:whitesmoke; 
+}  
+
+
+    /** text in Main */
+
+    /** Footer */
+footer ul li a{
+    color:whitesmoke;
+}
+footer p, footer i{
+    color:whitesmoke;
+}
+
+
+
+
+
+
+
+/** navbar + menu */
+
+nav{
+    padding-top:2%;
+}
+
+nav ul li  {
+
+    list-style: none;   
+}
+
+nav ul li a, i{
+
+    text-decoration: none;
+        
+}
+
+ul{
+    
+    padding-top:0; 
+    display:flex;
+    justify-content:space-around;       
+}
+.icon{
+    display:flex;
+    justify-content: flex-end;
+    
+}
+svg{
+    margin-right:5px;
+}
+
+
+    /** Connection RDV nav */
+.RDV{
+    display:flex;
+    justify-content: flex-end;
+}
+#Connexion{
+    
+    text-decoration: none;
+    padding:2%;
+}
+
+
+#staticConnect{
+
+    display:flex;
+    flex-direction:column;
+    margin-left:25%;
+    margin-top: 10%;
+    font-family:'Bison-Bold(PersonalUse)';
+    display:none;
+    
+}    
+
+
+/** main */
+    /** Salon */
+.TextSalon{
+    
+    color:black;
+}
+
+#Salon{
+    width:862px;
+    height:660px;
+    background-image:url('../ImgTest/salon.jpg');
+    background-size:cover;
+    margin:0;
+    padding:auto;
+    display:flex;
+    align-items: flex-end;
+    justify-content:center;
+}
+
+
+    /** Services */
+#Services{
+    background-color:black;
+    color:whitesmoke;
+}
+.TextServices{
+    padding:20px;
+    text-align: center;
+}
+.PicServices{
+    display:flex;
+    justify-content: space-around;
+}
+
+.PicServices h2{
+    text-align: center;
+}
+
+.left img{
+    max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.left:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.rightTop img{
+    max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.rightTop:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  } 
+.rightBottom img{
+    max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.rightBottom:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+} 
+  
+ /** Appointment Instructions */
+#how{
+    text-align: center;
+} 
+ #RendezVous{
+     display:flex;
+} 
+/** Team + Contact */
+
+#Contact{
+    background-color:black;
+    height: 400px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+#Gabriel, #Arthur, #Ivan, #Leslie{
+    width:200px;
+    height:200px;
+    border:solid yellow;
+    background-color:red;
+    margin:auto;
+}
+#Gabriel:hover,#Arthur:hover, #Ivan:hover, #Leslie:hover{
+    animation: bounce 1.8s;
+}
+/** Footer */
+
+#map{
+    display:flex;
+    flex-direction: center;
+}
+#end{
+    background-color:black;
+}
+#end h3, #end ul{
+    margin:0;
+}
+footer p{
+    text-align:right;
+    
+}
+#footer li a{
+    text-decoration:none;
+}
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+    
