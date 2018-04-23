@@ -123,12 +123,10 @@ jQuery(document).ready(function() {
     /** ***FIRST PASSWORD***** */
     //FOCUS IN
     $("#passwordRegister").on("focus", function() {
-        console.log("focus in passed password registration");
-        $("#RegistrationpassCheck").css("display", "block");
-    })
-
-    //FOCUS OUT 
-
+            console.log("focus in passed password registration");
+            $("#RegistrationpassCheck").css("display", "block");
+        })
+        //FOCUS OUT 
     $("#passwordRegister").on("keyup", checkPswd);
 
     function checkPswd() {
