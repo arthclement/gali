@@ -10,7 +10,7 @@ class UserController extends Controller
     /**
      * @Route("/user", name="user")
      */
-    public function index()
+    public function ()
     {
         return $this->json([
             'message' => 'Welcome to your new controller!',
