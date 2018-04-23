@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { RdvComponent } from './rdv/rdv.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RdvComponent
   ],
   imports: [
     BrowserModule
