@@ -42,7 +42,9 @@
 /*** ************** Backgrounds **********************/
 
 .title,
-#galiServices {
+#galiServices,
+.categories,
+#cat {
     background-color: black;
 }
 
@@ -140,6 +142,10 @@ header {
 
 /** menu categories */
 
+[class="navbar navbar-light bg-light"] {
+    padding: 0;
+}
+
 #cat li {
     list-style: none;
     font-size: 5vm;
@@ -147,6 +153,8 @@ header {
 
 #cat {
     width: 100%;
+    margin: 0;
+    padding: 0 2em;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
