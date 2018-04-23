@@ -1,68 +1,4 @@
 
-
-/** Fonts */
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-
-@font-face{
-    
-    font-family: 'Natsuki';
-    src:url('fonts/Natsuki/natsuki.ttf') format('truetype');
-    
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face{
-
-    font-family: 'Bison-Bold';
-    src:url('fonts/Bison/Bison-Bold.ttf') format('truetype');
-    
-    font-weight: bold;
-    font-style: normal;
-}
-
-/** Colors */
-/** Header + Navigation bar */
-    /** menu */
-.categories ul li a{
-    text-decoration: none;
-    color:#EAF2F8;
-    
-} 
-  /** button */
-.navbar-toggler-icon{
-    color:#A9CCE3;
-}
-
-/** main */
-main{
-    color:#EAF2F8;
-}
-
-
-/** Logo */
-strong{
-    font-family: 'Natsuki';
-    font-size:400%;
-    font-weight:bold;
-    color:#19B5FE;
-}
-
-/** Fonts + Font Size */
-
-    /** Header + Navigation Bar = Logo exclude */
-.title{
-    font-family: 'Bison-Bold';
-    font-size: 150%;
-} 
-
-
-/** Navigation Bar for the menu */
-
-.title{
-    background-color:black;
-}
-
 /** Body */
 
 * {
@@ -84,40 +20,112 @@ strong{
     
     
 }
+/** Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
-
-
-
-
-
-/** Navigation bar + Menu */
-
-.navbar.navbar-1 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+@font-face{
     
+    font-family: 'Natsuki';
+    src:url('fonts/Natsuki/natsuki.ttf') format('truetype');
+    
+    font-weight: bold;
+    font-style: normal;
 }
 
+@font-face{
+
+    font-family: 'Bison-Bold';
+    src:url('fonts/Bison/Bison-Bold.ttf') format('truetype');
+    
+    font-weight: bold;
+    font-style: normal;
+}
+
+/** ************Colors ******************************** */
+/*** ************** Backgrounds **********************/
+.title, #galiServices{
+    background-color:black;
+}
+/** Header + Navigation bar */
+    /** menu */ /** main */
+.categories ul li a, .connexion h3, main, h1{
+    text-decoration: none;
+    color:#EAF2F8;
+    
+} 
+  /** button */
+.navbar-toggler-icon{
+    color:#A9CCE3;
+}
+
+/** Logo Gali */
+strong, #aboutUs span{
+    font-family: 'Natsuki';
+    font-size:400%;
+    font-weight:bold;
+    color:#19B5FE;
+}
+
+/** Fonts + Font Size */
+
+    /** Header + Navigation Bar = Logo exclude */
+.title{
+    font-family: 'Bison-Bold';
+    font-size: 150%;
+} 
+
+/** Navigation containers */
+
+.navbar{
+    padding-top:0;
+    padding-bottom:0;
+}
+
+/** Navigation bar + Menu */
 .navbar{
     padding-top:0;
     padding-bottom: 0;
 }
 
-
-
 /** Nav */
+header{
+    width: 100%;
+    position:sticky;  
+}
+    /** connexion top right */
+.connexion{
+    display:flex;
+    
+}
+.connexion h3{
+    padding-right:5px;
+}
+.connexion button{
+    padding-bottom: 8px;
+}
 .navbar navbar-light navbar-1{
+    width: 100%;
+    position:sticky;
     padding:0;
 }
+
  /** menu categories */
+ .categories{
+     height:75%;
+ }
  .categories ul{
      width:1200px;
-     padding-top: 100px;
      margin-bottom:25px;
      display:flex;
      justify-content: space-around;
  }
 
+ .menu {
+    list-style: none;
+}
+
 .title {
+    width:100%;
     
     padding:0;
     text-align: center;
@@ -125,11 +133,14 @@ strong{
     top:0;
     position: sticky;
     margin:0;
+    z-index: 1;
+    display:flex;
     
     
 }
 
 /**Connexion */
+
 #navbarSupportedContent15{
     background-color: #A9CCE3;
     color:#4D5656;
@@ -143,6 +154,7 @@ strong{
     color:#19B5FE;
 
 }
+/** radio boxes */
 .male, .female{
    display:flex;
    align-items: baseline;        
@@ -164,6 +176,13 @@ strong{
 
 /* INPUT Navbar*/
 /*  Bouton*/
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+    
+}
+.connexion{
+    float:right;
+}
 .navbar-toggler{
     border: none;
     padding: 0;
@@ -177,43 +196,115 @@ strong{
     background-color:#19B5FE;
 }
 
-.sousNavBar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-   
-}
-
-.menu {
-    list-style: none;
-}
-
-/** menu nav list */
-
-
-
 /* Middle Section */
 
 
 /* MAIN */
 
 main{
+    width:100%;
     margin:0;
     position: absolute;
     z-index: -1;
-    display
+
 }
 
+/** first block section */
 #aboutUs{
+    width:100%;
+    height:550px;
     margin:0;
     padding:0;
+    background-image: url("../img/salon.jpg");
+    display:flex;
+    align-items: flex-end;
 }
+/** text first section */
+h1{
+    padding-left:20px;
+    
+}
+
+/** SECOND SECTION */
+#galiServices{
+    margin:0;
+}
+#beauty{
+    display:flex;  
+    padding-left: 60px;
+}
+.bigCube-p-h3-2{
+    width: 100%; 
+}
+.PicServices{
+    display:flex;
+    align-items: center;    
+}
+
+
+
+.left{
+    margin-top:25px;
+}
+.rightTop{
+    margin-right:25px;
+}
+.PicServices h2, .bigCube-p-h3-2 h3{
+    text-align: center;
+}
+.PicServices h2, .bigCube-p-h3-2 h3{
+    padding-top:10px;
+}
+.left:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+.rightTop img{
+    max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.rightTop:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  } 
+.rightBottom img{
+    max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.rightBottom:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+} 
+
+/** third section  + map*/
+#how h1, #how h3, #map h3{
+    color: black;
+    text-align:center;
+}
+
+#map iframe{
+    width:100%;
+}
+
+
 
 /** footer*/
 #contactUs{
     background-color:black;
-
+    font-size: 30px;
+    padding:5px;
+}
+#contactUs article{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
