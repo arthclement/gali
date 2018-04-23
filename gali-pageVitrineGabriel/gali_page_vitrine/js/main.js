@@ -123,7 +123,7 @@ jQuery(document).ready(function() {
     /** ***FIRST PASSWORD***** */
     //FOCUS IN
     $("#passwordRegister").on("focus", function() {
-            console.log("focus in passed password registration");
+
             $("#RegistrationpassCheck").css("display", "block");
         })
         //FOCUS OUT 
@@ -131,26 +131,25 @@ jQuery(document).ready(function() {
 
     function checkPswd() {
         var password = $("#passwordRegister").val();
-        console.log("il y a  : " + password);
-        //si longueur >8
+
         if (password.length > 8) {
             $("#length").addClass("valid").removeClass("invalid");
         } else {
             $("#length").addClass("invalid").removeClass("valid");
         }
-        //	.match(/[A-z]/) pour les lettres
+        //	.match(/[A-z]/) 
         if (password.match(/[A-z]/)) {
             $("#letter").addClass("valid").removeClass("invalid");
         } else {
             $("#letter").addClass("invalid").removeClass("valid");
         }
-        //	.match(/[A-Z]/) pour les majuscules
+        //	.match(/[A-Z]/) uppercase
         if (password.match(/[A-Z]/)) {
             $("#capital").addClass("valid").removeClass("invalid");
         } else {
             $("#capital").addClass("invalid").removeClass("valid");
         }
-        //	.match(/\d/) pour les nombres
+        //	.match(/\d/) numbers
         if (password.match(/\d/)) {
             $("#number").addClass("valid").removeClass("invalid");
         } else {
