@@ -1,10 +1,5 @@
-
 /** Body */
-
-* {
-    box-sizing: border-box;
-    transition-duration: 0.3s;
-    /** Nav + body colors */
+/** Nav + body colors */
     /** color test background
     #EAF2F8    #AED6F1
     #A9CCE3    #D4E6F1  #D6EAF8
@@ -12,31 +7,28 @@
     #D5DBDB     #D5D8DC
     #D6DBDF   #FEF5E7
     #F4F6F7    #AED6F1
+ */
 
-    */
-    
+*{
+    box-sizing: border-box;
+    transition-duration: 0.3s;
     font-family: 'Bison-Bold'; 
     font-weight:bold;
-    
-    
 }
+
 /** Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
 @font-face{
-    
     font-family: 'Natsuki';
     src:url('fonts/Natsuki/natsuki.ttf') format('truetype');
-    
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face{
-
     font-family: 'Bison-Bold';
     src:url('fonts/Bison/Bison-Bold.ttf') format('truetype');
-    
     font-weight: bold;
     font-style: normal;
 }
@@ -46,14 +38,14 @@
 .title, #galiServices{
     background-color:black;
 }
-/** Header + Navigation bar */
-    /** menu */ /** main */
-.categories ul li a, .connexion h3, main, h1{
+/** title + Navigation bar */
+/** menu */ /** main */
+.categories ul li a, h3, main, h1{
     text-decoration: none;
     color:#EAF2F8;
-    
 } 
-  /** button */
+
+/** button */
 .navbar-toggler-icon{
     color:#A9CCE3;
 }
@@ -67,42 +59,32 @@ strong, #aboutUs span{
 }
 
 /** Fonts + Font Size */
-
-    /** Header + Navigation Bar = Logo exclude */
+/** title + Navigation Bar = Logo exclude */
 .title{
     font-family: 'Bison-Bold';
     font-size: 150%;
 } 
 
 /** Navigation containers */
-
 .navbar{
     padding-top:0;
     padding-bottom:0;
 }
 
-/** Navigation bar + Menu */
-.navbar{
-    padding-top:0;
-    padding-bottom: 0;
+/** connexion top right */
+.connexion{
+	display:flex;
+	flex-direction: column;
 }
 
-/** Nav */
-header{
-    width: 100%;
-    position:sticky;  
-}
-    /** connexion top right */
-.connexion{
-    display:flex;
-    
-}
 .connexion h3{
     padding-right:5px;
 }
+
 .connexion button{
     padding-bottom: 8px;
 }
+
 .navbar navbar-light navbar-1{
     width: 100%;
     position:sticky;
@@ -110,23 +92,23 @@ header{
 }
 
  /** menu categories */
- .categories{
+.categories{
      height:75%;
  }
- .categories ul{
-     width:1200px;
-     margin-bottom:25px;
-     display:flex;
-     justify-content: space-around;
+ 
+.categories ul{
+    width:1200px;
+    margin-bottom:25px;
+    display:flex;
+    justify-content: space-around;
  }
 
- .menu {
+.menu {
     list-style: none;
 }
 
 .title {
     width:100%;
-    
     padding:0;
     text-align: center;
     position: -webkit-sticky;
@@ -135,12 +117,9 @@ header{
     margin:0;
     z-index: 1;
     display:flex;
-    
-    
 }
 
 /**Connexion */
-
 #navbarSupportedContent15{
     background-color: #A9CCE3;
     color:#4D5656;
@@ -149,25 +128,29 @@ header{
 [class="form-check form-check-inline"]{
     margin-left: 50px;
 }
+
 [type="checkbox"]{
-
     color:#19B5FE;
-
 }
+
 #pswd_info{
     display:none;
 }
+
 /** radio boxes */
 .male, .female{
    display:flex;
    align-items: baseline;        
 }
+
 .female{
     margin-left:70px;
 }
+
 .gender{
     padding-left:5px;
 }
+
 #radio{
     display:flex;
     flex-direction: row;
@@ -183,15 +166,14 @@ header{
     background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
     
 }
-.connexion{
-    float:right;
-}
+
 .navbar-toggler{
     border: none;
     padding: 0;
 }
+
 .form-control{
-  background-color: rgba(24, 190, 240, 0.1);  
+  	background-color: rgba(24, 190, 240, 0.1);  
 }
 
 [type="submit"]{
@@ -201,15 +183,12 @@ header{
 
 /* Middle Section */
 
-
 /* MAIN */
-
 main{
     width:100%;
     margin:0;
     position: absolute;
     z-index: -1;
-
 }
 
 /** first block section */
@@ -222,6 +201,7 @@ main{
     display:flex;
     align-items: flex-end;
 }
+
 /** text first section */
 h1{
     padding-left:20px;
@@ -232,55 +212,63 @@ h1{
 #galiServices{
     margin:0;
 }
+
 #beauty{
     display:flex;  
     padding-left: 60px;
     width:90%;
     justify-content: space-between;
 }
+
 .bigCube-p-h3-2{
     width: 100%; 
 }
+
 .PicServices{
     display:flex;
     align-items: center;    
 }
 
-
-
 .left{
     margin-top:25px;
 }
+
 .rightTop{
     margin-right:25px;
 }
+
 .PicServices h2, .bigCube-p-h3-2 h3{
     text-align: center;
 }
+
 .PicServices h2, .bigCube-p-h3-2 h3{
     padding-top:10px;
 }
+
 .left:hover img {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  }
-.rightTop img{
-    max-width: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
+
+.rightTop img{
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
 .rightTop:hover img {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  } 
+} 
+
 .rightBottom img{
-    max-width: 100%;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .rightBottom:hover img {
     -moz-transform: scale(1.1);
@@ -298,18 +286,15 @@ h1{
     width:100%;
 }
 
-
-
 /** footer*/
 #contactUs{
     background-color:black;
     font-size: 30px;
     padding:5px;
 }
+
 #contactUs article{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
-
