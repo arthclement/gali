@@ -5,8 +5,7 @@
     <title>GALI</title>
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" href = "path / to / font -awesome / css / font – awesome.min.css" > -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -21,54 +20,61 @@
             <nav class="navbar navbar-light navbar-1 white">
                 <!-- Navbar brand -->
                 <!-- Titre Gali + slogan dans navBar -->
-                <div class="galiTitle" >
+                <div class="galiTitle">
                     <a class="navbar-brand" href="#aboutUs">
                         <span>
-                            <strong > Gali </strong>  
+                            <strong> Gali </strong>
                         </span>
                     </a>
                 </div>
-                
-                
+
+
                 <!-- Collapse button -->
-                <div class ="connexion">
-                    <a href="#Connexion"><h3>Connexion</h3>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button></a>
+                <div class="connexion">
+                    <a href="#Connexion">
+                        <h3>Connexion</h3>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </a>
                 </div>
-                
+
                 <!-- sortie propre pour le css -->
-               
+
                 <!-- Collapsible content -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-                    
+
                     <!--Welcome Form-->
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
-                                aria-selected="true">Log In</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                aria-selected="false">Register</a>
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Log In</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Register</a>
                         </div>
                         <!-- Navigation Login-->
                     </nav>
-                    
+
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
                             <!--LogIn Form -->
-                            <form>
+                            <form id="loginForm">
                                 <!--Username-->
                                 <div class="form-group">
                                     <label for="Username">Username or @email</label>
                                     <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
+                                    <!--checking for validation form-->
+                                    <div id="usernameCheck">
+                                        <h4>It must be fullfilled</h4>
+                                    </div>
                                 </div>
                                 <!--password-->
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" class="form-control" id="Loginpassword" placeholder="Password">
+                                    <!--checking for validation form-->
+                                    <div id="LogPasswordCheck">
+                                        <h4>It must be fullfilled</h4>
+                                    </div>
                                 </div>
                                 <!--submit-->
                                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -83,44 +89,67 @@
                                     <div class="form-group col-md-6">
                                         <label for="firstname">Firstname</label>
                                         <input type="text" class="form-control" id="firstname" placeholder="Firstname">
+                                        <!--checking for validation form-->
+                                        <div id="firstnameCheck">
+                                            <h4>The firstname must be fullfilled</h4>
+                                        </div>
                                     </div>
                                     <br/>
                                     <!--gender-->
+                                    <!--checking for validation ??-->
+                                    <!--need modification for the label-->
                                     <div class="form-group col-md-6" id="radio">
                                         <div class="male">
-                                            <input   type="radio" name="gender" value="male" checked>
+                                            <input type="radio" name="gender" value="male" checked required>
                                             <label class="gender">Male</label>
                                         </div>
                                         <div class="female">
-                                            <input   type="radio" name="gender" value="female"> 
-                                            <label >Female</label>
+                                            <input type="radio" name="gender" value="female">
+                                            <label>Female</label>
                                         </div>
                                     </div>
                                     <!--lastname-->
                                     <div class="form-group col-md-6" class="form-check form-check-inline">
                                         <label for="lastname">Lastname</label>
                                         <input type="text" class="form-control" id="lastname" placeholder="Lastname">
+                                        <!--checking for validation form-->
+                                        <div id="lastnameCheck">
+                                            <h4>The lastname must be fullfilled</h4>
+                                        </div>
                                     </div>
                                     <!--email-->
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" placeholder="Email">
+                                        <!--checking for validation form-->
+                                        <div id="emailCheck">
+                                            <h4>You must enter a valid email</h4>
+                                        </div>
                                     </div>
                                     <!--password-->
                                     <div class="form-group col-md-6">
                                         <label for="password">Password</label>
                                         <input type="password" class="form-control" id="passwordRegister" placeholder="Password">
-                                    </div>
-                                    <!--jquery class = display: none-->
-                                    <div id="pswd_info">
-                                            <h4>Le mot de passe doit forcément contenir :</h4>
+                                        <div id="RegistrationpassCheck">
+                                            <h4>The password must contain : </h4>
                                             <ul>
-                                                <li id="letter" class="invalid">Au moins <strong>une lettre</strong></li>
-                                                <li id="capital" class="invalid">Au moins <strong>une majuscule</strong></li>
-                                                <li id="number" class="invalid">Au moins <strong>un chiffre</strong></li>
-                                                <li id="length" class="invalid">Faire au moins <strong>8 caractères</strong></li>
+                                                <li id="letter" class="invalid">At least
+                                                    <strong class="pswd_valid">a letter</strong>
+                                                </li>
+                                                <li id="capital" class="invalid">At least
+                                                    <strong class="pswd_valid">an uppercase</strong>
+                                                </li>
+                                                <li id="number" class="invalid">At least
+                                                    <strong class="pswd_valid">a number</strong>
+                                                </li>
+                                                <li id="length" class="invalid">Have a minimum
+                                                    <strong class="pswd_valid">8 characters</strong>
+                                                </li>
                                             </ul>
                                         </div>
+                                    </div>
+                                    <!--jquery class = display: none-->
+
                                     <!--confirm password-->
                                     <div class="form-group col-md-6">
                                         <label for="password">Confirm Password</label>
@@ -136,27 +165,34 @@
                                     </div>
                                 </div>
                                 <!--sign in-->
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                <button type="submit" class="btn btn-primary" id="signIn">Sign in</button>
                             </form>
 
                         </div>
                     </div>
-                
-                    
+
+
             </nav>
+            <!--Article à changer-->
             <article class="categories">
-                    <ul>
-                        <li class="menu"><a  href="#aboutUs">About Us</a></li>
-                        <li class="menu"><a  href="#galiServices">Our Services</a></li>
-                        <li class="menu"><a  href="#contactUs">Contact Us</a></li>
-                    </ul>
-            </article>    
-            
+                <ul>
+                    <li class="menu">
+                        <a href="#aboutUs">About Us</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#galiServices">Our Services</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#contactUs">Contact Us</a>
+                    </li>
+                </ul>
+            </article>
+
             <!-- End Navbar-->
-            
-            
+
+
         </header>
-    </article>    
+    </article>
 
 
     <!-- End Header + Menu -->
@@ -167,7 +203,8 @@
 
         <section id="aboutUs" class="container-fluid row">
             <!-- Begin 1 big cube-->
-                    <h1>Welcome to <span>Gali</span> Hair Salon</h1>  
+            <h1>Welcome to
+                <span>Gali</span> Hair Salon</h1>
         </section>
         <!--*****************************  Deuxieme Container-->
         <!--SECOND SECTION-->
@@ -175,70 +212,74 @@
             <!-- End Espace à conserver idees : photo - text -->
 
             <!-- begin little cubes-->
-            
-                
-            
+
+
+
             <!-- End little cubes-->
             <!-- Begin 1 big cube-->
-           
-                <div class="bigCube-p-h3-2">
-                        <h3>Gali helps you to book your appointements in a easy and intuitif way</h3>
-                        <h3>Change the way of your appointements</h3>
-                    <article class="PicServices">
-                        <aside class="left">
-                            <a href="#Connexion"><img src="img/cut.jpg"></a>
-                            <h2>Hair</h2>
+
+            <div class="bigCube-p-h3-2">
+                <h3>Gali helps you to book your appointements in a easy and intuitif way</h3>
+                <h3>Change the way of your appointements</h3>
+                <article class="PicServices">
+                    <aside class="left">
+                        <a href="#Connexion">
+                            <img src="img/cut.jpg">
+                        </a>
+                        <h2>Hair</h2>
+                    </aside>
+                    <div id="beauty">
+                        <aside class="rightTop">
+                            <a href="#Connexion">
+                                <img src="img/beauty.jpg">
+                            </a>
+                            <h2>Beauty</h2>
                         </aside>
-                        <div id="beauty">
-                            <aside class="rightTop">
-                                <a href="#Connexion"><img src="img/beauty.jpg"></a>
-                                <h2>Beauty</h2>
-                            </aside>
-                            <aside class="rightBottom">
-                                <a href="#Connexion"><img src="img/beauty.jpg"></a>
-                                    <h2>Make-Up</h2>
-                            </aside>
-                        </div>    
-                    </article>     
-                </div>
-           
+                        <aside class="rightBottom">
+                            <a href="#Connexion">
+                                <img src="img/beauty.jpg">
+                            </a>
+                            <h2>Make-Up</h2>
+                        </aside>
+                    </div>
+                </article>
+            </div>
+
             <!-- end big cube-->
         </section>
 
         <!--Third section-->
         <section id="how">
             <h1>How it works ?</h1>
-              <h3>Log In or Registrate to our application</h3>
-              <h3>Select the service that you want and choose a team member</h3>
-              <h3>Check your availibities for your appointment online</h3>
+            <h3>Log In or Registrate to our application</h3>
+            <h3>Select the service that you want and choose a team member</h3>
+            <h3>Check your availibities for your appointment online</h3>
         </section>
 
         <!--Map Come to us-->
         <section id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.0526848791633!2d5.946984415205174!3d49.502399079355776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479535034c0a600b%3A0xe8b8bed0e26f33a!2sTechnoport+S.a.!5e0!3m2!1sfr!2slu!4v1523848946449" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.0526848791633!2d5.946984415205174!3d49.502399079355776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479535034c0a600b%3A0xe8b8bed0e26f33a!2sTechnoport+S.a.!5e0!3m2!1sfr!2slu!4v1523848946449"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             <h3>Find Us Just Here</h3>
-        </section>    
-        
-            <!-- footer -->
+        </section>
+
+        <!-- footer -->
         <footer id="contactUs">
             <article>
                 <p>@Group: Gabriel, Arthur, Leslie, Ivan</p>
                 <p>Tel: 00352 11 22 33</p>
                 <p>gali@gali-team.com</p>
             </article>
-            
+
         </footer>
 
 
     </main>
-    
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 
