@@ -154,6 +154,9 @@ header{
     color:#19B5FE;
 
 }
+#pswd_info{
+    display:none;
+}
 /** radio boxes */
 .male, .female{
    display:flex;
@@ -232,6 +235,8 @@ h1{
 #beauty{
     display:flex;  
     padding-left: 60px;
+    width:90%;
+    justify-content: space-between;
 }
 .bigCube-p-h3-2{
     width: 100%; 
