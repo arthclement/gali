@@ -26,59 +26,140 @@ jQuery(document).ready(function() {
         }
     });
 
-    /** *************************Form Checking ************************************* */
-    /** LOGIN */
-    /* username */
-    //focus action + submit ??
+    /** *************************Form Checking **************************************************** 
+     * ***************************************************************************************
+     * ***********************************************************************
+     */
+
+    /** *****************LOGIN*********** */
+
+
+    /* ***username** */
+    // FOCUS  action 
     $("#username").on("focus", function() {
         console.log("focus in passed username");
         $("#usernameCheck").css("display", "block");
     })
 
-    //focus out action hide the block
-    // maybe when we press on the keyboard ??
+    // BLUR out action hide the block
+
     $("#username").on("keyup", function() {
         console.log("focus out passed username");
         $("#usernameCheck").css("display", "none");
     })
 
-    /*  Log In password */
-    //focus action + submit ??
+
+
+    /*  ***Log In password**** */
+    // FOCUS action 
     $("#Loginpassword").on("focus", function() {
         console.log("focus in passed password log in");
         $("#LogPasswordCheck").css("display", "block");
     })
 
-    //focus out action hide the block
-    // maybe when we press on the keyboard ??
+    //FOCUS out action hide the block
+
     $("#Loginpassword").on("keyup", function() {
         console.log("focus out passed password log in");
         $("#LogPasswordCheck").css("display", "none");
     })
 
-    /** Form Login validation for the connexion */
-    $("#loginForm").on("submit", function(event) {
-        event.preventDefault();
-        //check the criteria of the inputs
-        if ($("#username").val().length < 20 && $("#Loginpassword").val().length < 8) {
 
-            console.log("username criteria confirmation needed");
-            console.log("Login password criteria needed");
 
-            var username = $("#username").val();
-            var passwordLogin = $("#Loginpassword").val();
 
-            alert("Thank you " + username + "your connexion succeeded");
-        }
+
+
+    /** *************REGISTRATION FORM ***************** */
+
+
+
+    /****** INPUT FOCUS****************************** */
+
+    /*****FIRSTNAME***  */
+    //FOCUS IN
+    $("#firstname").on("focus", function() {
+        console.log("focus in passed firstname registration");
+        $("#firstnameCheck").css("display", "block");
+    })
+
+    //FOCUS OUT 
+    $("#firstname").on("keyup", function() {
+        console.log("focus out passed firstname registration");
+        $("#firstnameCheck").css("display", "none");
+    })
+
+
+    /*****LASTNAME***  */
+    //FOCUS IN
+    $("#lastname").on("focus", function() {
+        console.log("focus in passed lastname registration");
+        $("#lastnameCheck").css("display", "block");
+    })
+
+    //FOCUS OUT 
+    $("#lastname").on("keyup", function() {
+        console.log("focus out passed lastname registration");
+        $("#lastnameCheck").css("display", "none");
+    })
+
+
+
+    /*****EMAIL************************* */
+    //FOCUS IN
+    $("#email").on("focus", function() {
+        console.log("focus in passed email registration");
+        $("#emailCheck").css("display", "block");
+    })
+
+    //FOCUS OUT 
+    $("#email").on("keyup", function() {
+        console.log("focus out passed email registration");
+        $("#emailCheck").css("display", "none");
     })
 
 
 
 
+    /** ***FIRST PASSWORD***** */
+    //FOCUS IN
+    $("#passwordRegister").on("focus", function() {
+        console.log("focus in passed password registration");
+        $("#RegistrationpassCheck").css("display", "block");
+    })
 
+    //FOCUS OUT 
 
+    $("#passwordRegister").on("keyup", checkPswd);
 
+    function checkPswd() {
+        var password = $("#passwordRegister").val();
+        console.log("il y a  : " + password);
+        //si longueur >8
+        if (password.length > 8) {
+            $("#length").addClass("valid").removeClass("invalid");
+        } else {
+            $("#length").addClass("invalid").removeClass("valid");
+        }
+        //	.match(/[A-z]/) pour les lettres
+        if (password.match(/[A-z]/)) {
+            $("#letter").addClass("valid").removeClass("invalid");
+        } else {
+            $("#letter").addClass("invalid").removeClass("valid");
+        }
+        //	.match(/[A-Z]/) pour les majuscules
+        if (password.match(/[A-Z]/)) {
+            $("#capital").addClass("valid").removeClass("invalid");
+        } else {
+            $("#capital").addClass("invalid").removeClass("valid");
+        }
+        //	.match(/\d/) pour les nombres
+        if (password.match(/\d/)) {
+            $("#number").addClass("valid").removeClass("invalid");
+        } else {
+            $("#number").addClass("invalid").removeClass("valid");
+        }
 
+    }
 
 
 

@@ -191,6 +191,9 @@ header {
 /** **********************Form***************** */
 
 
+/***LOG IN FORM *******************/
+
+
 /** Log In page =  username + password */
 
 #usernameCheck,
@@ -199,6 +202,9 @@ header {
     color: #19B5FE;
     display: none;
 }
+
+
+/***********************REGISTRATION FORM *****************/
 
 
 /**  Registration page  = Firstname + Lastname + Username + Validation Form = display with jQuery */
@@ -246,6 +252,21 @@ header {
 
 #RegistrationpassCheckul li {
     text-align: center;
+}
+
+
+/*** classes of the defined checked input */
+
+.invalid {
+    padding-left: 22px;
+    line-height: 24px;
+    color: #ec3f41;
+}
+
+.valid {
+    padding-left: 22px;
+    line-height: 24px;
+    color: #3a7d34;
 }
 
 

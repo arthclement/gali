@@ -62,7 +62,7 @@
                                 <div class="form-group">
                                     <label for="Username">Username or @email</label>
                                     <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
-                                    <!--checking for validation form-->
+                                    <!--FOCUS -->
                                     <div id="usernameCheck">
                                         <h4>It must be fullfilled</h4>
                                     </div>
@@ -71,32 +71,33 @@
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" id="Loginpassword" placeholder="Password">
-                                    <!--checking for validation form-->
+                                    <!--FOCUS-->
                                     <div id="LogPasswordCheck">
                                         <h4>It must be fullfilled</h4>
                                     </div>
                                 </div>
-                                <!--submit-->
+                                <!--LOGIN FORM SUBMIT-->
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
 
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            <!--Register Form -->
-                            <form>
+                            <!--REGISTRATION FORM -->
+                            <form id="RegistrationForm">
                                 <!--firstname-->
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="firstname">Firstname</label>
                                         <input type="text" class="form-control" id="firstname" placeholder="Firstname">
-                                        <!--checking for validation form-->
+                                        <!--FOCUS-->
                                         <div id="firstnameCheck">
-                                            <h4>The firstname must be fullfilled</h4>
+                                            <h4>Please enter your firstname</h4>
                                         </div>
                                     </div>
                                     <br/>
                                     <!--gender-->
                                     <!--checking for validation ??-->
+                                    <!--TO DO LABEL FORM GENDER-->
                                     <!--need modification for the label-->
                                     <div class="form-group col-md-6" id="radio">
                                         <div class="male">
@@ -112,7 +113,7 @@
                                     <div class="form-group col-md-6" class="form-check form-check-inline">
                                         <label for="lastname">Lastname</label>
                                         <input type="text" class="form-control" id="lastname" placeholder="Lastname">
-                                        <!--checking for validation form-->
+                                        <!--FOCUS-->
                                         <div id="lastnameCheck">
                                             <h4>The lastname must be fullfilled</h4>
                                         </div>
@@ -120,8 +121,9 @@
                                     <!--email-->
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
+                                        <!--required input for email validation-->
                                         <input type="email" class="form-control" id="email" placeholder="Email">
-                                        <!--checking for validation form-->
+                                        <!--FOCUS-->
                                         <div id="emailCheck">
                                             <h4>You must enter a valid email</h4>
                                         </div>
@@ -130,6 +132,7 @@
                                     <div class="form-group col-md-6">
                                         <label for="password">Password</label>
                                         <input type="password" class="form-control" id="passwordRegister" placeholder="Password">
+                                        <!--FOCUS-->
                                         <div id="RegistrationpassCheck">
                                             <h4>The password must contain : </h4>
                                             <ul>
@@ -152,20 +155,21 @@
 
                                     <!--confirm password-->
                                     <div class="form-group col-md-6">
-                                        <label for="password">Confirm Password</label>
+                                        <label for="password" id="passwordConfirmation">Confirm Password</label>
                                         <input type="password" class="form-control" id8=8 "passwordRegisterConfirm" placeholder="Confirm Password">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <!--check out-->
+                                    <!--WHAT KIND OF ACTION ON IT-->
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="gridCheck">
                                         <label class="form-check-label" for="gridCheck">Check me out</label>
                                     </div>
                                 </div>
-                                <!--sign in-->
-                                <button type="submit" class="btn btn-primary" id="signIn">Sign in</button>
+                                <!--REGISTRATION BUTTON-->
+                                <button type="RegistrationSubmit" class="btn btn-primary" id="signIn">Sign in</button>
                             </form>
 
                         </div>
