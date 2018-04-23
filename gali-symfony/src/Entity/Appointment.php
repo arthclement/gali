@@ -5,69 +5,123 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Appointment
- *
- * @ORM\Table(name="appointment", uniqueConstraints={@ORM\UniqueConstraint(name="idappointment_UNIQUE", columns={"idappointment"}), @ORM\UniqueConstraint(name="idcustomer_UNIQUE", columns={"idcustomer"}), @ORM\UniqueConstraint(name="idpro_UNIQUE", columns={"idpro"})}, indexes={@ORM\Index(name="customer_idx", columns={"idcustomer"}), @ORM\Index(name="pro_idx", columns={"idpro"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\AppointmentRepository")
  */
 class Appointment
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="idappointment", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $idappointment;
+    private $id;
 
     /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="date", type="datetime", nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="appointments")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $customer;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="appointments")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $professional;
+
+    /**
+     * @ORM\Column(type="datetime")
      */
     private $date;
 
     /**
-     * @var string|null
-     *
-     * @ORM\Column(name="description", type="text", length=65535, nullable=true)
-     */
-    private $description;
-
-    /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="duration", type="time", nullable=true)
+     * @ORM\Column(type="time")
      */
     private $duration;
 
     /**
-     * @var bool|null
-     *
-     * @ORM\Column(name="approved", type="boolean", nullable=true)
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="boolean")
      */
     private $approved;
 
-    /**
-     * @var \User
-     *
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idcustomer", referencedColumnName="iduser")
-     * })
-     */
-    private $idcustomer;
+    public function getId()
+    {
+        return $this->id;
+    }
 
-    /**
-     * @var \User
-     *
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idpro", referencedColumnName="iduser")
-     * })
-     */
-    private $idpro;
+    public function getCustomer(): ?User
+    {
+        return $this->customer;
+    }
 
+    public function setCustomer(?User $customer): self
+    {
+        $this->customer = $customer;
 
+        return $this;
+    }
+
+    public function getProfessional(): ?User
+    {
+        return $this->professional;
+    }
+
+    public function setProfessional(?User $professional): self
+    {
+        $this->professional = $professional;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getDuration(): ?\DateTimeInterface
+    {
+        return $this->duration;
+    }
+
+    public function setDuration(\DateTimeInterface $duration): self
+    {
+        $this->duration = $duration;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getApproved(): ?bool
+    {
+        return $this->approved;
+    }
+
+    public function setApproved(bool $approved): self
+    {
+        $this->approved = $approved;
+
+        return $this;
+    }
 }
