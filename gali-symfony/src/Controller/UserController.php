@@ -2,22 +2,16 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
+use App\Entity\User;
 
 class UserController
 {
     public function registerUser
     (
         Request $request,
-//        ObjectManager $objectManager,
-//        SessionInterface $session,
-//        EncoderFactoryInterface $encoderFactory,
         FormFactoryInterface $factory
     )
     {
