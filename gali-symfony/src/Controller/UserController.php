@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Repository\RolesRepository;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -8,7 +9,6 @@ use App\Entity\User;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use App\Repository\RoleRepository;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -27,7 +27,7 @@ class UserController
         FormFactoryInterface $factory,
         ObjectManager $manager,
         UrlGeneratorInterface $urlGenerator,
-        RoleRepository $roleRepository,
+        RolesRepository $rolesRepository,
         EncoderFactoryInterface $encoderFactory,
         Environment $twig,
         ValidatorInterface $validator
