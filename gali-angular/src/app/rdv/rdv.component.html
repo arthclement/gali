@@ -1,8 +1,83 @@
-<p>
+<!-- <p>
   rdv works!
 </p>
 <input type="text" (keyup)="onNameKeyUp($event)">
-<button (click)="getUsers()" >Get Users</button>
+<button (click)="getProfile()">Get Profil</button>
+<br>
+<div *ngIf="found">
+  <span> {{name}}'s age is {{age}}</span>
+</div>
+
+----------------
+
+<button (click)="postProfile()">Post Profil</button>
+<br>
+-->
+<div id="bgcAgenda">
+  <form id="formAgenda">
+    <h3>Take an Appointement Here</h3>
+    <h5>Choose your Hardresser : </h5>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Louis
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Marie
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Julie
+      </label>
+    </div>
+    <br>
+    <h5>Choose your date : </h5>
+    <div class="row">
+      <div class="col">
+        <input type="date" class="form-control" placeholder="First name">
+      </div>
+    </div>
+    <br>
+    <h5> Unavailable Hours </h5>
+    <!-- <Span>{{coiffeur.unavailable}}</Span> -->
+    <p> here display the unavailable hours</p>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button (click)=getProfile()> Post rdv</button>
+  </form>
 
 
-
+  <table id="tableAgenda">
+    <tr>
+      <th>Coiffeur</th>
+      <th>Date</th>
+      <th>Heure</th>
+      <th>Description</th>
+    </tr>
+    <!-- <tr>
+    <td>{{coifferu.name}}</td>
+    <td>{{coiffeur.date}}</td>
+    <td>{{coiffeur.heure}}</td>
+    <td>{{coiffeur.Description}}</td>
+  </tr> -->
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>Couleur</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>80</td>
+      <td>shampoing + coupe homme</td>
+    </tr>
+  </table>
+</div>
