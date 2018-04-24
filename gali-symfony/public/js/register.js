@@ -23,6 +23,7 @@ $('#register-submit').on('click', function(event) {
 
 function usernameValidatorCallback(event){
     var xhr = event.target;
+    var html;
 
     if (xhr.readyState !== 4) {
         return;
@@ -33,7 +34,7 @@ function usernameValidatorCallback(event){
     if (json.available) {
         $('#username').attr('aria-describedby', 'inputError2Status');
 
-        var html = '<span class="glyphicon glyphicon-ok form-control-feedback usernameValidatorCallback" aria-hidden="true"></span><span id="inputSuccess2Status" class="sr-only usernameValidatorCallback">(success)</span>';
+        html = '<span class="glyphicon glyphicon-ok form-control-feedback usernameValidatorCallback" aria-hidden="true"></span><span id="inputSuccess2Status" class="sr-only usernameValidatorCallback">(success)</span>';
 
         $('.usernameValidatorCallback').remove();
         $('#username').parent().removeClass('has-success has-error has-warning has-feedback');
@@ -43,7 +44,7 @@ function usernameValidatorCallback(event){
     } else {
         $('#username').attr('aria-describedby', 'inputError2Status');
 
-        var html = '<span class="glyphicon glyphicon-remove form-control-feedback usernameValidatorCallback" aria-hidden="true"></span><span id="inputError2Status" class="sr-only usernameValidatorCallback">(error)</span>';
+        html = '<span class="glyphicon glyphicon-remove form-control-feedback usernameValidatorCallback" aria-hidden="true"></span><span id="inputError2Status" class="sr-only usernameValidatorCallback">(error)</span>';
 
         $('.usernameValidatorCallback').remove();
         $('#username').parent().removeClass('has-success has-error has-warning has-feedback');
