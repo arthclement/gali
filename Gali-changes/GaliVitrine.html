@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Neuton" rel="stylesheet">
+    <link href="Style/style.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <title>Gali</title>
+</head>
+
+<body>
+    <!-- top navigation bar = logo + links + social media icons-->
+    <header>
+
+        <section class="logo">
+            <!--Logo Gali -->
+            <a class="logo" href="#Connexion">Gali</a>
+        </section>
+
+        <!--Intégration bootstrap button pour register + log in-->
+        <!--bouton-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15" aria-controls="navbarSupportedContent15"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <section class="navbar">
+            <!-- navigation bar at the top-->
+            <nav>
+                <ul>
+                    <li class="menu"><a href="#Salon">Our Salon</a></li>
+                    <li class="menu"><a href="#Services">Services</a></li>
+                    <li class="menu"><a href="#Connexion">Appointment</a></li>
+                    <li class="menu"><a href="#Contact">Contact Us</a></li>
+
+                </ul>
+                <!-- social media icons-->
+                <div class="icon">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </nav>
+
+        </section>
+    </header>
+
+    <!-- main photos -->
+    <main>
+        <!-- Big Picture in background with text présentation salon-->
+        <section id="Salon">
+            <article class="TextSalon">
+                <h1>WELCOME TO GALI SALON</h1>
+
+            </article>
+        </section>
+        <!-- Prestations / Services / Tarifs -->
+        <section id="Services">
+
+            <article class="TextServices">
+                <h1>Our Services</h1>
+            </article>
+            <!--Hair + Beauty + MakeUp Services the pictures in background-->
+            <article class="PicServices">
+                <aside class="left">
+                    <a href="#Connexion"><img src="ImgTest/cut.jpg"></a>
+                    <h2>Hair</h2>
+                </aside>
+                <div id="beauty">
+                    <aside class="rightTop">
+                        <a href="#Connexion"><img src="ImgTest/beauty.jpg"></a>
+                        <h2>Beauty</h2>
+                    </aside>
+                    <aside class="rightBottom">
+                        <a href="#Connexion"><img src="ImgTest/beauty.jpg"></a>
+                        <h2>Make-Up</h2>
+                    </aside>
+                </div>
+            </article>
+        </section>
+
+        <!--Appointment instructions-->
+        <!--Emplacement photos-->
+
+        <h2 id="how">How it works ?</h2>
+        <section id="RendezVous">
+            <aside class="step1">
+                <div class="TextOne">
+                    <h3>Log In or Registrate to our application</h3>
+                </div>
+                <div class="PicOne">
+
+                </div>
+            </aside>
+            <aside class="step2">
+                <div class="TextTwo">
+                    <h3>Select the service that you want and choose a team member</h3>
+                </div>
+                <div class="PicTwo">
+
+                </div>
+            </aside>
+            <aside class="step3">
+                <div class="TextThree">
+                    <h3>Check your availibities for your appointment online</h3>
+                </div>
+                <div class="PicThree">
+
+                </div>
+            </aside>
+        </section>
+
+        <!--Contact-->
+        <!--Team Member Pictures-->
+        <section id="Contact">
+            <article id="Gabriel"></article>
+            <article id="Arthur"></article>
+            <article id="Ivan"></article>
+            <article id="Leslie"></article>
+        </section>
+    </main>
+
+    <footer>
+        <!--Map-->
+        <section id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2591.0526848791633!2d5.946984415205174!3d49.502399079355776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479535034c0a600b%3A0xe8b8bed0e26f33a!2sTechnoport+S.a.!5e0!3m2!1sfr!2slu!4v1523848946449"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <h3>Need Help?</h3>
+            <!--Peut-on insérer un formulaire de contact ici ?-->
+        </section>
+        <!-- Menu + Crédit + Logo-->
+        <section id="end">
+            <ul id="footer">
+                <li class="menu"><a href="#Home">Home</a></li>
+                <li class="menu"><a href="#Services">Services</a></li>
+                <li class="menu"><a href="#AboutUs">About Us</a></li>
+            </ul>
+            <h3><a class="logo" href="#">Gali</a></h3>
+            <p> helps you to book your appointements in a easy and intuitif way</p>
+
+        </section>
+    </footer>
+    <script type="text/script" src="script/main.js"></script>
+</body>
+
+</html>
