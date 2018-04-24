@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import * as $ from 'jquery';
 
 //http request import
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 // properties = components structure
 @Component({
@@ -15,6 +16,8 @@ import * as $ from 'jquery';
 export class AppComponent {
   title = 'app';
 
+  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com';
   //need a constructor to inject inside the http import
+  constructor (private http : HttpClient) {}
   
 }
