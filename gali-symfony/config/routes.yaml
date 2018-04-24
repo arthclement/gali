@@ -5,3 +5,11 @@
 api_professionals:
     path: /api/professionals
     controller: App\Controller\ApiController::getProfessionals
+
+api_appointments:
+    path: /api/appointments
+    controller: App\Controller\ApiController::getAppointments
+    
+api_unavailability:
+    path: /api/unavailability
+    controller: App\Controller\ApiController::getUnavailability

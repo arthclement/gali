@@ -35,16 +35,40 @@ class ApiController extends Controller
 
 
     /**
-     * @Route("/api/appointment", name="appointment")
+     * @Route("/api/appointments", name="appointments")
      */
-    public function getAppointment(Request $request)
+    public function getAppointments(Request $request)
     {
         $userID = $request->query->get('id');
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $user = $repoUser->find($userID);
 
-        return new JsonResponse(
+        $appointments = $user->getAppointments();
 
+        return new JsonResponse(
+            \json_encode($appointments),
+            200,
+            [],
+            true
+        );
+    }
+
+    /**
+     * @Route("/api/unavailability", name="unavailability")
+     */
+    public function getUnavailability(Request $request)
+    {
+        $userID = $request->query->get('id');
+        $repoUser = $this->getDoctrine()->getRepository(User::class);
+        $user = $repoUser->find($userID);
+
+        $unavailability = $user->getUnavailabilities();
+
+        return new JsonResponse(
+            \json_encode($unavailability),
+            200,
+            [],
+            true
         );
     }
 }
