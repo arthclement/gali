@@ -78,7 +78,7 @@ class ApiController extends Controller
     public function getUsers(Request $request)
     {
         $repoUser = $this->getDoctrine()->getRepository(User::class);
-        $userList = $repoUser->fetchAll();
+        $userList = $repoUser->findAll();
 
         return new JsonResponse(
             \json_encode($userList),
