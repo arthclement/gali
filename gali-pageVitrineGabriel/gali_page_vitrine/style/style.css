@@ -1,9 +1,8 @@
 /** Body */
-/* #18bef0 */
-/*rgb(24, 190, 240)*/
 
 * {
     box-sizing: border-box;
+<<<<<<< HEAD
     transition-duration: 0.4s;
     
 }
@@ -17,72 +16,260 @@ body{
     }
 
 /** Navigation bar + Menu */
+=======
+    transition-duration: 0.3s;
+    /** Nav + body colors */
+    /** color test background
+    #EAF2F8    #AED6F1
+    #A9CCE3    #D4E6F1  #D6EAF8
+    #D7DBDD   #7FB3D5
+    #D5DBDB     #D5D8DC
+    #D6DBDF   #FEF5E7
+    #F4F6F7    #AED6F1
 
-.navbar.navbar-1 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
-    padding-bottom: 80px;
+    */
+    font-family: 'Bison-Bold';
+    font-weight: bold;
 }
 
-.navbar{
-    padding-top:0;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
+
+/** Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@font-face {
+    font-family: 'Natsuki';
+    src: url('fonts/Natsuki/natsuki.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bison-Bold';
+    src: url('fonts/Bison/Bison-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/** ************Colors ******************************** */
+
+
+/*** ************** Backgrounds **********************/
+
+.title,
+#galiServices,
+.categories,
+#cat {
+    background-color: black;
+}
+
+
+/** Header + Navigation bar */
+
+
+/** menu */
+
+
+/** main */
+
+.categories ul li a,
+.connexion h3,
+main,
+h1 {
+    text-decoration: none;
+    color: #EAF2F8;
+}
+
+
+/** button */
+
+.navbar-toggler-icon {
+    color: #A9CCE3;
+}
+
+
+/** Logo Gali */
+
+strong,
+#aboutUs span {
+    font-family: 'Natsuki';
+    font-size: 400%;
+    font-weight: bold;
+    color: #19B5FE;
+}
+
+
+/** Fonts + Font Size */
+
+
+/** Header + Navigation Bar = Logo exclude */
+
+.title {
+    font-family: 'Bison-Bold';
+    font-size: 150%;
+}
+
+
+/** Navigation containers */
+
+.navbar {
+    padding-top: 0;
     padding-bottom: 0;
 }
 
-[id="nav-home-tab"]{
-    color: #18bef0;
+
+/** Navigation bar + Menu */
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
 }
-[id="nav-profile-tab"]{
-    color: #18bef0;
-}
+
 
 /** Nav */
 
+header {
+    width: 100%;
+    position: sticky;
+}
+
+
+/** connexion top right */
+
+.connexion {
+    display: flex;
+}
+
+.connexion h3 {
+    padding-right: 5px;
+}
+
+.connexion button {
+    padding-bottom: 8px;
+}
+
+.navbar navbar-light navbar-1 {
+    width: 100%;
+    position: sticky;
+    padding: 0;
+}
+
+
+/** menu categories */
+
+[class="navbar navbar-light bg-light"] {
+    padding: 0;
+}
+
+#cat li {
+    list-style: none;
+    font-size: 5vm;
+}
+
+#cat {
+    width: 100%;
+    margin: 0;
+    padding: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.navbar-brand mb-0 h1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
 .title {
-    background-color: white;
-    box-shadow: 0px 10px 5px 0px rgba(24, 190, 240, 0.1);
+    width: 100%;
+    padding: 0;
     text-align: center;
     position: -webkit-sticky;
-    top:0;
+    top: 0;
     position: sticky;
-    margin-bottom: 15px;
+    margin: 0;
     z-index: 1;
+<<<<<<< HEAD
     margin-left: 8%;
     margin-right: 9%;
     
+=======
+    display: flex;
 }
 
-[class="form-check form-check-inline"]{
+
+/**Connexion */
+
+#navbarSupportedContent15 {
+    background-color: #A9CCE3;
+    color: #4D5656;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
+}
+
+[class="form-check form-check-inline"] {
     margin-left: 50px;
 }
-[type="checkbox"]{
 
-    color:#18bef0;
-
+[type="checkbox"] {
+    color: #19B5FE;
 }
 
-/** entre nav et photo */
-
-span strong {
-    color: #18bef0;
-    font-size: 60px;
-    padding-left: 100px;
+#pswd_info {
+    display: none;
 }
 
+
+/** **********************Form***************** */
+
+
+/***LOG IN FORM *******************/
+
+
+/** Log In page =  username + password */
+
+#usernameCheck,
+#LogPasswordCheck {
+    font-size: 15px;
+    color: #19B5FE;
+    display: none;
+}
+
+<<<<<<< HEAD
 span{
     color: #18bef0;
  
     padding:0;
     margin:0;
     font-size: 20px;
+=======
+
+/***********************REGISTRATION FORM *****************/
+
+
+/**  Registration page  = Firstname + Lastname + Username + Validation Form = display with jQuery */
+
+#firstnameCheck,
+#lastnameCheck,
+#emailCheck {
+    display: none;
+    color: #19B5FE;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
 }
 
 
-.sousNavBar{
-    padding-top:5px;
-    padding-bottom: 5px;
-    background-color: white;
+/** password validation message */
+
+
+/** Disable the display : addClass jQuery */
+
+#RegistrationpassCheck {
+    display: none;
+    margin: 5px;
 }
 
+<<<<<<< HEAD
 /* INPUT Navbar*/
 /*  Bouton*/
 
@@ -93,56 +280,146 @@ span{
 .navbar-toggler{
     border: none;
     padding: 0;
-}
-.form-control{
-  background-color: rgba(24, 190, 240, 0.1);  
-}
-
-[type="submit"]{
-    border: 1px solid #18bef0;
-    background-color:#18bef0;
-}
-
-.sousNavBar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-left:0;
-    margin-bottom: 5px;
+=======
+#RegistrationpassCheck,
+.pswd_valid {
+    font-family: 'Bison-Bold';
+    font-size: 15px;
+    color: #19B5FE;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
 }
 
-.menu {
+#letter,
+#capital,
+#number,
+#length {
     list-style: none;
 }
 
-.sousNavBar ul li a {
-    font-weight: solid;
-    color:#18bef0;
+#RegistrationpassCheck ul {
+    display: flex;
+    flex-direction: column;
 }
+
+#RegistrationpassCheck h4 {
+    text-align: left;
+}
+
+#RegistrationpassCheckul li {
+    text-align: center;
+}
+
+
+/*** classes of the defined checked input */
+
+.invalid {
+    padding-left: 22px;
+    line-height: 24px;
+    color: #ec3f41;
+}
+
+.valid {
+    padding-left: 22px;
+    line-height: 24px;
+    color: #3a7d34;
+}
+
+
+/** radio boxes */
+
+.male,
+.female {
+    display: flex;
+    align-items: baseline;
+}
+
+.female {
+    margin-left: 70px;
+}
+
+.gender {
+    padding-left: 5px;
+}
+
+#radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding-top: 30px;
+}
+
+
+/* INPUT Navbar*/
+
+
+/*  Bouton*/
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+}
+
+.connexion {
+    float: right;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.form-control {
+    background-color: rgba(24, 190, 240, 0.1);
+}
+
+[type="submit"] {
+    border: 1px solid #19B5FE;
+    background-color: #19B5FE;
+}
+
 
 /* Middle Section */
 
 
 /* MAIN */
 
+<<<<<<< HEAD
 main{
     margin-left: 10%;
     margin-right: 10%;
 
+=======
+main {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    z-index: -1;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
 }
 
-/* Beggining Big Cube Faire CSS identitque */
-.bigCube-p-h3-1{
-    padding: 50px;
-    text-align: right;
+
+/** first block section */
+
+#aboutUs {
+    width: 100%;
+    height: 550px;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/salon.jpg");
+    display: flex;
+    align-items: flex-end;
 }
 
-.bigCube-p-h3-2{
-    padding: 50px;
+
+/** text first section */
+
+h1 {
+    padding-left: 20px;
 }
 
-/*End Big cube Faire CSS identitque*/
 
+<<<<<<< HEAD
 #galiServices:hover{
     border: vw0.3 solid #d1d1d1;
     box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
@@ -158,33 +435,91 @@ main{
    /* box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);*/
     border-radius: 8px;
     padding: 8px;
+=======
+/** SECOND SECTION */
+
+#galiServices {
+    margin: 0;
 }
 
-section {
-    margin-top: 50px;
+#beauty {
     display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-left: 60px;
+    width: 90%;
+    justify-content: space-between;
 }
 
-.grandP h3 {
-    padding: 10%;
-    padding-bottom: 0;
+.bigCube-p-h3-2 {
+    width: 100%;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
 }
 
-.p-1{padding: 1em;}
-.p-2{padding: 2em;}
-.p-3{padding: 3em;}
-.p-4{padding: 4em;}
-.p-5{padding: 5em;}
-.br{border: 1px solid red;}
+.PicServices {
+    display: flex;
+    align-items: center;
+}
 
-.sectionMilieu div h3 {
-    margin: 100px;
+.left {
+    margin-top: 25px;
+}
+
+.rightTop {
+    margin-right: 25px;
+}
+
+.PicServices h2,
+.bigCube-p-h3-2 h3 {
     text-align: center;
-    padding: 150px;
 }
 
+.PicServices h2,
+.bigCube-p-h3-2 h3 {
+    padding-top: 10px;
+}
+
+.left:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.rightTop img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.rightTop:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.rightBottom img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.rightBottom:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/** third section  + map*/
+
+#how h1,
+#how h3,
+#map h3 {
+    color: black;
+    text-align: center;
+}
+
+<<<<<<< HEAD
 footer {
     background-color: #18bef0 ;
     
@@ -197,4 +532,26 @@ footer {
     padding-left: 50px;
     margin-left: 10%;
     margin-right: 10%;
+=======
+#map iframe {
+    width: 100%;
 }
+
+
+/** footer*/
+
+#contactUs {
+    background-color: black;
+    font-size: 30px;
+    padding: 5px;
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
+}
+
+#contactUs article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/** RESPONSIVE */

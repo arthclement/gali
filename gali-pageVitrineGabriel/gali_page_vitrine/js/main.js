@@ -1,5 +1,6 @@
 var debug = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 jQuery(document).ready(function(){
   console.log("ok");
 
@@ -41,6 +42,8 @@ jQuery(document).ready(function(){
 
 });
 =======
+=======
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
 jQuery(document).ready(function() {
     console.log("ok");
 
@@ -202,5 +205,9 @@ jQuery(document).ready(function() {
 
 
 
+<<<<<<< HEAD
+});
+>>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
+=======
 });
 >>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
