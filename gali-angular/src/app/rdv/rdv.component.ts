@@ -12,7 +12,3 @@ export class RdvComponent implements OnInit {
   constructor() { }
     ngOnInit() { }
   }
-  /* ici http GET*/
-
-
-
