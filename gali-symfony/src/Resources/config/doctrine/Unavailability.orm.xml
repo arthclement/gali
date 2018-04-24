@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="App\Entity\Unavailability" table="unavailability">
+    <indexes>
+      <index name="user_idx" columns="iduser"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="idunavailability_UNIQUE" columns="idunavailability"/>
+      <unique-constraint name="iduser_UNIQUE" columns="iduser"/>
+    </unique-constraints>
+    <id name="idunavailability" type="integer" column="idunavailability">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="starttime" type="datetime" column="starttime" nullable="true"/>
+    <field name="endtime" type="datetime" column="endtime" nullable="true"/>
+    <field name="description" type="text" column="description" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="iduser" target-entity="User&gt;unavailability" fetch="LAZY">
+      <join-columns>
+        <join-column name="iduser" referenced-column-name="iduser"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

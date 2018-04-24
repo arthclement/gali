@@ -1,5 +1,15 @@
 # IDE - VSCode
 .vscode
-fontawesome-free-5.0.10
+# Composer
+composer.phar
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+.buildpath
+.project
+.settings/
 /test
-/node_modules
+
