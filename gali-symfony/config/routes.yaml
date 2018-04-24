@@ -1,3 +1,7 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+api_professionals:
+    path: /api/professionals
+    controller: App\Controller\ApiController::getProfessionals
