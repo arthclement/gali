@@ -10,6 +10,13 @@ user_register:
     path: /register
     controller: App\Controller\UserController::registerUser
 
+user_login:
+    path: /login
+    controller: App\Controller\UserController::loginUser
+
+logout:
+    path: /logout
+
 username_available:
     path: /username/available
     controller: App\Controller\UserController::usernameAvailable

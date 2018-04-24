@@ -9,10 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Entity\User;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Twig\Environment;
 
@@ -141,6 +143,23 @@ class UserController
             'status' => 0,
             'message' => 'User successfully created'
         ]);
+    }
+
+    public function loginUser
+    (
+        AuthenticationUtils $authUtils,
+        Environment $twig
+    )
+    {
+        return new Response(
+            $twig->render(
+                'Security/login.html.twig',
+                [
+                    'last_username' => $authUtils->getLastUsername(),
+                    'error' => $authUtils->getLastAuthenticationError()
+                ]
+            )
+        );
     }
 
     public function usernameAvailable
