@@ -16,7 +16,6 @@ class ApiController extends Controller
      */
     public function getProfessionals()
     {
-        $professionalsToEncode = [];
         $repository = $this->getDoctrine()->getRepository(User::class);
 
         $professionals = $repository->findBy(
@@ -26,12 +25,8 @@ class ApiController extends Controller
             ]
         );
 
-        foreach ($professionals as $user) {
-            $professionalsToEncode[] = $user->getFirstname() . ' ' . $user->getLastname();
-        }
-
         return new JsonResponse(
-            \json_encode($professionalsToEncode),
+            \json_encode($professionals),
             200,
             [],
             true
