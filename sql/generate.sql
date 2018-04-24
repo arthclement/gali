@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `gali`.`userinfo` (
   `country` VARCHAR(255) NULL,
   `phone` VARCHAR(255) NULL,
   PRIMARY KEY (`iduser`),
-  CONSTRAINT `user->userinfo`
+  CONSTRAINT `userTouserinfo`
     FOREIGN KEY (`iduser`)
     REFERENCES `gali`.`user` (`iduser`)
     ON DELETE NO ACTION
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `gali`.`user_role` (
   INDEX `role_idx` (`iduser` ASC, `idrole` ASC),
   PRIMARY KEY (`iduser_role`),
   UNIQUE INDEX `iduser_role_UNIQUE` (`iduser_role` ASC),
-  CONSTRAINT `user->user_role`
+  CONSTRAINT `userTouser_role`
     FOREIGN KEY (`iduser`)
     REFERENCES `gali`.`user` (`iduser`)
     ON DELETE NO ACTION
@@ -116,12 +116,12 @@ CREATE TABLE IF NOT EXISTS `gali`.`appointment` (
   UNIQUE INDEX `idappointment_UNIQUE` (`idappointment` ASC),
   UNIQUE INDEX `idcustomer_UNIQUE` (`idcustomer` ASC),
   UNIQUE INDEX `idpro_UNIQUE` (`idpro` ASC),
-  CONSTRAINT `customer->appointment`
+  CONSTRAINT `customerToappointment`
     FOREIGN KEY (`idcustomer`)
     REFERENCES `gali`.`user` (`iduser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `pro->appointment`
+  CONSTRAINT `proToappointment`
     FOREIGN KEY (`idpro`)
     REFERENCES `gali`.`user` (`iduser`)
     ON DELETE NO ACTION
@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `gali`.`unavailability` (
   UNIQUE INDEX `iduser_UNIQUE` (`iduser` ASC),
   CONSTRAINT `user`
     FOREIGN KEY (`iduser`)
-    REFERENCES `gali`.`user->unavailability` (`iduser`)
+    REFERENCES `gali`.`userTounavailability` (`iduser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
