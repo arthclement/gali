@@ -58,7 +58,7 @@
         
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <!--Register Form -->
-                        <form>
+                        <form action="{{ path('user_register') }}" method="POST">
                             <div class="form-row">
                                 <!--username-->
                                 <div class="form-group col-md-6">
@@ -68,14 +68,14 @@
                                 <br/>
                                 <!--firstName-->
                                 <div class="form-group col-md-6">
-                                    <label for="firstName">Firstname</label>
-                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Firstname">
+                                    <label for="firstname">Firstname</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstname" placeholder="Firstname">
                                 </div>
                                 <br/>
                                 <!--lastName-->
                                 <div class="form-group col-md-6" class="form-check form-check-inline">
-                                    <label for="lastName">Lastname</label>
-                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Lastname">
+                                    <label for="lastname">Lastname</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Lastname">
                                 </div>
                                 <!--email-->
                                 <div class="form-group col-md-6">

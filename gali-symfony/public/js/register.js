@@ -1,25 +1,25 @@
-$('#register-submit').on('click', function(event) {
-    event.preventDefault();
+// $('#register-submit').on('click', function(event) {
+//     event.preventDefault();
 
-    var firstName = $('#firstName').val();
-    var lastName = $('#lastName').val();
-    var emailValue = $('#email').val();
+//     var firstName = $('#firstName').val();
+//     var lastName = $('#lastName').val();
+//     var emailValue = $('#email').val();
 
-    $.ajax({
-        url: '/register',
-        type: 'POST',
-        datatype: 'JSON',
-        data: {
-            email: emailValue
-        },
-        success: function(data) {
-            console.log(data);
-        },
-        error: function(error) {
-            console.log(error);
-        }
-    });
-});
+//     $.ajax({
+//         url: '/register',
+//         type: 'POST',
+//         datatype: 'JSON',
+//         data: {
+//             email: emailValue
+//         },
+//         success: function(data) {
+//             console.log(data);
+//         },
+//         error: function(error) {
+//             console.log(error);
+//         }
+//     });
+// });
 
 function usernameValidatorCallback(event){
     var xhr = event.target;

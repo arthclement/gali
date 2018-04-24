@@ -27,6 +27,8 @@ services:
     ports:
       - 80:80
       - 8080:8080
+    command:
+      - alias composer='/usr/local/bin/composer.phar'
 
 networks:
   gali:
