@@ -8,57 +8,70 @@
   <span> {{name}}'s age is {{age}}</span>
 </div>
 
-----------------
+
 
 <button (click)="postProfile()">Post Profil</button>
 <br>
 -->
-<div id="bgcAgenda">
-  <form id="formAgenda">
+<section>
+  <form id="formAgenda"> <!-- ***********/////////  !!!   ajouter des input nom client ?!-->
+
     <h3>Take an Appointement Here</h3>
+    <!-- ***********************************   begin  type Radio ***************************-->
     <h5>Choose your Hardresser : </h5>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-      <label class="form-check-label" for="exampleRadios1">
-        Louis
-      </label>
+      <ul>
+        <li>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Louis
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            Marie
+          </label>
+        </li>
+        <li>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            Julie
+          </label>
+        </li>
+      </ul>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-      <label class="form-check-label" for="exampleRadios2">
-        Marie
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-      <label class="form-check-label" for="exampleRadios2">
-        Julie
-      </label>
-    </div>
+
     <br>
-    <h5>Choose your date ¬ hour8: </h5>
+    <!-- ********************************** end  DateTime ! ************-->
+
+    <!-- ********************************** Begin  DateTime ! *********************************-->
+    <h5>Choose your date and hour </h5>
     <div class="row">
       <div class="col">
-        <input type="date" class="form-control" placeholder="First name">
+        <input type="date" class="form-control" placeholder="time">
+      </div>
+      <div class="col">
+        <input type="time" class="form-control" placeholder="time">
       </div>
     </div>
-    <div class="row">
-        <div class="col">
-          <input type="time" class="form-control" placeholder="First name">
-        </div>
-      </div>
+
     <br>
     <h5> Unavailable Hours </h5>
+    <!-- ********************************** end  DateTime ! *********-->
+
+    <!-- ********************************** begin  Textarea ******************************-->
     <!-- <Span>{{coiffeur.unavailable}}</Span> -->
-    <p> here display the unavailable hours</p>
+    <p> voir commentaire dans code - here display the unavailable hours of the coiffeur</p>
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Description</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Color? Cut? or a cup of café/thé and a head massage ?"></textarea>
     </div>
-    <button (click)=getProfile()> Post rdv</button>
+    <button type="submit" (click)=getProfile() class="btn btn-primary">Create RDV</button>
+    <!-- ********************************** end Textarea  *********-->
   </form>
 
-
+  <!-- ********************************  Begin  Table  display RDV  ************************* -->
   <table id="tableAgenda">
     <tr>
       <th>Coiffeur</th>
@@ -73,16 +86,17 @@
     <td>{{coiffeur.Description}}</td>
   </tr> -->
     <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
+      <td>Louis</td>
+      <td>04 30 2018</td>
       <td>94</td>
       <td>Couleur</td>
     </tr>
     <tr>
-      <td>John</td>
-      <td>Doe</td>
+      <td>Marie</td>
+      <td>05 05 2018</td>
       <td>80</td>
       <td>shampoing + coupe homme</td>
     </tr>
   </table>
-</div>
+  <!-- ********************************** end  DateTime ! *********-->
+</section>

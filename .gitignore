@@ -13,3 +13,6 @@ composer.phar
 .settings/
 /test
 
+
+###> fixbug, DO NOT TOUCH (Gab)
+erve --open

@@ -1,12 +1,68 @@
+$blueGali: #18BEF0;
 
-#formAgenda{
-    margin: 5vw;
+* {
+  box-sizing: border-box;
+  transition-duration: 0.4s;
 }
 
-#tableAgenda{
-    margin: 5vw;
-    width: 70%;
-    text-align: center;
+/** ***********    Containers   ***********/
+
+section {
+  
+  width: 90%;
+  
+}
+
+#formAgenda {
+  margin: 2vw 0 0 2vw;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 4px 3px 4px 5px rgba(172, 179, 182, 0.3);
+   
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+ul li {
+    padding-right: 1.8vw;
+}
+
+input{
+    
+    color:  $blueGali;
+    border-radius: 1.5vw;
+    box-shadow: 4px 3px 4px 5px rgba(172, 179, 182, 0.3);
+}
+
+[placeholder="time"]{
+    width: 50%;
 }
 
 
+
+textarea{
+    width: 55%;
+    border-radius: 20px;
+}
+
+
+#tableAgenda {
+  margin: 5vw;
+  width: 70%;
+  text-align: center;
+}
+
+[type="submit"]{
+    border: none;
+    background-color: $blueGali;
+    box-shadow: 2px 1px 3px 5px $blueGali;
+}
+
+tr{
+    background-color: rgba(148, 230, 255, 0.2);
+    border: 1px solid red;
+}
