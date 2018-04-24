@@ -17,3 +17,22 @@ api_unavailability:
 api_users:
     path: /api/users
     controller: App\Controller\ApiController::getUsers
+    
+home_page:
+    path: /
+    controller: App\Controller\HomePageController::getHomePage
+
+user_register:
+    path: /register
+    controller: App\Controller\UserController::registerUser
+
+username_available:
+    path: /username/available
+    controller: App\Controller\UserController::usernameAvailable
+    methods: ['POST']
+
+user_activate:
+    path: /user/activate/{token}
+    controller: App\Controller\UserController::activateUser
+    requirements:
+        token: '[a-z0-9-]+'

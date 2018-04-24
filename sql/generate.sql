@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `gali`.`user` (
   `password` VARCHAR(255) NOT NULL,
   `create_time` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   `active` TINYINT(1) NULL,
-  `token` VARCHAR(255) NULL,
+  `email_token` VARCHAR(255) NULL,
   PRIMARY KEY (`iduser`),
   UNIQUE INDEX `iduser_UNIQUE` (`iduser` ASC))
 ENGINE = InnoDB
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `gali`.`userinfo` (
   `street` VARCHAR(255) BINARY NULL,
   `postcode` VARCHAR(255) NULL,
   `city` VARCHAR(255) NULL,
-  `streetnumber` VARCHAR(255) NULL,
+  `street_number` VARCHAR(255) NULL,
   `country` VARCHAR(255) NULL,
   `phone` VARCHAR(255) NULL,
   PRIMARY KEY (`iduser`),
@@ -78,7 +78,7 @@ COLLATE = utf8_bin;
 -- Table `gali`.`user_role`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `gali`.`user_role` (
-  `iduser_role` INT UNSIGNED NOT NULL AUTO_INCREMENT,  
+  `iduser_role` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `iduser` INT UNSIGNED NOT NULL,
   `idrole` INT UNSIGNED NOT NULL,
   INDEX `role_idx` (`iduser` ASC, `idrole` ASC),
@@ -137,16 +137,16 @@ COLLATE = utf8_bin;
 CREATE TABLE IF NOT EXISTS `gali`.`unavailability` (
   `idunavailability` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `iduser` INT UNSIGNED NOT NULL,
-  `starttime` DATETIME NULL,
-  `endtime` DATETIME NULL,
+  `start_time` DATETIME NULL,
+  `end_time` DATETIME NULL,
   `description` TEXT NULL,
   PRIMARY KEY (`idunavailability`),
   UNIQUE INDEX `idunavailability_UNIQUE` (`idunavailability` ASC),
   INDEX `user_idx` (`iduser` ASC),
   UNIQUE INDEX `iduser_UNIQUE` (`iduser` ASC),
-  CONSTRAINT `user`
+  CONSTRAINT `userTounavailability`
     FOREIGN KEY (`iduser`)
-    REFERENCES `gali`.`userTounavailability` (`iduser`)
+    REFERENCES `gali`.`user` (`iduser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB

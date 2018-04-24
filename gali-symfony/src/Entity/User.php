@@ -5,10 +5,23 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+use Ramsey\Uuid\Uuid;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(
+ *     fields={"username"},
+ *     errorPath="username",
+ *     message="This user is already registered"
+ * )
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     errorPath="email",
+ *     message="This email is already registered"
+ * )
  */
 class User implements UserInterface, \Serializable
 {
@@ -21,16 +34,24 @@ class User implements UserInterface, \Serializable
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
+     * @Assert\NotBlank()
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(
+     *  pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-,]).{8,}$/",
+     *  message="The password must follow: minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+     * )
+     * @Assert\NotBlank()
      */
     private $password;
 
@@ -42,20 +63,22 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="boolean")
      */
-    private $isActive;
+    private $isActive = false;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $token;
+    private $emailToken;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $lastname;
 
@@ -78,7 +101,7 @@ class User implements UserInterface, \Serializable
      * @ORM\ManyToOne(targetEntity="App\Entity\Roles", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Appointment", mappedBy="customer", orphanRemoval=true)
@@ -95,8 +118,15 @@ class User implements UserInterface, \Serializable
      */
     private $gender;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $salt;
+
     public function __construct()
     {
+        $this->setEmailToken(Uuid::uuid1());
+        $this->roles = new ArrayCollection();
         $this->appointments = new ArrayCollection();
         $this->unavailabilities = new ArrayCollection();
     }
@@ -166,14 +196,14 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    public function getToken(): ?string
+    public function getEmailToken(): ?string
     {
-        return $this->token;
+        return $this->emailToken;
     }
 
-    public function setToken(?string $token): self
+    public function setEmailToken(?string $emailToken): self
     {
-        $this->token = $token;
+        $this->emailToken = $emailToken;
 
         return $this;
     }
@@ -237,16 +267,16 @@ class User implements UserInterface, \Serializable
 
         return $this;
     }
-    
-    public function getSalt()
-    {
-        // you *may* need a real salt depending on your encoder
-        // see section on salt below
-        return null;
-    }
 
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
     public function eraseCredentials()
     {
+        return;
     }
 
     /** 
@@ -275,14 +305,40 @@ class User implements UserInterface, \Serializable
         ) = unserialize($serialized, ['allowed_classes' => false]);
     }
 
+    /**
+     * @return Roles|null
+     */
     public function getRoles(): ?Roles
     {
         return $this->roles;
     }
 
+    /**
+     * @param Roles|null $roles
+     * @return User
+     */
     public function setRoles(?Roles $roles): self
     {
         $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getSalt(): ?string
+    {
+        return $this->salt;
+    }
+
+    /**
+     * @param string $salt
+     * @return User
+     */
+    public function setSalt(string $salt): self
+    {
+        $this->salt = $salt;
 
         return $this;
     }
@@ -295,6 +351,10 @@ class User implements UserInterface, \Serializable
         return $this->appointments;
     }
 
+    /**
+     * @param Appointment $appointment
+     * @return User
+     */
     public function addAppointment(Appointment $appointment): self
     {
         if (!$this->appointments->contains($appointment)) {
@@ -305,6 +365,10 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @param Appointment $appointment
+     * @return User
+     */
     public function removeAppointment(Appointment $appointment): self
     {
         if ($this->appointments->contains($appointment)) {
@@ -326,6 +390,10 @@ class User implements UserInterface, \Serializable
         return $this->unavailabilities;
     }
 
+    /**
+     * @param Unavailability $unavailability
+     * @return User
+     */
     public function addUnavailability(Unavailability $unavailability): self
     {
         if (!$this->unavailabilities->contains($unavailability)) {
@@ -336,6 +404,10 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @param Unavailability $unavailability
+     * @return User
+     */
     public function removeUnavailability(Unavailability $unavailability): self
     {
         if ($this->unavailabilities->contains($unavailability)) {
@@ -349,16 +421,23 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getGender(): ?bool
     {
         return $this->gender;
     }
 
+    /**
+     * @param bool $gender
+     * @return User
+     */
     public function setGender(bool $gender): self
     {
-        $this->gender = $gender;
+       $this->gender = $gender;
 
-        return $this;
+       return $this;
     }
 }
     
