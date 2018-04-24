@@ -6,18 +6,19 @@
 <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
     <!--input elements here-->
     <!--firstname + lastname-->
-    <table class="fullwidth" cellspacing="0">
+
+    <table cellspacing="0">
         <tr>
             <td>
                 <div class="info">
-                    <input class="md" type="text" mdInput placeholder="Firstname" id="firstname" name="firstname">
+                    <input class="md" type="text" mdInput placeholder="{{ user.firstname }}" id="firstname" name="firstname">
 
 
                 </div>
             </td>
             <td>
                 <div class="info">
-                    <input class="md" type="text" mdInput placeholder="Lastname" id="lastname" name="lastname">
+                    <input class="md" type="text" mdInput placeholder="{{ user.lastname }}" id="lastname" name="lastname">
 
 
                 </div>

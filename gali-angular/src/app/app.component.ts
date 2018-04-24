@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 //jquery import
 import * as $ from 'jquery';
 
 //http request import
-//import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+
+@NgModule({
+  declarations: [
+   // HttpClientModule
+  ]
+})
 // properties = components structure
 @Component({
   selector: 'app-root',

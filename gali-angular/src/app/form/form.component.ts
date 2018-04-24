@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
-// binding
+// import the class
+import { Cardex } from '../cardex';
+
 
 // error message can't find module
 //import { userInfo } from 'os';
@@ -14,6 +16,7 @@ import { NgModel } from '@angular/forms';
 
 @NgModule({
   declarations: [
+    //clas
     
   ],
   imports:[
@@ -21,12 +24,20 @@ import { NgModel } from '@angular/forms';
 
   ],
 })
-// need the cross origin resource sharing
-//contains component class
-export class FormComponent  {
 
-  // create new object
-  //Cardex = new Cardex();
+export class FormComponent  {
+  user: Cardex = {
+    firstname: 'dwdfnwd',
+    lastname: 'SFqfhdfB',
+    //birthdate:
+   //gender: 
+  };
+  
+  
+    
+
+  
+  
 
   constructor() { }
 
