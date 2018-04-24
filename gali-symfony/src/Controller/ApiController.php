@@ -71,4 +71,20 @@ class ApiController extends Controller
             true
         );
     }
+
+    /**
+     * @Route("/api/users", name="users")
+     */
+    public function getUsers(Request $request)
+    {
+        $repoUser = $this->getDoctrine()->getRepository(User::class);
+        $userList = $repoUser->fetchAll();
+
+        return new JsonResponse(
+            \json_encode($userList),
+            200,
+            [],
+            true
+        );
+    }
 }
