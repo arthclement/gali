@@ -43,13 +43,13 @@
                         <form action="/login" method="POST">
                             <!--Username-->
                             <div class="form-group">
-                                <label for="Username">Username or @email</label>
-                                <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
+                                <label for="username-login">Username or @email</label>
+                                <input type="text" class="form-control" id="username-login" name="username-login" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
                             </div>
                             <!--password-->
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <label for="password-login">Password</label>
+                                <input type="password-login" class="form-control" id="password-login" name="password-login" placeholder="Password">
                             </div>
                             <!--submit-->
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -58,54 +58,58 @@
         
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <!--Register Form -->
-                        <form action="/register" method="POST">
-                            <!--firstname-->
+                        <form>
                             <div class="form-row">
+                                <!--username-->
                                 <div class="form-group col-md-6">
-                                    <label for="firstname">Firstname</label>
-                                    <input type="text" class="form-control" id="firstname" placeholder="Firstname">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                                 </div>
                                 <br/>
-                                <!--gender-->
-                                <div class="form-group col-md-6" id="radio">
-                                    <div class="male">
-                                        <input   type="radio" name="gender" value="male" checked>
-                                        <label class="gender">Male</label>
-                                    </div>
-                                    <div class="female">
-                                        <input   type="radio" name="gender" value="female"> 
-                                        <label >Female</label>
-                                    </div>
+                                <!--firstName-->
+                                <div class="form-group col-md-6">
+                                    <label for="firstName">Firstname</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Firstname">
                                 </div>
-                                <!--lastname-->
+                                <br/>
+                                <!--lastName-->
                                 <div class="form-group col-md-6" class="form-check form-check-inline">
-                                    <label for="lastname">Lastname</label>
-                                    <input type="text" class="form-control" id="lastname" placeholder="Lastname">
+                                    <label for="lastName">Lastname</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Lastname">
                                 </div>
                                 <!--email-->
                                 <div class="form-group col-md-6">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                </div>
+                                <!--gender-->
+                                <div class="form-group col-md-6" id="radio">
+                                    <div class="radio">
+                                        <label><input type="radio" name="gender" value="male" checked> Male</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" id="gender-female" name="gender" value="female"> Female</label>
+                                    </div>
                                 </div>
                                 <!--password-->
                                 <div class="form-group col-md-6">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="passwordRegister" placeholder="Password">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="password">
                                 </div>
                                 <!--jquery class = display: none-->
-                                <div id="pswd_info">
-                                        <h4>Le mot de passe doit forcément contenir :</h4>
-                                        <ul>
-                                            <li id="letter" class="invalid">Au moins <strong>une lettre</strong></li>
-                                            <li id="capital" class="invalid">Au moins <strong>une majuscule</strong></li>
-                                            <li id="number" class="invalid">Au moins <strong>un chiffre</strong></li>
-                                            <li id="length" class="invalid">Faire au moins <strong>8 caractères</strong></li>
-                                        </ul>
-                                    </div>
+                                {#<div id="pswd_info">#}
+                                    {#<h4>Le mot de passe doit forcément contenir :</h4>#}
+                                    {#<ul>#}
+                                        {#<li id="letter" class="invalid">Au moins <strong>une lettre</strong></li>#}
+                                        {#<li id="capital" class="invalid">Au moins <strong>une majuscule</strong></li>#}
+                                        {#<li id="number" class="invalid">Au moins <strong>un chiffre</strong></li>#}
+                                        {#<li id="length" class="invalid">Faire au moins <strong>8 caractères</strong></li>#}
+                                    {#</ul>#}
+                                {#</div>#}
                                 <!--confirm password-->
                                 <div class="form-group col-md-6">
                                     <label for="password">Confirm Password</label>
-                                    <input type="password" class="form-control" id8=8 "passwordRegisterConfirm" placeholder="Confirm Password">
+                                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
                                 </div>
                             </div>
 
@@ -117,10 +121,11 @@
                                 </div>
                             </div>
                             <!--sign in-->
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <button id="register-submit" type="submit" class="btn btn-primary">Sign in</button>
                        </form>
                     </div>
                 </div>
+            </div>
         </nav>
         <article class="categories">
                 <ul>
