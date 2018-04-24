@@ -4,11 +4,7 @@
     "require": {
         "php": "^7.2.3",
         "ext-iconv": "*",
-<<<<<<< HEAD
-        "api-platform/api-pack": "^1.1",
-=======
         "ramsey/uuid": "^3.7",
->>>>>>> development
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
