@@ -10,11 +10,14 @@ import { c } from '@angular/core/src/render3';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
+
+
+// need the cross origin resource sharing
 //contains component class
 export class FormComponent  {
 
   // create new object
- // Cardex = new Cardex();
+  //Cardex = new Cardex();
 
   constructor() { }
 

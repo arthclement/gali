@@ -20,6 +20,9 @@ import { BodyComponent } from './body/body.component';
 //form data entry
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
+//importting the HTTP request GET + POST
+import { HttpClientModule } from '@angular/common/http';
+
 //routing
 //routerModule = responsible for the navigation
 //routes = an array, routes of informations of each page
@@ -31,7 +34,7 @@ import { SliderComponent } from './slider/slider.component';
 
 
 
-
+//adding all the imports into the ng Module declarations
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,8 @@ import { SliderComponent } from './slider/slider.component';
     SidebarComponent,
     BodyComponent,
     SliderComponent,
+    HttpClientModule
+    
     
   ],
   //activation of the imports

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 //jquery import
 import * as $ from 'jquery';
 
+//http request import
+
 // properties = components structure
 @Component({
   selector: 'app-root',
@@ -12,4 +14,7 @@ import * as $ from 'jquery';
 //logic here
 export class AppComponent {
   title = 'app';
+
+  //need a constructor to inject inside the http import
+  
 }
