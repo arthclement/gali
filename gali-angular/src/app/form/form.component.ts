@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 // binding
-import { Cardex } from '../cardex';
+
 // error message can't find module
 //import { userInfo } from 'os';
-import { c } from '@angular/core/src/render3';
+import {  } from '@angular/core/src/render3';
+import { NgModel } from '@angular/forms';
 @Component({
   //change the output
   selector: 'app-form',
@@ -11,7 +12,15 @@ import { c } from '@angular/core/src/render3';
   styleUrls: ['./form.component.scss']
 })
 
+@NgModule({
+  declarations: [
+    
+  ],
+  imports:[
+    
 
+  ],
+})
 // need the cross origin resource sharing
 //contains component class
 export class FormComponent  {

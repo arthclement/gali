@@ -21,7 +21,7 @@ import { BodyComponent } from './body/body.component';
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
 //importting the HTTP request GET + POST
-import { HttpClientModule } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
 
 //routing
 //routerModule = responsible for the navigation
@@ -43,8 +43,8 @@ import { SliderComponent } from './slider/slider.component';
     AgendaComponent,
     SidebarComponent,
     BodyComponent,
-    SliderComponent,
-    HttpClientModule
+    SliderComponent
+   // HttpClientModule
     
     
   ],
