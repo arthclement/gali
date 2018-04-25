@@ -3,16 +3,20 @@
 #    controller: App\Controller\DefaultController::index
 
 home_page:
-    path: /
+    path: /{_locale}
     controller: App\Controller\HomePageController::getHomePage
+    defaults:
+        _locale: en
 
 user_register:
-    path: /register
+    path: /{_locale}/register
     controller: App\Controller\UserController::registerUser
+    defaults:
+        _locale: en
 
-user_login:
-    path: /login
-    controller: App\Controller\UserController::loginUser
+login:
+    path: /{_locale}/login
+    controller: App\Controller\UserController::login
 
 logout:
     path: /logout
