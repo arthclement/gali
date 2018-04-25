@@ -2,7 +2,7 @@
 
 //data modal class
 //to do : match the user profile from the database
- export class Cardex {
+ export class CardexIndividual {
     
 //properties no ? if it is not optional
          firstname: string;
