@@ -12,4 +12,4 @@ composer.phar
 .project
 .settings/
 fontawesome-free-5.0.10/
-../gali-symfony/.idea/
+.idea

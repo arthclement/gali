@@ -3,30 +3,81 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Role
- *
- * @ORM\Table(name="role", uniqueConstraints={@ORM\UniqueConstraint(name="idrole_UNIQUE", columns={"idrole"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RoleRepository")
  */
 class Role
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="idrole", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $idrole;
+    private $id;
 
     /**
-     * @var string|null
-     *
-     * @ORM\Column(name="label", type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $label;
+    private $role;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="roles")
+     */
+    private $users;
 
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addRole($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->contains($user)) {
+            $this->users->removeElement($user);
+            // set the owning side to null (unless already changed)
+            if ($user->getRoles() === $this) {
+                $user->addRole(null);
+            }
+        }
+
+        return $this;
+    }
 }

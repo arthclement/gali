@@ -12,7 +12,4 @@ composer.phar
 .project
 .settings/
 /test
-
-
-###> fixbug, DO NOT TOUCH (Gab)
-erve --open
+gali-symfony/config/packages/swiftmailer.yaml

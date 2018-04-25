@@ -5,52 +5,88 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Unavailability
- *
- * @ORM\Table(name="unavailability", uniqueConstraints={@ORM\UniqueConstraint(name="idunavailability_UNIQUE", columns={"idunavailability"}), @ORM\UniqueConstraint(name="iduser_UNIQUE", columns={"iduser"})}, indexes={@ORM\Index(name="user_idx", columns={"iduser"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\UnavailabilityRepository")
  */
 class Unavailability
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="idunavailability", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $idunavailability;
+    private $id;
 
     /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="starttime", type="datetime", nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="unavailabilities")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
+    /**
+     * @ORM\Column(type="datetime")
      */
     private $starttime;
 
     /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="endtime", type="datetime", nullable=true)
+     * @ORM\Column(type="datetime")
      */
     private $endtime;
 
     /**
-     * @var string|null
-     *
-     * @ORM\Column(name="description", type="text", length=65535, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $description;
 
-    /**
-     * @var \User>unavailability
-     *
-     * @ORM\ManyToOne(targetEntity="User>unavailability")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="iduser", referencedColumnName="iduser")
-     * })
-     */
-    private $iduser;
+    public function getId()
+    {
+        return $this->id;
+    }
 
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
 
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getStarttime(): ?\DateTimeInterface
+    {
+        return $this->starttime;
+    }
+
+    public function setStarttime(\DateTimeInterface $starttime): self
+    {
+        $this->starttime = $starttime;
+
+        return $this;
+    }
+
+    public function getEndtime(): ?\DateTimeInterface
+    {
+        return $this->endtime;
+    }
+
+    public function setEndtime(\DateTimeInterface $endtime): self
+    {
+        $this->endtime = $endtime;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 }

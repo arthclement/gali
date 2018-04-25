@@ -2,66 +2,477 @@
 
 namespace App\Entity;
 
+use Serializable;
+use Ramsey\Uuid\Uuid;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * User
- *
- * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="iduser_UNIQUE", columns={"iduser"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(
+ *     fields={"username"},
+ *     errorPath="username",
+ *     message="This user is already registered !"
+ * )
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     errorPath="email",
+ *     message="This email is already registered !"
+ * )
  */
-class User
+class User implements UserInterface, \Serializable
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="iduser", type="integer", nullable=false, options={"unsigned"=true})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
      */
-    private $iduser;
+    private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="username", type="string", length=255, nullable=false)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $username;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255, nullable=false)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Email()
+     * @Assert\NotBlank()
      */
     private $email;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(
+     *  pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-,]).{8,}$/",
+     *  message="The password must follow: minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+     * )
+     * @Assert\NotBlank()
      */
     private $password;
 
     /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="create_time", type="datetime", nullable=true, options={"default"="CURRENT_TIMESTAMP"})
+     * @ORM\Column(type="datetime")
      */
-    private $createTime = 'CURRENT_TIMESTAMP';
+    private $create_time;
 
     /**
-     * @var bool|null
-     *
-     * @ORM\Column(name="active", type="boolean", nullable=true)
+     * @ORM\Column(type="boolean")
      */
-    private $active;
+    private $isActive = false;
 
     /**
-     * @var string|null
-     *
-     * @ORM\Column(name="token", type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $token;
+    private $emailToken;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $firstname;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $birthdate;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $address;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $phone;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Role", inversedBy="users")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $role;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Appointment", mappedBy="customer", orphanRemoval=true)
+     */
+    private $appointments;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Unavailability", mappedBy="user", orphanRemoval=true)
+     */
+    private $unavailabilities;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $gender;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $salt;
+
+    public function __construct()
+    {
+        $this->setEmailToken(Uuid::uuid1());
+        $this->roles = new ArrayCollection();
+        $this->appointments = new ArrayCollection();
+        $this->unavailabilities = new ArrayCollection();
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getCreateTime(): ?\DateTimeInterface
+    {
+        return $this->create_time;
+    }
+
+    public function setCreateTime(\DateTimeInterface $create_time): self
+    {
+        $this->create_time = $create_time;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getIsActive(): ?bool
+    {
+        return $this->isActive;
+    }
+
+    public function setIsActive(bool $isActive): self
+    {
+        $this->isActive = $isActive;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getEmailToken(): ?string
+    {
+        return $this->emailToken;
+    }
+
+    public function setEmailToken(?string $emailToken): self
+    {
+        $this->emailToken = $emailToken;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getBirthdate(): ?\DateTimeInterface
+    {
+        return $this->birthdate;
+    }
+
+    public function setBirthdate(?\DateTimeInterface $birthdate): self
+    {
+        $this->birthdate = $birthdate;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?string $address): self
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     */
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?string $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    public function eraseCredentials()
+    {
+        return;
+    }
+
+    /** 
+     * @see \Serializable::serialize() 
+     */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            $this->salt,
+        ));
+    }
+
+    /** 
+     * @see \Serializable::unserialize() 
+     */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            $this->salt
+        ) = unserialize($serialized, ['allowed_classes' => false]);
+    }
+
+    /**
+     * @Groups({"userInfo"})
+     *
+     *
+     * @return Array
+     */
+    public function getRoles(): Array
+    {
+        return [$this->role->getRole()];
+    }
+
+    public function addRole(Role $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getSalt(): ?string
+    {
+        return $this->salt;
+    }
+
+    /**
+     * @param string $salt
+     * @return User
+     */
+    public function setSalt(string $salt): self
+    {
+        $this->salt = $salt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Appointment[]
+     */
+    public function getAppointments(): Collection
+    {
+        return $this->appointments;
+    }
+
+    /**
+     * @param Appointment $appointment
+     * @return User
+     */
+    public function addAppointment(Appointment $appointment): self
+    {
+        if (!$this->appointments->contains($appointment)) {
+            $this->appointments[] = $appointment;
+            $appointment->setCustomer($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param Appointment $appointment
+     * @return User
+     */
+    public function removeAppointment(Appointment $appointment): self
+    {
+        if ($this->appointments->contains($appointment)) {
+            $this->appointments->removeElement($appointment);
+            // set the owning side to null (unless already changed)
+            if ($appointment->getCustomer() === $this) {
+                $appointment->setCustomer(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Unavailability[]
+     */
+    public function getUnavailabilities(): Collection
+    {
+        return $this->unavailabilities;
+    }
+
+    /**
+     * @param Unavailability $unavailability
+     * @return User
+     */
+    public function addUnavailability(Unavailability $unavailability): self
+    {
+        if (!$this->unavailabilities->contains($unavailability)) {
+            $this->unavailabilities[] = $unavailability;
+            $unavailability->setUser($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param Unavailability $unavailability
+     * @return User
+     */
+    public function removeUnavailability(Unavailability $unavailability): self
+    {
+        if ($this->unavailabilities->contains($unavailability)) {
+            $this->unavailabilities->removeElement($unavailability);
+            // set the owning side to null (unless already changed)
+            if ($unavailability->getUser() === $this) {
+                $unavailability->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getGender(): ?bool
+    {
+        return $this->gender;
+    }
+
+    /**
+     * @param bool $gender
+     * @return User
+     */
+    public function setGender(bool $gender): self
+    {
+       $this->gender = $gender;
+
+       return $this;
+    }
 }
+    
