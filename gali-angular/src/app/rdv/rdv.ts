@@ -1,6 +1,6 @@
 export class Rdv {
     id: number;
-    hairedresser: string;
+    hairdresser: string;
     firstname: string;
     lastname: string;
     date: string;
