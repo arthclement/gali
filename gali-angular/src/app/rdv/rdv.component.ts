@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Rdv } from './rdv';
+
 // import { RDVS } from './mock-rdv';
 
 // import { $ } from 'protractor';
@@ -55,12 +56,12 @@ export class RdvComponent implements OnInit {
     // this.selectRdv = rdv;
    // }
   constructor(private httpClient: HttpClient) { }
-  postRdv() {
-    this.httpClient.post('',
+  getRdv() {
+    this.httpClient.get('localhost/api/appointments',
   {
   })
     .subscribe(
-      (data: any) => {
+      (data: any[]) => {
 
       }
     );

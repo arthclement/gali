@@ -1,3 +1,4 @@
+// import { Coiffeur } from './coiffeur';
 export class Rdv {
     id: number;
     hairdresser: string;
