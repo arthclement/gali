@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RdvComponent } from './rdv/rdv.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
+     AppComponent,
     RdvComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule
   ],
