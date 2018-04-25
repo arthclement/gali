@@ -4,14 +4,15 @@ namespace App\Controller;
 
 use App\Entity\Role;
 use App\Entity\User;
+use App\Repository\RoleRepository;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Serializer\Annotation\Groups;
 
 
 class ApiController extends Controller
@@ -20,19 +21,20 @@ class ApiController extends Controller
     /**
      * @Route("/api/professionals", name="professionals")
      */
-    public function getProfessionals()
-    {
-        $repository = $this->getDoctrine()->getRepository(User::class);
+    public function getProfessionals(
+        UserRepository $repoUser,
+        RoleRepository $repoRole,
+        SerializerInterface $serializer
+    ) {
+        $repoUser = $this->getDoctrine()->getRepository(User::class);
+        $repoRole = $this->getDoctrine()->getRepository(Role::class);
 
-        $professionals = $repository->findBy(
-            [
-                ['role' => 'ROLE_COIFFEUR'],
-                ['firstname' => 'ASC']
-            ]
-        );
+        $role = $repoRole->findOneBy(['label' => 'ROLE_COIFFEUR']);
+
+        $professionals = $repoUser->findByRole($role);
 
         return new JsonResponse(
-            \json_encode($professionals),
+            $serializer->serialize($professionals, 'json'),
             200,
             [],
             true
