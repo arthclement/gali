@@ -1,75 +1,22 @@
-var debug = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-jQuery(document).ready(function(){
-  console.log("ok");
+// smooth scroll
+$('a[href^="#"]').on("click", function() {
 
-
-
-  //for the navigation
-  // smooth scroll
-  $('a[href^="#"]').on("click", function(){
-  
-  //get the href value
+    //get the href value
     var theHrefValue = $(this).attr("href");
-  //console.log(theHrefValue);
-  //problem with only #
-    if(theHrefValue != "#"){
-    //try to find an element with this ID
-      var element = $(theHrefValue);
-      if(element.length >0){ //IF I FOUND SOMETHING
-      //look for an element with the right id
-      var offsetTop = element.offset().top-185;
-      //animation
-        $("body, html").animate({
-        "scrollTop": offsetTop
-        },1000);
-      }
-    }
-  });
-
-//for the connexion
-  $("#passwordRegister").on("focus",function(){
-    console.log("focus");
-    $("#pswd_info").css("display", "block");
-    console.log("display ok");
-  });
-
-  
-
-
-
-
-});
-=======
-=======
->>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
-jQuery(document).ready(function() {
-    console.log("ok");
-
-
-
-    //for the navigation
-    // smooth scroll
-    $('a[href^="#"]').on("click", function() {
-
-        //get the href value
-        var theHrefValue = $(this).attr("href");
-        //console.log(theHrefValue);
-        //problem with only #
-        if (theHrefValue != "#") {
-            //try to find an element with this ID
-            var element = $(theHrefValue);
-            if (element.length > 0) { //IF I FOUND SOMETHING
-                //look for an element with the right id
-                var offsetTop = element.offset().top - 185;
-                //animation
-                $("body, html").animate({
-                    "scrollTop": offsetTop
-                }, 1000);
-            }
+    //console.log(theHrefValue);
+    //problem with only #
+    if (theHrefValue != "#") {
+        //try to find an element with this ID
+        var element = $(theHrefValue);
+        if (element.length > 0) { //IF I FOUND SOMETHING
+            //look for an element with the right id
+            var offsetTop = element.offset().top - 185;
+            //animation
+            $("body, html").animate({
+                "scrollTop": offsetTop
+            }, 1000);
         }
-    });
+    }
 
     /** *************************Form Checking **************************************************** 
      * ***************************************************************************************
@@ -163,8 +110,6 @@ jQuery(document).ready(function() {
     })
 
 
-
-
     /** ***FIRST PASSWORD***** */
     //FOCUS IN
     $("#passwordRegister").on("focus", function() {
@@ -202,12 +147,4 @@ jQuery(document).ready(function() {
         }
 
     }
-
-
-
-<<<<<<< HEAD
 });
->>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
-=======
-});
->>>>>>> ed9f61b14b7ebcc2314b668f4552a9d0d725ff2b
