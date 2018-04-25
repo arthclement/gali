@@ -18,8 +18,7 @@ use Twig\Environment;
 
 class UserController
 {
-    public function registerUser
-    (
+    public function registerUser(
         Request $request,
         ObjectManager $manager,
         RolesRepository $rolesRepository,
@@ -117,7 +116,7 @@ class UserController
 
         //To send an email with Swift_Mailer
         $message = new \Swift_Message();
-        $message->setFrom('info@gali.com')
+        $message->setFrom('info@gali.lu')
             ->setTo($user->getEmail())
             ->setSubject('Validate your account.')
             ->setContentType('text/html')
@@ -137,14 +136,15 @@ class UserController
         $mailer->send($message);
         $session->getFlashBag()->add('info', 'User successfully registered !');
 
-        return new JsonResponse([
+        return new JsonResponse(
+            [
             'status' => 0,
             'message' => 'User successfully created'
-        ]);
+            ]
+        );
     }
 
-    public function usernameAvailable
-    (
+    public function usernameAvailable(
         Request $request,
         UserRepository $repository
     )
@@ -163,8 +163,7 @@ class UserController
         );
     }
 
-    public function activateUser
-    (
+    public function activateUser(
         $token,
         ObjectManager $manager,
         SessionInterface $session,

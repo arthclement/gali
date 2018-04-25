@@ -4,13 +4,20 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Roles;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+
 
 class ApiController extends Controller
 {
+
     /**
      * @Route("/api/professionals", name="professionals")
      */
@@ -39,7 +46,7 @@ class ApiController extends Controller
      */
     public function getAppointments(Request $request)
     {
-        $userID = $request->query->get('id');
+        $userID = $request->query->get('id'); // /api/appointments?id=1
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $user = $repoUser->find($userID);
 
@@ -75,13 +82,17 @@ class ApiController extends Controller
     /**
      * @Route("/api/users", name="users")
      */
-    public function getUsers(Request $request)
+    public function getUsers(
+        Request $request,
+        UserRepository $userRepository
+    )
     {
+        $userToConvert = [];
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $userList = $repoUser->findAll();
 
         return new JsonResponse(
-            \json_encode($userList),
+            \Serializer::serialize($userList, 'json'),
             200,
             [],
             true
