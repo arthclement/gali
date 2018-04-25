@@ -3,13 +3,13 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { CardexIndividual } from '../cardexIndividual';
 import { CARDEXGLOBAL } from '../cardexGlobal';
 //import Http get request module
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
 
-//import interface post 
+ 
 
 
-//import Observable == http request
-//import { Observable } from 'rxjs/Observable';
+
+
 
 
 // error message can't find module
@@ -17,6 +17,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {  } from '@angular/core/src/render3';
 //NgModel Here
 import { NgModel, FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -37,7 +39,8 @@ import { NgModel, FormsModule } from '@angular/forms';
   imports:[
     
     FormsModule,
-    HttpClientModule
+    //HttpClientModule,
+    
     
 
   ],
@@ -47,7 +50,7 @@ export class FormComponent implements OnInit {
 
   
 
-  CardexIndividual: {};
+  //CardexIndividual: {};
   // Individual User Profile as an object
   user: CardexIndividual = {
     firstname: 'dwdfnwd',
@@ -61,8 +64,9 @@ export class FormComponent implements OnInit {
     //to do add role in the template
     role:'dwf',
   };
+   
 
-/** 
+ /**
   //test with fake json request
   readonly ROOT_URL = '';
   //need an http get request for just one JSON object
@@ -76,6 +80,7 @@ export class FormComponent implements OnInit {
 
   }
   */
+  
   ngOnInit() {
     
   }

@@ -23,7 +23,7 @@ import { BodyComponent } from './body/body.component';
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
 //importing the HTTP request GET + POST == avoid
-import { HttpClientModule } from '@angular/common/http';
+//import { HttpClientModule } from '@angular/common/http';
 
 //routing
 //routerModule = responsible for the navigation
@@ -59,7 +59,7 @@ import { SliderComponent } from './slider/slider.component';
     //error message no exported member
    // MdInputModule,
     //MdButtonModule
-    HttpClientModule, 
+   // HttpClientModule, 
     RouterModule.forRoot([
       {
         path:'', component: AgendaComponent
