@@ -1,24 +1,25 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\User;
+use Twig\Environment;
 use App\Repository\RoleRepository;
 use App\Repository\UserRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use App\Entity\User;
-use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Twig\Environment;
 
-class UserController
+class UserController extends Controller
 {
     public function registerUser(
         Request $request,
@@ -27,7 +28,6 @@ class UserController
         EncoderFactoryInterface $encoderFactory,
         ValidatorInterface $validator,
         Environment $twig,
-        \Swift_Mailer $mailer,
         SessionInterface $session
     )
     {
@@ -115,11 +115,19 @@ class UserController
 
         $manager->persist($user);
         $manager->flush();
-
+        
         //To send an email with Swift_Mailer
-        $message = new \Swift_Message();
-        $message->setTo($user->getEmail())
-            ->setSubject('Validate your account.')
+        $transport = (new \Swift_SmtpTransport(
+            'email-smtp.eu-west-1.amazonaws.com',
+            25,
+            'tls'
+        ))->setUsername('AKIAJFNL3DBZLK4VEFUA')
+        ->setPassword('AvTM+wt4BY8dRY349+CQFgb3Zh/Z9nzQ9IwyvCzcF4er');
+        $mailer = new \Swift_Mailer($transport);
+        $message = new \Swift_Message('Validate your account');
+        $message->setFrom(['no-reply@arthur-clement.eu' => 'Gali Team'])
+            ->setTo($user->getEmail())
+            ->setSubject('Validate your account')
             ->setContentType('text/html')
             ->setBody(
                 $twig->render(

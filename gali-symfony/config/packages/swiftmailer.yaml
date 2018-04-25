@@ -1,9 +1,3 @@
 swiftmailer:
-    transport: 'smtp'
-    host: 'email-smtp.eu-west-1.amazonaws.com'
-    port: '465'
-    username: 'QUtJQUpGTkwzREJaTEs0VkVGVUE='
-    password: 'QXZUTSt3dDRCWThkUlkzNDkrQ1FGZ2IzWmgvWjluelE5SXd5dkN6Y0Y0ZXI='
-    encryption: 'tls'
-    sender_address: 'no-reply@arthur-clement.eu'
+    url: '%env(MAILER_URL)%'
     spool: { type: 'memory' }
