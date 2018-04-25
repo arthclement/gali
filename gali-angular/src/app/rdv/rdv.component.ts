@@ -10,6 +10,7 @@ import { Rdv } from './rdv';
   styleUrls: ['./rdv.component.scss']
 })
 export class RdvComponent implements OnInit {
+
   rdvs: Rdv[] = [
   {
     id: 1,
