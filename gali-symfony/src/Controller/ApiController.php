@@ -72,8 +72,7 @@ class ApiController extends Controller
         Request $request,
         UserRepository $userRepository,
         SerializerInterface $serializer
-    )
-    {
+    ) {
         $userID = $request->query->get('id');
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $user = $repoUser->find($userID);
@@ -81,7 +80,10 @@ class ApiController extends Controller
         $unavailability = $user->getUnavailabilities();
 
         return new JsonResponse(
-            $serializer->serialize($unavailability, 'json'),
+            $serializer->serialize(
+                $unavailability,
+                'json'
+            ),
             200,
             [],
             true

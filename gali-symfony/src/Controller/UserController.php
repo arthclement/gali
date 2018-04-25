@@ -118,8 +118,7 @@ class UserController
 
         //To send an email with Swift_Mailer
         $message = new \Swift_Message();
-        $message->setFrom('info@gali.lu')
-            ->setTo($user->getEmail())
+        $message->setTo($user->getEmail())
             ->setSubject('Validate your account.')
             ->setContentType('text/html')
             ->setBody(
