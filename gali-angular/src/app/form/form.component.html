@@ -14,6 +14,11 @@
                 <!--role-->
                 <div class="info">
                     <div class="user">
+                        <button (click)="getPosts()"></button>
+                        <div *ngFor="let post of posts | async">
+                            {{post | json}}
+
+                        </div>
                         <label>Role</label>
                         <span>{{ user.role }}</span>
                     </div>
@@ -87,6 +92,7 @@
 
                     <label>phone</label><br>
                     <span>{{ user.phone }}</span>
+
                 </div>
             </td>
             <td>

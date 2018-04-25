@@ -5,13 +5,19 @@ import { CARDEXGLOBAL } from '../cardexGlobal';
 //import Http get request module
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+//import interface post 
+
+
+//import Observable == http request
+//import { Observable } from 'rxjs/Observable';
+
 
 // error message can't find module
 //import { userInfo } from 'os';
 import {  } from '@angular/core/src/render3';
 //NgModel Here
 import { NgModel, FormsModule } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
+
 
 
 
@@ -24,13 +30,14 @@ import { Observable } from 'rxjs/Observable';
 
 @NgModule({
   declarations: [
-    HttpClientModule
-    //clas
+    
+    
     
   ],
   imports:[
-    //ngModule import here
-    FormsModule
+    
+    FormsModule,
+    HttpClientModule
     
 
   ],
@@ -40,6 +47,7 @@ export class FormComponent implements OnInit {
 
   
 
+  CardexIndividual: {};
   // Individual User Profile as an object
   user: CardexIndividual = {
     firstname: 'dwdfnwd',
@@ -56,15 +64,15 @@ export class FormComponent implements OnInit {
 
 
   //test with fake json request
-  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com/';
+  readonly ROOT_URL = '';
   //need an http get request for just one JSON object
 
-  posts: any;
+  posts: '<Object>';
   constructor(private http: HttpClient) { }
 
   //the get request
   getPosts(){
-    this.posts = this.http.get(this.ROOT_URL + '/posts')
+    this.CardexIndividual = this.http.get(this.ROOT_URL + '/cardexIndividual')
 
   }
   ngOnInit() {
