@@ -13,28 +13,28 @@
 <button (click)="postProfile()">Post Profil</button>
 <br>
 -->
-<section>
-  <form id="formAgenda">
-    <h3>Take an Appointement Here</h3>
+<section id="mainConteiner">
+  <form id="formRdv">
+    <h3>Book of appointments</h3>
     <!-- ***********************************   begin  type Radio ***************************-->
-    <h5>Choose your Hardresser : </h5>
-    <div class="form-check">
+    <h5>Hairdresser ? </h5>
+    <div class="form-check" id="hairdresser">
       <ul>
         <li>
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
+          <input class="form-check-input" type="radio" name="typeRadio" id="typeRadios1" value="option1" checked>
+          <label class="form-check-label" for="typeRadio1">
             Louis
           </label>
         </li>
         <li>
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
+          <input class="form-check-input" type="radio" name="typeRadio" id="typeRadios2" value="option2">
+          <label class="form-check-label" for="typeRadio2">
             Marie
           </label>
         </li>
         <li>
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
+          <input class="form-check-input" type="radio" name="typeRadio" id="typeRadios3" value="option2">
+          <label class="form-check-label" for="typeRadio3">
             Julie
           </label>
         </li>
@@ -42,27 +42,27 @@
     </div>
 
     <br>
-    <!-- ********************************** end  DateTime ! ************-->
+    <!-- ********************************** end  type Radio ************-->
 
-    <!-- ********************************** Begin  DateTime ! *********************************-->
-    <h5>Choose your date and hour </h5>
+    <!-- ********************************** Begin  DateTime  *********************************-->
+    <h5>Date and hour ?</h5>
     <div class="row">
       <div class="col">
-        <input type="date" class="form-control" placeholder="time">
+        <input type="date" class="form-control" id="datePicker" placeholder="time">
       </div>
       <div class="col">
-        <input type="time" class="form-control" placeholder="time">
+        <input type="time" class="form-control" id="time" placeholder="time">
       </div>
     </div>
 
     <br>
-    <h5> Unavailable Hours </h5>
-    <!-- ********************************** end  DateTime ! *********-->
+    <h5> Ooops! Unavailable !</h5>
+    <!-- ********************************** end  DateTime *********-->
 
     <!-- ********************************** begin  Textarea and unavailability ******************************-->
     <!-- <Span>{{coiffeur.unavailable}}</Span> -->
     <ul>
-      <li>*** here display the unavailable hours of the coiffeur</li>
+      <li>*** here display the unavailable hours of the hairdressers</li>
     </ul>
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Description</label>
@@ -75,12 +75,12 @@
     <div class="row">
       <div class="col">
 
-        <label for="formGroupExampleInput2">Firstname</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Firstname">
+        <label for="formGroupExampleInput2" >Firstname</label>
+        <input type="text" class="form-control" id="inputNameClient1" placeholder="Firstname">
       </div>
       <div class="col">
         <label for="formGroupExampleInput2">Lastname</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Lastname">
+        <input type="text" class="form-control" id="inputNameClient2" placeholder="Lastname">
       </div>
     </div>
     <br>
@@ -89,12 +89,12 @@
 
     <!-- ********************************** begin Submit button ******************************-->
 
-    <button type="submit" (click)=postRdv() class="btn btn-primary">Create RDV</button>
+    <button type="submit" (click)=postRdv() class="btn btn-primary" id="submitBouton">Create RDV</button>
     <!-- ********************************** end Submit button  ******************************-->
   </form>
 
   <!-- ********************************  Begin  Table  display RDV  ************************* -->
-  <table id="tableAgenda">
+  <table id="tableRdv">
     <tr>
       <th>Hairdresser</th>
       <th>Firstname</th>

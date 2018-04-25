@@ -1,51 +1,57 @@
 $blueGali: #18BEF0;
+$boxShadow: 4px 3px 4px 5px rgba(172, 179, 182, 0.3);
 
 * {
   box-sizing: border-box;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
 }
 
-/** ***********    Containers   ***********/
+/** ***********   Main Conteiner ***********/
 
-section {
-  
-  width: 90%;
+#mainConteiner {
+    width: 90%;
   
 }
 
-/* *************   inside Form ************ */
-#formAgenda {
-  margin: 2vw 0 0 2vw;
-  padding: 1vw;
+/* *********** Form inside Conteiner************ */
+#formRdv {
+    margin: 2vw 0 0 2vw;
+    padding: 1vw;
     width: 60%;
     border-radius: 8px;
-    box-shadow: 4px 3px 4px 5px rgba(172, 179, 182, 0.3);
-   
+    box-shadow: $boxShadow;
+
 }
 
+/* Textarea and unavailability */
 ul{
     display: flex;
     justify-content: space-between;
+        li{
+            padding-right: 1.8vw;
+            list-style: none;
+        }
     
 }
 
-ul li {
-    padding-right: 1.8vw;
-    list-style: none;
+[name="typeRadio"]{
+    box-shadow: none;
 }
-
 input{
     
     color:  $blueGali;
     border-radius: 1.5vw;
-    box-shadow: 4px 3px 4px 5px rgba(172, 179, 182, 0.3);
+    box-shadow: $boxShadow;
 }
 
+
+/*  DateTime */
 [placeholder="time"]{
     width:51%;
+    
 }
 
-/*  input nom client */
+/*  input name client */
 [id="formGroupExampleInput2"]{
     width:55%;
     color: $blueGali;
@@ -54,27 +60,41 @@ input{
 
 
 textarea{
-    width: 55%;
+    width: 0 auto;
     border-radius: 20px;
     color: $blueGali;
+    box-shadow: $boxShadow;
 }
 
 
+/*  Submit button  */
+[type="submit"]{
+    border: none;
+    background-color: $blueGali;
+    box-shadow: 2px 1px 3px 5px $blueGali;
+    transition-duration: 0.2s;
+    
+}
+
+[type="submit"]:hover{ 
+    background-color: rgb(0, 132, 255);
+    box-shadow: 4px 3px 4px 5px rgb(0, 132, 255);
+    
+    
+}
+
     /* ****************  tale *********/
 
-    #tableAgenda {
+    #tableRdv {
         margin: 2vw 0 1vw 2vw;
-        
+        box-shadow: 5px 10px 10px 10px rgba(148, 230, 255, 0.2);
+        border-radius: 8px;
         width: 70%;
         text-align: center;
         
       }
       
-      [type="submit"]{
-          border: none;
-          background-color: $blueGali;
-          box-shadow: 2px 1px 3px 5px $blueGali;
-      }
+     
 
     tr{
     background-color: rgba(148, 230, 255, 0.2);
