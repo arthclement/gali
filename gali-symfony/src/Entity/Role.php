@@ -9,7 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\RolesRepository")
  */
-class Roles
+class Role
 {
     /**
      * @ORM\Id()
@@ -62,7 +62,7 @@ class Roles
     {
         if (!$this->users->contains($user)) {
             $this->users[] = $user;
-            $user->setRoles($this);
+            $user->addRole($this);
         }
 
         return $this;
@@ -74,7 +74,7 @@ class Roles
             $this->users->removeElement($user);
             // set the owning side to null (unless already changed)
             if ($user->getRoles() === $this) {
-                $user->setRoles(null);
+                $user->addRole(null);
             }
         }
 

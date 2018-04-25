@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use App\Repository\RolesRepository;
+use App\Repository\RoleRepository;
 use App\Repository\UserRepository;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -9,10 +9,12 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Entity\User;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Twig\Environment;
 
@@ -21,7 +23,7 @@ class UserController
     public function registerUser(
         Request $request,
         ObjectManager $manager,
-        RolesRepository $rolesRepository,
+        RoleRepository $roleRepository,
         EncoderFactoryInterface $encoderFactory,
         ValidatorInterface $validator,
         Environment $twig,
@@ -30,13 +32,13 @@ class UserController
     )
     {
         //request parameters
-        $username = $request->request->get('username');
-        $firstName = $request->request->get('firstname');
-        $lastName = $request->request->get('lastname');
-        $email = $request->request->get('email');
-        $gender = $request->request->get('gender');
-        $password = $request->request->get('password');
-        $confirmPassword = $request->request->get('confirm-password');
+        $username = $request->request->get('_username-reg');
+        $firstName = $request->request->get('_firstname');
+        $lastName = $request->request->get('_lastname');
+        $email = $request->request->get('_email');
+        $gender = $request->request->get('_gender');
+        $password = $request->request->get('_password-reg');
+        $confirmPassword = $request->request->get('_confirm-password');
 
         //user to be registered
         $user = new User();
@@ -102,13 +104,13 @@ class UserController
             $salt
         );
 
-        $userRole = $rolesRepository->findOneByRole('ROLE_USER');
+        $userRole = $roleRepository->findOneByRole('ROLE_USER');
         if(!$userRole) {
             throw new NotFoundHttpException('ROLE_USER not found in the DB');
         }
 
         $user->setPassword($password);
-        $user->setRoles($userRole);
+        $user->addRole($userRole);
         $user->setCreateTime(new \DateTime('now'));
 
         $manager->persist($user);
@@ -144,7 +146,25 @@ class UserController
         );
     }
 
-    public function usernameAvailable(
+    public function login
+    (
+        AuthenticationUtils $authUtils,
+        Environment $twig
+    )
+    {
+        return new Response(
+            $twig->render(
+                'header.html.twig',
+                [
+                    'last_username' => $authUtils->getLastUsername(),
+                    'error' => $authUtils->getLastAuthenticationError()
+                ]
+            )
+        );
+    }
+
+    public function usernameAvailable
+    (
         Request $request,
         UserRepository $repository
     )

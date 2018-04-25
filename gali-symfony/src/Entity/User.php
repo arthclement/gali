@@ -15,12 +15,12 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @UniqueEntity(
  *     fields={"username"},
  *     errorPath="username",
- *     message="This user is already registered"
+ *     message="This user is already registered !"
  * )
  * @UniqueEntity(
  *     fields={"email"},
  *     errorPath="email",
- *     message="This email is already registered"
+ *     message="This email is already registered !"
  * )
  */
 class User implements UserInterface, \Serializable
@@ -98,10 +98,10 @@ class User implements UserInterface, \Serializable
     private $phone;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Roles", inversedBy="users")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Role", inversedBy="users")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $roles = [];
+    private $role;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Appointment", mappedBy="customer", orphanRemoval=true)
@@ -306,20 +306,16 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * @return Roles|null
+     * @return Array
      */
-    public function getRoles(): ?Roles
+    public function getRoles(): Array
     {
-        return $this->roles;
+        return [$this->role->getRole()];
     }
 
-    /**
-     * @param Roles|null $roles
-     * @return User
-     */
-    public function setRoles(?Roles $roles): self
+    public function addRole(Role $role): self
     {
-        $this->roles = $roles;
+        $this->role = $role;
 
         return $this;
     }

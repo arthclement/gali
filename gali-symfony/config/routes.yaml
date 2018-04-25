@@ -19,12 +19,23 @@ api_users:
     controller: App\Controller\ApiController::getUsers
     
 home_page:
-    path: /
+    path: /{_locale}
     controller: App\Controller\HomePageController::getHomePage
+    defaults:
+        _locale: en
 
 user_register:
-    path: /register
+    path: /{_locale}/register
     controller: App\Controller\UserController::registerUser
+    defaults:
+        _locale: en
+
+login:
+    path: /{_locale}/login
+    controller: App\Controller\UserController::login
+
+logout:
+    path: /logout
 
 username_available:
     path: /username/available

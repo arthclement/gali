@@ -39,20 +39,24 @@
                 
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        {% if error is defined %}
+                            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
                         <!--LogIn Form -->
-                        <form action="/login" method="POST">
-                            <!--Username-->
+                        <form action="{{ path('login') }}" method="post">
                             <div class="form-group">
-                                <label for="username-login">Username or @email</label>
-                                <input type="text" class="form-control" id="username-login" name="username-login" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
+                                <label for="username">Username:</label>
+                                <input class="form-control" type="text" id="username" name="_username" value="{% if last_name is defined %}{{ last_username }}{% endif %}"/>
                             </div>
-                            <!--password-->
+
                             <div class="form-group">
-                                <label for="password-login">Password</label>
-                                <input type="password-login" class="form-control" id="password-login" name="password-login" placeholder="Password">
+                                <label for="password">Password:</label>
+                                <input class="form-control" type="password" id="password" name="_password" />
                             </div>
-                            <!--submit-->
-                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                            <div class="col-xs-10 col-xs-offset-1">
+                                <button type="submit" class="btn btn-block btn-success">login</button>
+                            </div>
                         </form>
                     </div>
         
@@ -62,39 +66,39 @@
                             <div class="form-row">
                                 <!--username-->
                                 <div class="form-group col-md-6">
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                                    <label for="username-reg">Username</label>
+                                    <input type="text" class="form-control" id="username-reg" name="_username-reg" placeholder="Username">
                                 </div>
                                 <br/>
                                 <!--firstName-->
                                 <div class="form-group col-md-6">
                                     <label for="firstname">Firstname</label>
-                                    <input type="text" class="form-control" id="firstName" name="firstname" placeholder="Firstname">
+                                    <input type="text" class="form-control" id="firstname" name="_firstname" placeholder="Firstname">
                                 </div>
                                 <br/>
                                 <!--lastName-->
                                 <div class="form-group col-md-6" class="form-check form-check-inline">
                                     <label for="lastname">Lastname</label>
-                                    <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Lastname">
+                                    <input type="text" class="form-control" id="lastName" name="_lastname" placeholder="Lastname">
                                 </div>
                                 <!--email-->
                                 <div class="form-group col-md-6">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="_email" placeholder="Email">
                                 </div>
                                 <!--gender-->
                                 <div class="form-group col-md-6" id="radio">
                                     <div class="radio">
-                                        <label><input type="radio" name="gender" value="male" checked> Male</label>
+                                        <label><input type="radio" name="_gender" value="male" checked> Male</label>
                                     </div>
                                     <div class="radio">
-                                        <label><input type="radio" id="gender-female" name="gender" value="female"> Female</label>
+                                        <label><input type="radio" name="_gender" value="female"> Female</label>
                                     </div>
                                 </div>
                                 <!--password-->
                                 <div class="form-group col-md-6">
-                                    <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                                    <label for="password-reg">Password</label>
+                                    <input type="password" class="form-control" id="password-reg" name="_password-reg" placeholder="password">
                                 </div>
                                 <!--jquery class = display: none-->
                                 {#<div id="pswd_info">#}
@@ -108,8 +112,8 @@
                                 {#</div>#}
                                 <!--confirm password-->
                                 <div class="form-group col-md-6">
-                                    <label for="password">Confirm Password</label>
-                                    <input type="password" class="form-control" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                                    <label for="confirm-password">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirm-password" name="_confirm-password" placeholder="Confirm Password">
                                 </div>
                             </div>
 

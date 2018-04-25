@@ -1,10 +1,10 @@
 // $('#register-submit').on('click', function(event) {
 //     event.preventDefault();
-
+//
 //     var firstName = $('#firstName').val();
 //     var lastName = $('#lastName').val();
 //     var emailValue = $('#email').val();
-
+//
 //     $.ajax({
 //         url: '/register',
 //         type: 'POST',
