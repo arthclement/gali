@@ -9,7 +9,7 @@ class HomePageController
     public function getHomePage(Environment $twig)
     {
         return new Response(
-            $twig->render('/HomePage/homePage.html.twig')
+            $twig->render('/homepage/homepage.html')
         );
     }
 }
