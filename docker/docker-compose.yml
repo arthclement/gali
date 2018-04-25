@@ -17,16 +17,12 @@ services:
     image: php:7.2-apache
     build: .
     volumes:
-      - ./apache/apache.conf:/etc/apache2/apache.conf
-      - ./apache/angular.conf:/etc/apache2/sites-enabled/angular.conf
-      - ./apache/symfony.conf:/etc/apache2/sites-enabled/symfony.conf
-      - ./apache/ports.conf:/etc/apache2/ports.conf      
+      - ./apache/apache.conf:/etc/apache2/apache2.conf
       - ./../:/var/www/html/
     networks:
       - gali
     ports:
       - 80:80
-      - 8080:8080
 
 networks:
   gali:

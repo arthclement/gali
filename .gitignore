@@ -12,3 +12,4 @@ composer.phar
 .project
 .settings/
 /test
+gali-symfony/config/packages/swiftmailer.yaml

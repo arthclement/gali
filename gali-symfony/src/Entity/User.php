@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\Mapping as ORM;
+use Serializable;
 use Ramsey\Uuid\Uuid;
-use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -131,16 +133,23 @@ class User implements UserInterface, \Serializable
         $this->unavailabilities = new ArrayCollection();
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getUsername(): ?string
     {
         return $this->username;
     }
 
+    
     public function setUsername(string $username): self
     {
         $this->username = $username;
@@ -148,6 +157,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getEmail(): ?string
     {
         return $this->email;
@@ -172,6 +184,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getCreateTime(): ?\DateTimeInterface
     {
         return $this->create_time;
@@ -184,6 +199,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getIsActive(): ?bool
     {
         return $this->isActive;
@@ -196,6 +214,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getEmailToken(): ?string
     {
         return $this->emailToken;
@@ -208,6 +229,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getFirstname(): ?string
     {
         return $this->firstname;
@@ -220,6 +244,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getLastname(): ?string
     {
         return $this->lastname;
@@ -232,6 +259,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getBirthdate(): ?\DateTimeInterface
     {
         return $this->birthdate;
@@ -244,6 +274,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getAddress(): ?string
     {
         return $this->address;
@@ -256,6 +289,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getPhone(): ?string
     {
         return $this->phone;
@@ -306,6 +342,9 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * @Groups({"userInfo"})
+     *
+     *
      * @return Array
      */
     public function getRoles(): Array
