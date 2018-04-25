@@ -2,17 +2,16 @@
 
 namespace App\Controller;
 
+use App\Entity\Role;
 use App\Entity\User;
-use App\Entity\Roles;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 
 class ApiController extends Controller
@@ -27,7 +26,7 @@ class ApiController extends Controller
 
         $professionals = $repository->findBy(
             [
-                ['roles' => 'ROLE_COIFFEUR'],
+                ['role' => 'ROLE_COIFFEUR'],
                 ['firstname' => 'ASC']
             ]
         );
@@ -44,8 +43,11 @@ class ApiController extends Controller
     /**
      * @Route("/api/appointments", name="appointments")
      */
-    public function getAppointments(Request $request)
-    {
+    public function getAppointments(
+        Request $request,
+        UserRepository $userRepository,
+        SerializerInterface $serializer
+    ) {
         $userID = $request->query->get('id'); // /api/appointments?id=1
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $user = $repoUser->find($userID);
@@ -53,7 +55,10 @@ class ApiController extends Controller
         $appointments = $user->getAppointments();
 
         return new JsonResponse(
-            \json_encode($appointments),
+            $serializer->serialize(
+                $appointments,
+                'json'
+            ),
             200,
             [],
             true
@@ -63,7 +68,11 @@ class ApiController extends Controller
     /**
      * @Route("/api/unavailability", name="unavailability")
      */
-    public function getUnavailability(Request $request)
+    public function getUnavailability(
+        Request $request,
+        UserRepository $userRepository,
+        SerializerInterface $serializer
+    )
     {
         $userID = $request->query->get('id');
         $repoUser = $this->getDoctrine()->getRepository(User::class);
@@ -72,7 +81,7 @@ class ApiController extends Controller
         $unavailability = $user->getUnavailabilities();
 
         return new JsonResponse(
-            \json_encode($unavailability),
+            $serializer->serialize($unavailability, 'json'),
             200,
             [],
             true
@@ -84,15 +93,19 @@ class ApiController extends Controller
      */
     public function getUsers(
         Request $request,
-        UserRepository $userRepository
+        UserRepository $userRepository,
+        SerializerInterface $serializer
     )
     {
-        $userToConvert = [];
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $userList = $repoUser->findAll();
 
         return new JsonResponse(
-            serialize($userList, 'json'),
+            $serializer->serialize(
+                $userList, 
+                'json',
+                ['groups' => ['userInfo']]
+            ),
             200,
             [],
             true
