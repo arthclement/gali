@@ -1,3 +1,6 @@
+//import the global cardex
+import { CARDEXGLOBAL } from './cardexGlobal';
+
 // create the class in a separated file
 
 //data modal class = a class for the object creation
@@ -11,12 +14,9 @@
          birthdate: string;
          gender: boolean;
 // is the format ok ??
-// JUST UNE ADDRESS
-         street: string;
-         postcode: string;
-         city: string;
-         country: string;
-
+// JUST UNE ADDRESS complète 
+         adress: string;
+         
          iduser: number;
 
          phone: string;

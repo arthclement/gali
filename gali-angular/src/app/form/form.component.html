@@ -10,37 +10,47 @@
 
     <table class="fullwidth" cellspacing="0">
         <tr>
-            <!--firstname + lastname-->
             <td>
+                <!--role-->
                 <div class="info">
-                    <div class="info">
-                        <label>Firstname</label>
-                        <span>{{ user.firstname }}</span>
+                    <div class="user">
+                        <label>Role</label>
+                        <span>{{ user.role }}</span>
                     </div>
-
-
 
                 </div>
             </td>
             <td>
+                <!--firstname-->
                 <div class="info">
-                    <div class="info">
+                    <div class="user">
+                        <label>Firstname</label>
+                        <span>{{ user.firstname }}</span>
+                    </div>
+
+                </div>
+
+            </td>
+            <td>
+                <!--lastname-->
+                <div class="info">
+                    <div class="user">
                         <label>Lastname</label>
                         <span>{{ user.lastname }}</span>
                     </div>
 
                 </div>
+
             </td>
         </tr>
-    </table>
 
-    <!--Birthdate + Gender-->
-    <table class="fullwidth" cellspacing="0">
+    </table>
+    <table class="fullwidth" class="middleTable" cellspacing="0">
         <tr>
             <td>
                 <!--birthdate-->
                 <div class="info">
-                    <div class="info">
+                    <div class="user">
                         <label>Birthdate</label>
                         <span>{{ user.birthdate }}</span>
                     </div>
@@ -50,65 +60,46 @@
             <td>
                 <!--gender-->
                 <div class="info">
-                    <div class="gender">
+                    <div class="user">
                         <label>Gender</label>
                         <span>{{ user.gender }}</span>
                     </div>
 
                 </div>
-
             </td>
-        </tr>
-    </table>
-
-    <!--Address = street + postcode-->
-    <table class="fullwidth" cellspacing="0">
-        <tr>
             <td>
-                <!--street-->
-                <div class="adress">
-                    <div class="infoAdress">
-                        <label>Street</label>
-                        <span>{{ user.street }}</span>
+                <!--Complete Adress-->
+                <div class="info">
+                    <div class="user">
+                        <label>Adress</label>
+                        <span>{{ user.adress }}</span>
                     </div>
-                    <div class="infoAdress">
-                        <!--city-->
-                        <label>City</label>
-                        <span>{{ user.city }}</span>
-                    </div>
-                    <div class="infoAdress">
-                        <!--country-->
-                        <label>Country</label>
-                        <span>{{ user.country }}</span>
-                    </div>
-                    <div class="postcode">
-                        <!--postcode-->
-                        <label>Postcode</label>
-                        <span>{{ user.postcode }}</span>
-                    </div>
-
                 </div>
             </td>
         </tr>
     </table>
-    <!--City + Country-->
 
     <!-- Phone number + id User-->
-    <table class="fullwidth" cellspacing="0">
+    <table class="fullwidth" class="IdTable" cellspacing="0">
         <tr>
             <td>
-                <div class="info">
+                <div class="user">
 
                     <label>phone</label><br>
                     <span>{{ user.phone }}</span>
                 </div>
             </td>
             <td>
-                <div class="info">
+                <div class="user">
                     <label>Id</label><br>
                     <span>{{ user.id }}</span>
                 </div>
             </td>
         </tr>
     </table>
+
+
+
+
+
 </table>

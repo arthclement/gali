@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 // import the class
 import { CardexIndividual } from '../cardexIndividual';
-import { MockCardexGlobal } from '../mockCardexGlobal';
+import { CARDEXGLOBAL } from '../cardexGlobal';
 
 
 // error message can't find module
@@ -38,12 +38,10 @@ export class FormComponent  {
     //is the format ok ?
     birthdate: '1870, 12, 05',
     gender: true,
+    adress :'djsjg',
   
 
-    street:'lalee',
-    postcode: '90000',
-    city: 'ouii',
-    country: 'fghj',
+    
 
     iduser: 2,
 
@@ -53,6 +51,8 @@ export class FormComponent  {
     role:'dwf',
 
   };
+  
+
 
   //need an http get request for just one JSON object
 
