@@ -13,9 +13,10 @@ section {
   
 }
 
+/* *************   inside Form ************ */
 #formAgenda {
   margin: 2vw 0 0 2vw;
-    width: 50%;
+    width: 60%;
     border-radius: 8px;
     box-shadow: 4px 3px 4px 5px rgba(172, 179, 182, 0.3);
    
@@ -29,6 +30,7 @@ ul{
 
 ul li {
     padding-right: 1.8vw;
+    list-style: none;
 }
 
 input{
@@ -39,7 +41,13 @@ input{
 }
 
 [placeholder="time"]{
-    width: 50%;
+    width:51%;
+}
+
+/*  input nom client */
+[id="formGroupExampleInput2"]{
+    width:55%;
+    color: $blueGali;
 }
 
 
@@ -47,22 +55,29 @@ input{
 textarea{
     width: 55%;
     border-radius: 20px;
+    color: $blueGali;
 }
 
 
-#tableAgenda {
-  margin: 5vw;
-  width: 70%;
-  text-align: center;
-}
+    /* ****************  tale *********/
 
-[type="submit"]{
-    border: none;
-    background-color: $blueGali;
-    box-shadow: 2px 1px 3px 5px $blueGali;
-}
+    #tableAgenda {
+        margin: 2vw 0 1vw 2vw;
+        width: 70%;
+        text-align: center;
+        
+      }
+      
+      [type="submit"]{
+          border: none;
+          background-color: $blueGali;
+          box-shadow: 2px 1px 3px 5px $blueGali;
+      }
 
-tr{
+    tr{
     background-color: rgba(148, 230, 255, 0.2);
-    border: 1px solid red;
+    border-bottom: 1px solid $blueGali;
+    
 }
+
+

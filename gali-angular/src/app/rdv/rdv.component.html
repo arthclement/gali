@@ -14,7 +14,8 @@
 <br>
 -->
 <section>
-  <form id="formAgenda"> <!-- ***********/////////  !!!   ajouter des input nom client ?!-->
+  <form id="formAgenda">
+    <!-- ***********/////////  !!!   ajouter des input nom client ?!-->
 
     <h3>Take an Appointement Here</h3>
     <!-- ***********************************   begin  type Radio ***************************-->
@@ -62,21 +63,46 @@
 
     <!-- ********************************** begin  Textarea ******************************-->
     <!-- <Span>{{coiffeur.unavailable}}</Span> -->
-    <p> voir commentaire dans code - here display the unavailable hours of the coiffeur</p>
+    <ul>
+      <li>*** here display the unavailable hours of the coiffeur</li>
+    </ul>
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Description</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Color? Cut? or a cup of café/thé and a head massage ?"></textarea>
     </div>
-    <button type="submit" (click)=getProfile() class="btn btn-primary">Create RDV</button>
+
     <!-- ********************************** end Textarea  *********-->
+
+    <!-- ********************************** begin  input name client ******************************-->
+    <div class="row">
+      <div class="col">
+
+        <label for="formGroupExampleInput2">Firstname</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Firstname">
+      </div>
+      <div class="col">
+        <label for="formGroupExampleInput2">Lastname</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Lastname">
+      </div>
+    </div>
+    <br>
+    <!-- ********************************** end   input name client******************************-->
+
+
+    <!-- ********************************** begin Submit button ******************************-->
+
+    <button type="submit" (click)=getProfile() class="btn btn-primary">Create RDV</button>
+    <!-- ********************************** end Submit button  ******************************-->
   </form>
 
   <!-- ********************************  Begin  Table  display RDV  ************************* -->
   <table id="tableAgenda">
     <tr>
-      <th>Coiffeur</th>
+      <th>Hairedresser</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
       <th>Date</th>
-      <th>Heure</th>
+      <th>Hour</th>
       <th>Description</th>
     </tr>
     <!-- <tr>
@@ -86,16 +112,21 @@
     <td>{{coiffeur.Description}}</td>
   </tr> -->
     <tr>
+
       <td>Louis</td>
+      <td>John</td>
+      <td>Doe</td>
       <td>04 30 2018</td>
       <td>94</td>
-      <td>Couleur</td>
+      <td>Color</td>
     </tr>
     <tr>
       <td>Marie</td>
+      <td>Jane</td>
+      <td>Smith</td>
       <td>05 05 2018</td>
       <td>80</td>
-      <td>shampoing + coupe homme</td>
+      <td>shampoo + cut </td>
     </tr>
   </table>
   <!-- ********************************** end  DateTime ! *********-->
