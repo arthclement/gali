@@ -29,12 +29,16 @@ class ApiController extends Controller
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $repoRole = $this->getDoctrine()->getRepository(Role::class);
 
-        $role = $repoRole->findOneBy(['label' => 'ROLE_COIFFEUR']);
+        $role = $repoRole->findOneBy(['role' => 'ROLE_COIFFEUR']);
 
         $professionals = $repoUser->findByRole($role);
 
         return new JsonResponse(
-            $serializer->serialize($professionals, 'json'),
+            $serializer->serialize(
+                $professionals,
+                'json',
+                ['groups' => ['userInfo']]
+            ),
             200,
             [],
             true
