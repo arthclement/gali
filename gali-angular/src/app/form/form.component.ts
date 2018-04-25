@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 // import the class
 import { CardexIndividual } from '../cardexIndividual';
+import { MockCardexGlobal } from '../mockCardexGlobal';
 
 
 // error message can't find module
@@ -30,14 +31,14 @@ import { NgModel, FormsModule } from '@angular/forms';
 
 export class FormComponent  {
 
-  // User Profile
+  // Individual User Profile as an object
   user: CardexIndividual = {
     firstname: 'dwdfnwd',
     lastname: 'SFqfhdfB',
     //is the format ok ?
     birthdate: '1870, 12, 05',
-    gender: 'female',
-  //type gender to change
+    gender: true,
+  
 
     street:'lalee',
     postcode: '90000',
@@ -47,7 +48,20 @@ export class FormComponent  {
     iduser: 2,
 
     phone: '000000000',
+
+    //to do add role in the template
+    role:'dwf',
+
   };
+
+  //need an http get request for just one JSON object
+
+  
+  
+
+
+
+  
   
   
     

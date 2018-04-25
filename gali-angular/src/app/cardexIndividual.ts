@@ -1,6 +1,6 @@
 // create the class in a separated file
 
-//data modal class
+//data modal class = a class for the object creation
 //to do : match the user profile from the database
  export class CardexIndividual {
     
@@ -9,9 +9,9 @@
          lastname: string;
 // is the format ok ??
          birthdate: string;
-         gender: string;
+         gender: boolean;
 // is the format ok ??
-
+// JUST UNE ADDRESS
          street: string;
          postcode: string;
          city: string;
@@ -20,6 +20,7 @@
          iduser: number;
 
          phone: string;
+         role: string;
 
         
 
