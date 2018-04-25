@@ -7,19 +7,19 @@
 //properties no ? if it is not optional
          firstname: string;
          lastname: string;
+// is the format ok ??
+         birthdate: string;
+         gender: string;
+// is the format ok ??
 
-         //birthdate: DateTimeFormat;
-         //gender: string;
-        //type gender to change
+         street: string;
+         postcode: string;
+         city: string;
+         country: string;
 
-        // street: string;
-        // postcode: string;
-        // city: string;
-        // country: string;
+         iduser: number;
 
-       // iduser: number;
-
-       // phone: string;
+         phone: string;
 
         
 

@@ -29,8 +29,19 @@ export class FormComponent  {
   user: Cardex = {
     firstname: 'dwdfnwd',
     lastname: 'SFqfhdfB',
-    //birthdate:
-   //gender: 
+    //is the format ok ?
+    birthdate: '1870, 12, 05',
+    gender: 'female',
+  //type gender to change
+
+    street:'lalee',
+    postcode: '90000',
+    city: 'ouii',
+    country: 'fghj',
+
+    iduser: 2,
+
+    phone: '000000000',
   };
   
   
