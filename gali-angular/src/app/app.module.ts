@@ -20,7 +20,7 @@ import { BodyComponent } from './body/body.component';
 //form data entry
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
-//importting the HTTP request GET + POST == avoid
+//importing the HTTP request GET + POST == avoid
 import { HttpClientModule } from '@angular/common/http';
 
 //routing
