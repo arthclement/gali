@@ -5,6 +5,7 @@
         "php": "^7.2.3",
         "ext-iconv": "*",
         "ramsey/uuid": "^3.7",
+        "symfony/apache-pack": "^1.0",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
@@ -65,7 +66,7 @@
     "extra": {
         "symfony": {
             "id": "01CAZD9M748KYF6WE2QHEXYFHG",
-            "allow-contrib": false
+            "allow-contrib": true
         }
     }
 }
