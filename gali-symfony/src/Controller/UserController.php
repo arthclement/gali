@@ -145,21 +145,18 @@ class UserController
         ]);
     }
 
-    public function login
-    (
-        AuthenticationUtils $authUtils,
-        Environment $twig
-    )
+    public function login(AuthenticationUtils $authUtils)
     {
-        return new Response(
-            $twig->render(
-                'header.html.twig',
-                [
-                    'last_username' => $authUtils->getLastUsername(),
-                    'error' => $authUtils->getLastAuthenticationError()
-                ]
-            )
-        );
+        $authError = $authUtils->getLastAuthenticationError();
+
+        if ($authError) {
+            return new JsonResponse([
+               'auth_error' => $authError->getMessage()
+            ]);
+        }
+
+        //Redirection to the Angular application
+        return new RedirectResponse('/appointments.html');
     }
 
     public function usernameAvailable
