@@ -5,6 +5,8 @@ import * as $ from 'jquery';
 // for the gesture
 import 'hammerjs';
 
+//import { Observable } from 'rxjs/Observable';
+
 //warning messages must install depedencies myself
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -44,6 +46,7 @@ import { SliderComponent } from './slider/slider.component';
     SidebarComponent,
     BodyComponent,
     SliderComponent
+    
    
     
     

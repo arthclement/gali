@@ -62,7 +62,7 @@ export class FormComponent implements OnInit {
     role:'dwf',
   };
 
-
+/** 
   //test with fake json request
   readonly ROOT_URL = '';
   //need an http get request for just one JSON object
@@ -75,6 +75,7 @@ export class FormComponent implements OnInit {
     this.CardexIndividual = this.http.get(this.ROOT_URL + '/cardexIndividual')
 
   }
+  */
   ngOnInit() {
     
   }

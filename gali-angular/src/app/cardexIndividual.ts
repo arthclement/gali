@@ -21,11 +21,4 @@ import { CARDEXGLOBAL } from './cardexGlobal';
 
          phone: string;
          role: string;
-
-        
-
-
-    
-    
-
 }
