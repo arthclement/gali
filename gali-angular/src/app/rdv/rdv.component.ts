@@ -54,6 +54,16 @@ export class RdvComponent implements OnInit {
     // onSelect(rdv: Rdv): void {
     // this.selectRdv = rdv;
    // }
-  constructor() {}
+  constructor(private httpClient: HttpClient) { }
+  postRdv() {
+    this.httpClient.post('',
+  {
+  })
+    .subscribe(
+      (data: any) => {
+
+      }
+    );
+  }
   ngOnInit() { }
   }

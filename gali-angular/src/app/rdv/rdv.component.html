@@ -15,8 +15,6 @@
 -->
 <section>
   <form id="formAgenda">
-    <!-- ***********/////////  !!!   ajouter des input nom client ?!-->
-
     <h3>Take an Appointement Here</h3>
     <!-- ***********************************   begin  type Radio ***************************-->
     <h5>Choose your Hardresser : </h5>
@@ -61,7 +59,7 @@
     <h5> Unavailable Hours </h5>
     <!-- ********************************** end  DateTime ! *********-->
 
-    <!-- ********************************** begin  Textarea ******************************-->
+    <!-- ********************************** begin  Textarea and unavailability ******************************-->
     <!-- <Span>{{coiffeur.unavailable}}</Span> -->
     <ul>
       <li>*** here display the unavailable hours of the coiffeur</li>
@@ -91,7 +89,7 @@
 
     <!-- ********************************** begin Submit button ******************************-->
 
-    <button type="submit" (click)=getProfile() class="btn btn-primary">Create RDV</button>
+    <button type="submit" (click)=postRdv() class="btn btn-primary">Create RDV</button>
     <!-- ********************************** end Submit button  ******************************-->
   </form>
 
