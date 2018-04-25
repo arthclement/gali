@@ -92,7 +92,7 @@ class ApiController extends Controller
         $userList = $repoUser->findAll();
 
         return new JsonResponse(
-            \Serializer::serialize($userList, 'json'),
+            serialize($userList, 'json'),
             200,
             [],
             true
