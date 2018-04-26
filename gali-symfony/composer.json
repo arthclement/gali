@@ -4,6 +4,7 @@
     "require": {
         "php": "^7.2.3",
         "ext-iconv": "*",
+        "nelmio/api-doc-bundle": "^3.2",
         "ramsey/uuid": "^3.7",
         "symfony/apache-pack": "^1.0",
         "symfony/console": "^4.0",
