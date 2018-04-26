@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RdvComponent } from './rdv.component';
+import { RdvComponent } from './appointments.component';
 
 describe('RdvComponent', () => {
   let component: RdvComponent;

@@ -1,5 +1,5 @@
 <!-- <p>
-  rdv works!
+  appointments works!
 </p>
 <input type="text" (keyup)="onNameKeyUp($event)">
 <button (click)="getProfile()">Get Profil</button>
@@ -104,29 +104,14 @@
       <th>Description</th>
     </tr>
 
-
-
-    <tr *ngFor="let rdv of rdvs">
-      <td>{{rdv.hairdresser}}</td>
-      <td>{{rdv.firstname}}</td>
-      <td>{{rdv.lastname}}</td>
-      <td>{{rdv.date}}</td>
-      <td>{{rdv.hour}}</td>
-      <td>{{rdv.description}}</td>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{appointment.hairdresser}}</td>
+      <td>{{appointment.firstname}}</td>
+      <td>{{appointment.lastname}}</td>
+      <td>{{appointment.date}}</td>
+      <td>{{appointment.hour}}</td>
+      <td>{{appointment.description}}</td>
     </tr>
-    <!-- <tr>
-      <td>Marie</td>
-      <td>Jane</td>
-      <td>Smith</td>
-      <td>05 05 2018</td>
-      <td>80</td>
-      <td>shampoo + cut </td>
-    </tr> -->
+
   </table>
-  <!-- ********************************** end  DateTime ! *********-->
-  <!-- <ol>
-      <li *ngFor="let rdv of rdvs">
-        <span class="badge">{{rdv.hairedresser}}</span> {{rdv.firstname}}
-      </li>
-  </ol>-->
 </section>
