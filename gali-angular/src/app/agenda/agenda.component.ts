@@ -14,21 +14,18 @@ import { Routes, RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     SliderComponent,
-    
-
   ],
 
   //add Routes
-  imports:[
+  imports: [
     RouterModule.forRoot([
       {
-        path:'slider', component: SliderComponent
+        path: 'slider',
+        component: SliderComponent
       },
-      
-
     ])
   ]
-})  
+})
 
 
 @Component({

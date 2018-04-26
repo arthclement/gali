@@ -16,26 +16,28 @@ import { AgendaComponent } from '../agenda/agenda.component';
     FormComponent,
 
   ],
-  imports:[
+  imports: [
     RouterModule.forRoot([
       {
-        path:'agenda', component: AgendaComponent
+        path: 'rdv',
+        component: AgendaComponent
       },
       {
-        path:'form', component: FormComponent
+        path: 'form',
+        component: FormComponent
       },
     ])
 
   ]
-  
+
 })
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
-  
- 
+
+
 })
 export class SidebarComponent {
 

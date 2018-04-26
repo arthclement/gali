@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import * as $ from 'jquery';
 // for the gesture
-import 'hammerjs';
 
 //import { Observable } from 'rxjs/Observable';
 
@@ -46,10 +45,6 @@ import { SliderComponent } from './slider/slider.component';
     SidebarComponent,
     BodyComponent,
     SliderComponent
-    
-   
-    
-    
   ],
   //activation of the imports
   imports: [
@@ -59,20 +54,24 @@ import { SliderComponent } from './slider/slider.component';
     //error message no exported member
    // MdInputModule,
     //MdButtonModule
-   // HttpClientModule, 
+   // HttpClientModule,
     RouterModule.forRoot([
       {
-        path:'', component: AgendaComponent
+        path: '',
+        component: AgendaComponent
       },
-      
+
       {
-        path: 'agenda', component: AgendaComponent
+        path: 'rdv',
+        component: AgendaComponent
       },
       {
-        path: 'form', component: FormComponent
+        path: 'form',
+        component: FormComponent
       },
       {
-        path:'body', component:BodyComponent
+        path: 'body',
+        component: BodyComponent
       },
     ])
     //RouterModule.forRoot()= static method for routerModule class = defines the root route for application

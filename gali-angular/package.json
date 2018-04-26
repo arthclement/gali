@@ -26,9 +26,7 @@
     "angular-calendar": "^0.24.0",
     "core-js": "^2.4.1",
     "daypilot-pro-angular": "https://npm.daypilot.org/daypilot-pro-angular/trial/2018.2.3244.tar.gz",
-    "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
-    "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
