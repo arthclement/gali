@@ -54,6 +54,11 @@
     color: #18bef0;
 }
 
+/*   ************************slide bar*/
+#myCaroussell{
+    width: 50%;
+    margin: auto;
+}
 
 /** entre nav et photo */
 
