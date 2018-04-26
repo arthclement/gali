@@ -40,6 +40,8 @@
     box-shadow: 0px 10px 5px 0px rgba(24, 190, 240, 0.1);
     text-align: center;
     position: -webkit-sticky;
+    margin-right: 10%;
+    margin-left:10%;
     top: 0;
     position: sticky;
     margin-bottom: 15px;
@@ -58,6 +60,7 @@
 #myCaroussell{
     width: 50%;
     margin: auto;
+    
 }
 
 /** entre nav et photo */
@@ -208,9 +211,28 @@ span {
 /* MAIN */
 
 main {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 12.5%;
 }
+
+#galiMilieu{
+    color: rgba(24, 190, 240, 0.2)
+    
+}
+
+
+.sectionMilieu div h3 {
+    font-size: 8vw;
+    text-align: center;
+    margin: 8vw 0 8vw 0;
+    
+}
+
+.cubeP{
+    font-size: 1.5vw;
+}
+
+
 
 
 /* Beggining Big Cube Faire CSS identitque */
@@ -229,15 +251,22 @@ main {
 
 .container-fluid {
     display: flex;
-    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
     border-radius: 8px;
     padding: 8px;
+}
+
+.container-fluid:hover {
+    display: flex;
+    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
+    background-color: #f7faff;
+    border-radius: 8px;
+   
 }
 
 section {
     margin-top: 50px;
     display: flex;
-    margin-left: 50px;
+    margin-left: 55px;
     margin-right: 50px;
 }
 
@@ -270,18 +299,15 @@ section {
     border: 1px solid red;
 }
 
-.sectionMilieu div h3 {
-    margin: 100px;
-    text-align: center;
-    padding: 150px;
-}
 
 footer {
-    background-color: #18bef0;
+    background: linear-gradient(to bottom, #00c4ff 0%, #18bef0 100%); ;
     padding: 50px 0 50px 0px;
     border-radius: 10px;
     color: #fff;
     font-size: 20px;
-    margin: 50px 20px 20px 20px;
+    margin: 50px 10% 80px 10%;
     padding-left: 50px;
+    box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
 }
+

@@ -180,7 +180,7 @@
         <!-- MAIN - Containers Paragraphe et Photo -->
 
         <!--Beginning Espace à conserver idees : photo - text -->
-     
+
 
 
         <!-- ************************** Slider Bootstrap ***************** -->
@@ -190,26 +190,17 @@
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
             </ol>
-            <div class="carousel-inner" >
+            <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="../img/imgCheveuxBleu.jpg" alt="First slide">
+                <img class="d-block w-100" src="../img/imgCheveuBleuProfileGrd.jpg" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="../img/imgDuoPhoto.jpg" alt="Second slide">
+                <img class="d-block w-100" src="../img/imgBleuProfileGrd.jpg" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="../img/imgMeches.jpg" alt="Third slide">
+                <img class="d-block w-100" src="../img/imgCheveuxBleu.jpg" alt="Third slide">
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="../img/imgPotCouleur.jpg" alt="Third slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="../img/imgMeches4.jpg" alt="Third slide">
-              </div>
-              
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -233,11 +224,7 @@
                 <div class="bigCube-p-h3-1">
                     <h3>About Us</h3>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias eius voluptatum dolorum dolor doloribus
-                        illo, reprehenderit blanditiis. Sapiente incidunt asperiores error fugiat voluptas ut aliquid perspiciatptas
-                        ut aliquid perspiciatis fuga harum amet.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi alias eius voluptatum dolorum dolor doloribus illo, reprehenderit blanditiis. Sapiente incidunt
-                        asperiores error fugiat voluptas ut aliquid perspiciatis fuga harum amet.</p>
+                    <p class="cubeP">GALI : Gabriel, Arthur, Leslie, Ivan. <br> Multi Colors,  <br>Multi Cultural,  <br> Multi Minds, <br> Multi Problems? No! <br>Only Multi Solutions  </p>
                 </div>
             </div>
             <!-- end big cube-->
@@ -261,7 +248,7 @@
                         <img src="../img/imgMultiPphoto.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="../img/imgMeches5.jpg" class="img-fluid">
+                        <img src="../img/imgCheveuxBleu.jpg" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -273,7 +260,7 @@
         <!--Beginning Espace à conserver idees : photo - text -->
         <div class="sectionMilieu">
             <div>
-                <h3> GALI is Awsome - GALI is Awsome - GALI is Awsome </h3>
+                <h3 id="galiMilieu"> GALI helps you </h3>
             </div>
         </div>
 
@@ -288,19 +275,19 @@
             <div class="col-xs-12 col-lg-4">
                 <div class="row">
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgMeches4.jpg" class="img-fluid">
+                        <img src="../img/imgMeches4.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgMeches2" class="img-fluid">
+                        <img src="../img/imgHomme.jpg" class="img-fluid">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgPotCouleur" class="img-fluid">
+                        <img src="../img/imgCheveuxBleu.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="../img/imgDuoPhoto.jpg" class="img-fluid">
+                        <img src="../img/imgMeches2.jpg" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -310,11 +297,9 @@
                 <div class="bigCube-p-h3-2">
                     <h3>The Services of GALI</h3>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias eius voluptatum dolorum dolor doloribus
-                        illo, reprehenderit blanditiis. Sapiente incidunt asperiores error fugiat voluptas ut aliquid perspiciatptas
-                        ut aliquid perspiciatis fuga harum amet.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi alias eius voluptatum dolorum dolor doloribus illo, reprehenderit blanditiis. Sapiente incidunt
-                        asperiores error fugiat voluptas ut aliquid perspiciatis fuga harum amet.</p>
+                    <p class="cubeP"> Gali is a customer management tool for hairdressers. <br>The objective of the project is to create an adaptable plateform for professionnal, easy to use and to embedded to any existing website. The idea is to create a customer interface, entirely customisable by the professionnal.
+
+                    </p>
                 </div>
             </div>
             <!-- end big cube-->
@@ -322,7 +307,7 @@
         <!--Beginning Espace à conserver idees : photo - text -->
         <div class="sectionMilieu">
             <div>
-                <h3> GALI is Awsome - GALI is Awsome - GALI is Awsome </h3>
+                <h3 id="galiMilieu">  GALI is your friend </h3>
             </div>
         </div>
 
@@ -352,8 +337,6 @@
         var validator = new UsernameValidator('#username-reg', 'http://localhost/username/available', 'POST');
         validator.setCallback(usernameValidatorCallback);
         validator.setBefore(beforeValidate);
-
-      
     </script>
     <script src="../js/script.js"></script>
 </body>
