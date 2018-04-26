@@ -1,7 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 // import the class
 import { CardexIndividual } from '../cardexIndividual';
-import { CARDEXGLOBAL } from '../cardexGlobal';
+
 //import Http get request module
 //import { HttpClientModule } from '@angular/common/http';
 

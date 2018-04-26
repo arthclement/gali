@@ -28,7 +28,7 @@
     "daypilot-pro-angular": "https://npm.daypilot.org/daypilot-pro-angular/trial/2018.2.3244.tar.gz",
     "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
-    "rxjs": "^5.5.10",
+    "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -50,6 +50,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "^2.6.2"
+    "typescript": "^2.8.3"
   }
 }

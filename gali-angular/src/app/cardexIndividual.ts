@@ -1,5 +1,5 @@
 //import the global cardex
-import { CARDEXGLOBAL } from './cardexGlobal';
+
 
 // create the class in a separated file
 
