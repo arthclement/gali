@@ -55,15 +55,17 @@ class ApiController extends Controller
         SerializerInterface $serializer
     ) {
         $userID = $request->query->get('id'); // /api/appointments?id=1
-        $repoUser = $this->getDoctrine()->getRepository(User::class);
-        $user = $repoUser->find($userID);
+        //$repoUser = $this->getDoctrine()->getRepository(User::class);
+        //$user = $repoUser->find($userID);
 
-        $appointments = $user->getAppointments();
+        $user = $userRepository->find($userID);
+        $appointments = $user->getAppointments($user->getId());
 
         return new JsonResponse(
             $serializer->serialize(
                 $appointments,
-                'json'
+                'json',
+                ['groups' => ['appointmentInfo']]
             ),
             200,
             [],

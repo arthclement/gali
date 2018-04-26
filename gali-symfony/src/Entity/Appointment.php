@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AppointmentRepository")
@@ -48,6 +49,9 @@ class Appointment
      */
     private $approved;
 
+    /**
+     * @Groups({"appointmentInfo"})
+     */
     public function getId()
     {
         return $this->id;
@@ -77,6 +81,9 @@ class Appointment
         return $this;
     }
 
+    /**
+     * @Groups({"appointmentInfo"})
+     */
     public function getDate(): ?\DateTimeInterface
     {
         return $this->date;
@@ -89,6 +96,9 @@ class Appointment
         return $this;
     }
 
+    /**
+     * @Groups({"appointmentInfo"})
+     */
     public function getDuration(): ?\DateTimeInterface
     {
         return $this->duration;
@@ -101,6 +111,9 @@ class Appointment
         return $this;
     }
 
+    /**
+     * @Groups({"appointmentInfo"})
+     */
     public function getDescription(): ?string
     {
         return $this->description;
@@ -113,6 +126,9 @@ class Appointment
         return $this;
     }
 
+    /**
+     * @Groups({"appointmentInfo"})
+     */
     public function getApproved(): ?bool
     {
         return $this->approved;

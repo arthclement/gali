@@ -381,7 +381,7 @@ class User implements UserInterface, \Serializable
     /**
      * @return Collection|Appointment[]
      */
-    public function getAppointments(): Collection
+    public function getAppointments(string $userId): Collection
     {
         return $this->appointments;
     }
