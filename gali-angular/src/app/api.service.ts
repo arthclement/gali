@@ -8,7 +8,6 @@ import { Appointment } from './appointment';
 @Injectable()
 export class ApiService {
   apiResult;
-  usersList;
 
   getUsers() {
     this.http.get('/api/users')
@@ -29,6 +28,8 @@ export class ApiService {
   }
 
   getProfessionals() {
+    let usersList = [];
+
     this.http.get('/api/professionals').
     subscribe(data => this.apiResult = data);
 
@@ -41,13 +42,15 @@ export class ApiService {
         professionals['lastname'],
         professionals['gender']
       );
+      usersList.push(professionalToAppend);
     }
 
-    return this.usersList;
+    return usersList;
   }
 
   getAppointments(id) {
     let params = new HttpParams().set('id', id);
+    let appointmentList = [];
 
     this.http.get(
       '/api/appointments',
@@ -59,13 +62,13 @@ export class ApiService {
     );
 
     for (const appointment of this.apiResult) {
-      let professional
-
       let appointmentsToAppend = new Appointment(
         appointment['id'],
         new Date(appointment['startdate']),
         new Date(appointment['enddate']),
-      )
+        appointment['description']
+      );
+      appointmentList.push(appointmentsToAppend);
     }
 
   }
