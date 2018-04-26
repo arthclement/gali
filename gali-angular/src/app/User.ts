@@ -1,12 +1,10 @@
-// creation of the class
-
-export class IndividualProfile {
+export class User {
   id: number;
   role: string;
   firstname: string;
   lastname: string;
-  birthdate: string;
+  birthdate: Date;
   gender: boolean;
-  adress: string;
+  address: string;
   phone: string;
 }

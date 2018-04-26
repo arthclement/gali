@@ -1,106 +1,22 @@
-<!--template cardex-->
-
-<!-- input search cardex customer-->
-
-<!--bind the ngSubmit-->
-<table class="formwidth">
-    <!--user profile from the database here-->
-
-
-
-    <table class="fullwidth" cellspacing="0">
-        <tr>
-            <td>
-                <!--role-->
-                <div class="info">
-                    <div class="user">
-                        <label>Role</label>
-                        <span>{{ user.role }}</span>
-                    </div>
-
-                </div>
-            </td>
-            <td>
-                <!--firstname-->
-                <div class="info">
-                    <div class="user">
-                        <label>Firstname</label>
-                        <span>{{ user.firstname }}</span>
-                    </div>
-
-                </div>
-
-            </td>
-            <td>
-                <!--lastname-->
-                <div class="info">
-                    <div class="user">
-                        <label>Lastname</label>
-                        <span>{{ user.lastname }}</span>
-                    </div>
-
-                </div>
-
-            </td>
-        </tr>
-
-    </table>
-    <table class="fullwidth" class="middleTable" cellspacing="0">
-        <tr>
-            <td>
-                <!--birthdate-->
-                <div class="info">
-                    <div class="user">
-                        <label>Birthdate</label>
-                        <span>{{ user.birthdate }}</span>
-                    </div>
-
-                </div>
-            </td>
-            <td>
-                <!--gender-->
-                <div class="info">
-                    <div class="user">
-                        <label>Gender</label>
-                        <span>{{ user.gender }}</span>
-                    </div>
-
-                </div>
-            </td>
-            <td>
-                <!--Complete Adress-->
-                <div class="info">
-                    <div class="user">
-                        <label>Address</label>
-                        <span>{{ user.address }}</span>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <!-- Phone number + id User-->
-    <table class="fullwidth" class="IdTable" cellspacing="0">
-        <tr>
-            <td>
-                <div class="user">
-
-                    <label>phone</label><br>
-                    <span>{{ user.phone }}</span>
-
-                </div>
-            </td>
-            <td>
-                <div class="user">
-                    <label>Id</label><br>
-                    <span>{{ user.id }}</span>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-
-
-
-
-</table>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Your account</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <form #f="ngForm" (ngSubmit)="onsubmit(f.value)" novalidate>
+            <input name="first" ngModel required #first="ngModel">
+            <input name="last" ngModel>
+            <button>Submit</button>
+          </form>
+        </div>
+    </div>
+    <div class="row">
+      <p>First name value: {{ first.value }}</p>
+      <p>First name valid: {{ first.valid }}</p>
+      <p>Form value: {{ f.value | json }}</p>
+      <p>Form valid: {{ f.valid }}</p>
+    </div>
+</div>
