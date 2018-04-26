@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Component, NgModule } from '@angular/core';
-// import the class
-import { CardexIndividual } from '../cardexIndividual';
-
-=======
 import { Component, NgModule, OnInit } from '@angular/core';
 // import the class
 import { CardexIndividual } from '../cardexIndividual';
@@ -17,22 +11,18 @@ import { CardexIndividual } from '../cardexIndividual';
 
 
 
->>>>>>> Layout
 
 // error message can't find module
 //import { userInfo } from 'os';
 import {  } from '@angular/core/src/render3';
 //NgModel Here
 import { NgModel, FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> Layout
 @Component({
   //change the output
   selector: 'app-form',
@@ -42,14 +32,6 @@ import { NgModel, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-<<<<<<< HEAD
-    //clas
-    
-  ],
-  imports:[
-    //ngModule import here
-    FormsModule
-=======
     
     
     
@@ -59,18 +41,11 @@ import { NgModel, FormsModule } from '@angular/forms';
     FormsModule,
     //HttpClientModule,
     
->>>>>>> Layout
     
 
   ],
 })
 
-<<<<<<< HEAD
-export class FormComponent  {
-
-  // User Profile
-  user: CardexIndividual = {
-=======
 export class FormComponent implements OnInit {
 
   
@@ -79,35 +54,10 @@ export class FormComponent implements OnInit {
   // Individual User Profile as an object
   user: CardexIndividual = {
     role:'dwf',
->>>>>>> Layout
     firstname: 'dwdfnwd',
     lastname: 'SFqfhdfB',
     //is the format ok ?
     birthdate: '1870, 12, 05',
-<<<<<<< HEAD
-    gender: 'female',
-  //type gender to change
-
-    street:'lalee',
-    postcode: '90000',
-    city: 'ouii',
-    country: 'fghj',
-
-    iduser: 2,
-
-    phone: '000000000',
-  };
-  
-  
-    
-
-  
-  
-
-  constructor() { }
-
-  ngOnInit() {
-=======
     gender: true,
     adress : 'djdgjfgjfkjdfjsjg',
     iduser: 2,
@@ -134,7 +84,6 @@ export class FormComponent implements OnInit {
   
   ngOnInit() {
     
->>>>>>> Layout
   }
 
 }
