@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BodyComponent } from './body/body.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
 @NgModule({
@@ -23,6 +24,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: '',
