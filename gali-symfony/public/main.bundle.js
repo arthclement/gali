@@ -6017,8 +6017,8 @@ var ApiService = /** @class */ (function () {
     ApiService.prototype.getProfessionals = function () {
         var _this = this;
         var professionalsList = [];
-        this.http.get('/api/professionals').
-            subscribe(function (data) { return _this.apiResult = data; });
+        this.http.get('/api/professionals')
+            .subscribe(function (data) { return _this.apiResult = data; });
         for (var _i = 0, _a = this.apiResult; _i < _a.length; _i++) {
             var professionals = _a[_i];
             var professionalToAppend = new __WEBPACK_IMPORTED_MODULE_3__coiffeur__["a" /* Coiffeur */](professionals['id'], professionals['roles'][0], professionals['username'], professionals['firstname'], professionals['lastname'], professionals['gender']);
@@ -6039,6 +6039,13 @@ var ApiService = /** @class */ (function () {
             appointmentList.push(appointmentsToAppend);
         }
         return appointmentList;
+    };
+    ApiService.prototype.getConnectedUser = function () {
+        var _this = this;
+        this.http.get('/api/lastuser')
+            .subscribe(function (data) { return _this.apiResult = data; });
+        var lastUser = new __WEBPACK_IMPORTED_MODULE_2__user__["a" /* User */](this.apiResult['id'], this.apiResult['roles'][0], this.apiResult['username'], this.apiResult['firstname'], this.apiResult['lastname'], this.apiResult['gender']);
+        return lastUser;
     };
     ApiService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
@@ -6116,12 +6123,14 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__body_body_component__ = __webpack_require__("./src/app/body/body.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__api_service__ = __webpack_require__("./src/app/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -6171,7 +6180,7 @@ var AppModule = /** @class */ (function () {
                     },
                 ])
             ],
-            providers: [],
+            providers: [__WEBPACK_IMPORTED_MODULE_12__api_service__["a" /* ApiService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -6324,8 +6333,6 @@ var FormComponent = /** @class */ (function () {
         this.apiService = apiService;
     }
     FormComponent.prototype.ngOnInit = function () {
-        var userCollection = this.apiService.getUsers();
-        var currentUsername = userCollection[0];
     };
     FormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -6352,7 +6359,7 @@ var FormComponent = /** @class */ (function () {
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n    <div class=\"container-fluid\">\n        <div>\n            <!--Link to agenda home page-->\n            <a class=\"navbar-brand\" routerLink=\"/agenda\">Gali </a>\n        </div>\n\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n    \n\n        <div class=\"nav justify-content-end\">\n        <!--User Account-->\n            <form class=\"form-inline my-2 my-lg-0\">\n            <!--User Username or Login here-->\n            <!-- How to get rid of parentheses ????????-->\n                <p>Welcome <span>{{ username }}</span></p>\n            <!-- Log out button must to be linked-->    \n                <button class=\"btn\" type=\"submit\" routerLink=\"/body\" [value]=\"btnSubmit\">Log Out</button>\n            </form>\n        </div>\n    </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-default\">\n    <div class=\"container-fluid\">\n        <div>\n            <!--Link to agenda home page-->\n            <a class=\"navbar-brand\" routerLink=\"/agenda\">Gali </a>\n        </div>\n\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n\n        <div class=\"nav justify-content-end\">\n        <!--User Account-->\n            <form class=\"form-inline my-2 my-lg-0\">\n            <!--User Username or Login here-->\n            <!-- How to get rid of parentheses ????????-->\n                <p>Welcome <span>{{ currentUser.username }}</span></p>\n            <!-- Log out button must to be linked-->\n                <button class=\"btn\" type=\"submit\" href=\"/logout\" [value]=\"btnSubmit\">Log Out</button>\n            </form>\n        </div>\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -6369,6 +6376,7 @@ module.exports = "@import url(\"https://fonts.googleapis.com/css?family=Poiret+O
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__api_service__ = __webpack_require__("./src/app/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6379,21 +6387,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
-        this.username = "User Example";
-        // control the log out button
+    function HeaderComponent(apiService) {
+        this.apiService = apiService;
         this.btnSubmit = 'Log Out';
     }
     HeaderComponent.prototype.ngOnInit = function () {
+        this.currentUser = this.apiService.getUsers();
     };
     HeaderComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-header',
             template: __webpack_require__("./src/app/header/header.component.html"),
-            styles: [__webpack_require__("./src/app/header/header.component.scss")]
+            styles: [__webpack_require__("./src/app/header/header.component.scss")],
+            providers: [__WEBPACK_IMPORTED_MODULE_1__api_service__["a" /* ApiService */]]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__api_service__["a" /* ApiService */]])
     ], HeaderComponent);
     return HeaderComponent;
 }());

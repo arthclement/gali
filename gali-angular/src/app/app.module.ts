@@ -11,6 +11,7 @@ import { BodyComponent } from './body/body.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
+import { ApiService } from './api.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,7 @@ import { RouterModule } from '@angular/router';
       },
     ])
   ],
-  providers: [],
+  providers: [ ApiService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

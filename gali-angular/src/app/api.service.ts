@@ -7,13 +7,13 @@ import { Appointment } from './appointment';
 
 @Injectable()
 export class ApiService {
-  apiResult;
+  apiResult: any;
 
   getUsers() {
     let usersList = [];
 
     this.http.get('/api/users')
-    .subscribe(data => this.apiResult = data);
+    .subscribe((data: any) => this.apiResult = data);
 
     for (const user of this.apiResult) {
       let userToAppend = new User(
@@ -33,8 +33,8 @@ export class ApiService {
   getProfessionals() {
     let professionalsList = [];
 
-    this.http.get('/api/professionals').
-    subscribe(data => this.apiResult = data);
+    this.http.get('/api/professionals')
+    .subscribe((data: any) => this.apiResult = data);
 
     for (const professionals of this.apiResult) {
       let professionalToAppend = new Coiffeur(
@@ -62,7 +62,7 @@ export class ApiService {
         params: params
       }
     ).subscribe(
-        data => this.apiResult = data
+      (data: any) => this.apiResult = data
     );
 
     for (const appointment of this.apiResult) {
@@ -78,6 +78,22 @@ export class ApiService {
     return appointmentList;
   }
 
-  constructor(private http: HttpClient) { }
+  getConnectedUser() {
+    this.http.get('/api/lastuser')
+    .subscribe((data: any) => this.apiResult = data);
+
+    let lastUser = new User(
+      this.apiResult['id'],
+      this.apiResult['roles'][0],
+      this.apiResult['username'],
+      this.apiResult['firstname'],
+      this.apiResult['lastname'],
+      this.apiResult['gender']
+    );
+
+    return lastUser;
+  }
+
+  constructor(public http: HttpClient) { }
 
 }
