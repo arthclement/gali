@@ -68,16 +68,19 @@ class ApiController extends Controller
 
         $appointments = $appointmentRepository->getByCustomerId($user->getId());
 
-        return new JsonResponse(
-            $serializer->serialize(
-                $appointments,
-                'json',
-                ['groups' => ['appointmentInfo']]
-            ),
-            200,
-            [],
-            true
-        );
+        return new JsonResponse($appointments);
+
+
+//        return new JsonResponse(
+//            $serializer->serialize(
+//                $appointments,
+//                'json',
+//                ['groups' => ['appointmentInfo']]
+//            ),
+//            200,
+//            [],
+//            true
+//        );
     }
 
     /**
