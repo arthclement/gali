@@ -6,7 +6,7 @@
 //data modal class = a class for the object creation
 //to do : match the user profile from the database
  export class CardexIndividual {
-    
+        role: string;
 //properties no ? if it is not optional
          firstname: string;
          lastname: string;
@@ -20,5 +20,5 @@
          iduser: number;
 
          phone: string;
-         role: string;
+         
 }

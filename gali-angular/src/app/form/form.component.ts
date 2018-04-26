@@ -53,16 +53,17 @@ export class FormComponent implements OnInit {
   //CardexIndividual: {};
   // Individual User Profile as an object
   user: CardexIndividual = {
+    role:'dwf',
     firstname: 'dwdfnwd',
     lastname: 'SFqfhdfB',
     //is the format ok ?
     birthdate: '1870, 12, 05',
     gender: true,
-    adress :'djsjg',
+    adress : 'djdgjfgjfkjdfjsjg',
     iduser: 2,
     phone: '000000000',
     //to do add role in the template
-    role:'dwf',
+    
   };
    
 
