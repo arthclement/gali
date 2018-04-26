@@ -36,7 +36,7 @@ export class FormComponent implements OnInit {
     //is the format ok ?
     birthdate: '1870, 12, 05',
     gender: true,
-    address : 'djdgjfgjfkjdfjsjg',
+    address: 'djdgjfgjfkjdfjsjg',
     id: 2,
     phone: '000000000',
     //to do add role in the template
