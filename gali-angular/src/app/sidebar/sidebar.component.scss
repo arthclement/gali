@@ -1,0 +1,53 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
+
+/**format taille vw */
+
+#sidebar {
+    position: fixed;
+    width: 151px;
+    height: 100%;
+    background: #EAF2F8;
+}
+
+
+/** test categories color
+#4D5656
+#7B7D7D
+*/
+
+#sidebar ul li {
+    color: #4D5656;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid #AED6F1;
+}
+
+
+/** test hover menu color
+#AED6F1
+#A9CCE3
+
+*/
+
+.menu li:hover {
+    background: #AED6F1;
+    /** test border left menu color
+grey = deep #D0D3D4
+#A9CCE3 = Logout color 
+
+*/
+    border-left: 5px solid #A9CCE3;
+}
+
+.active a {
+    text-decoration: none;
+    color: #4D5656;
+}
