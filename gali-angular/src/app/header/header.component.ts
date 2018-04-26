@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = this.apiService.getUsers();
+    this.currentUser = this.currentUser[0];
   }
 
 }
