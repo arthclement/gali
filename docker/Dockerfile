@@ -7,3 +7,4 @@ RUN mv composer.phar /usr/local/bin/composer.phar
 RUN alias composer='/usr/local/bin/composer.phar'
 RUN docker-php-ext-install pdo_mysql
 RUN a2enmod rewrite
+RUN a2enmod headers
