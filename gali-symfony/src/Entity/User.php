@@ -457,6 +457,8 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * @Groups({"userInfo"})
+     * 
      * @return bool|null
      */
     public function getGender(): ?bool
