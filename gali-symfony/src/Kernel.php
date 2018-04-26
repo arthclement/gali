@@ -34,7 +34,11 @@ class Kernel extends BaseKernel
             }
         }
 
-      
+        $bundles = [
+            // ...
+
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+        ];
     }
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
