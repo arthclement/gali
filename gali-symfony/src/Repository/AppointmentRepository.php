@@ -21,11 +21,13 @@ class AppointmentRepository extends ServiceEntityRepository
 
     public function getByCustomerId(string $customerId) {
         $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder->select('*')
-            ->where('a.customer_id:customerId')
+        $queryBuilder->select('a')
+            ->where('a.customer = :customerId')
             ->setParameter('customerId', $customerId);
 
-        return $result = $queryBuilder->getQuery()->getArrayResult();
+            $result = $queryBuilder->getQuery()->getArrayResult();
+            var_dump($result);
+            die;
     }
 
 //    /**

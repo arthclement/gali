@@ -66,21 +66,18 @@ class ApiController extends Controller
             throw new NotFoundHttpException("User $userID was not found in the DB");
         }
 
-        $appointments = $appointmentRepository->getByCustomerId($user->getId());
-
-        return new JsonResponse($appointments);
-
-
-//        return new JsonResponse(
-//            $serializer->serialize(
-//                $appointments,
-//                'json',
-//                ['groups' => ['appointmentInfo']]
-//            ),
-//            200,
-//            [],
-//            true
-//        );
+        $appointments = $user->getAppointments();
+        
+        return new JsonResponse(
+            $serializer->serialize(
+                $appointments,
+                'json',
+                ['groups' => ['appointmentInfo']]
+            ),
+            200,
+            [],
+            true
+        );
     }
 
     /**
