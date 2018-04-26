@@ -6,10 +6,8 @@ angular:
     controller: App\Controller\AngularController::index
 
 home_page:
-    path: /{_locale}
+    path: /
     controller: App\Controller\HomePageController::getHomePage
-    defaults:
-        _locale: en
 
 api_professionals:
     path: /api/professionals
@@ -26,13 +24,14 @@ api_unavailability:
 api_users:
     path: /api/users
     controller: App\Controller\ApiController::getUsers
-    
+
+api_lastUser:
+    path: /api/lastuser
+    controller: App\Controller\ApiController::getLastUser
 
 user_register:
-    path: /{_locale}/register
+    path: /register
     controller: App\Controller\UserController::registerUser
-    defaults:
-        _locale: en
 
 login:
     path: /login
