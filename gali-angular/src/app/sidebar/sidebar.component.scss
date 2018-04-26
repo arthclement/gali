@@ -7,12 +7,14 @@
     font-weight: bold;
 }
 
+
+/**format taille vw */
+
 #sidebar {
     position: fixed;
     width: 151px;
     height: 100%;
     background: #EAF2F8;
-    
 }
 
 
@@ -27,10 +29,6 @@
     padding: 15px 10px;
     border-bottom: 1px solid #AED6F1;
 }
-
-
-
-
 
 
 /** test hover menu color
@@ -49,8 +47,7 @@ grey = deep #D0D3D4
     border-left: 5px solid #A9CCE3;
 }
 
-.active a{
+.active a {
     text-decoration: none;
     color: #4D5656;
-
 }

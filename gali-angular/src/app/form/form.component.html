@@ -3,100 +3,98 @@
 <!-- input search cardex customer-->
 
 <!--bind the ngSubmit-->
-<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
-    <!--input elements here-->
-    <!--firstname + lastname-->
+<table class="formwidth">
+    <!--user profile from the database here-->
+
+
+
     <table class="fullwidth" cellspacing="0">
         <tr>
             <td>
+                <!--role-->
                 <div class="info">
-                    <input class="md" type="text" mdInput placeholder="Firstname" id="firstname" name="firstname">
+                    <div class="user">
 
+                        <label>Role</label>
+                        <span>{{ user.role }}</span>
+                    </div>
 
                 </div>
             </td>
             <td>
+                <!--firstname-->
                 <div class="info">
-                    <input class="md" type="text" mdInput placeholder="Lastname" id="lastname" name="lastname">
+                    <div class="user">
+                        <label>Firstname</label>
+                        <span>{{ user.firstname }}</span>
+                    </div>
 
+                </div>
 
+            </td>
+            <td>
+                <!--lastname-->
+                <div class="info">
+                    <div class="user">
+                        <label>Lastname</label>
+                        <span>{{ user.lastname }}</span>
+                    </div>
+
+                </div>
+
+            </td>
+        </tr>
+
+    </table>
+    <table class="fullwidth" class="middleTable" cellspacing="0">
+        <tr>
+            <td>
+                <!--birthdate-->
+                <div class="info">
+                    <div class="user">
+                        <label>Birthdate</label>
+                        <span>{{ user.birthdate }}</span>
+                    </div>
+
+                </div>
+            </td>
+            <td>
+                <!--gender-->
+                <div class="info">
+                    <div class="user">
+                        <label>Gender</label>
+                        <span>{{ user.gender }}</span>
+                    </div>
+
+                </div>
+            </td>
+            <td>
+                <!--Complete Adress-->
+                <div class="info">
+                    <div class="user">
+                        <label>Adress</label>
+                        <span>{{ user.adress }}</span>
+                    </div>
                 </div>
             </td>
         </tr>
     </table>
 
-    <!--Birthdate + Gender-->
-    <table class="fullwidth" cellspacing="0">
-        <tr>
-            <td>
-                <div class="info">
-                    <input class="md" type="datetime" mdInput placeholder="Birthdate" id="birthdate" name="birthdate">
-                </div>
-            </td>
-            <td>
-                <div class="gender">
-                    <!-- Male + Female -->
-
-                    <input class="md" type="radio" mdInput placeholder="gender" id="male" name="gender" value="male">Male<br>
-                    <input class="md" type="radio" mdInput placeholder="gender" id="female" name="gender" value="female">Female<br>
-                </div>
-
-            </td>
-        </tr>
-    </table>
-
-    <!--Address-->
-    <table class="fullwidth" cellspacing="0">
-        <tr>
-            <td>
-                <!--street-->
-                <div class="info">
-                    <input class="md" type="text" mdInput placeholder="street" id="street" name="street">
-
-                </div>
-            </td>
-            <td>
-                <!--postcode-->
-                <div class="info">
-                    <input class="md" type="number" mdInput placeholder="postcode" id="postcode" name="postcode">
-
-
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <!--city-->
-            <td>
-                <div class="info">
-                    <input class="md" type="text" mdInput placeholder="city" id="city" name="city">
-
-
-                </div>
-            </td>
-            <!--country-->
-            <td>
-                <div class="info">
-                    <input class="md" type="text" mdInput placeholder="country" id="country" name="country">
-
-
-                </div>
-            </td>
-        </tr>
-
-
-    </table>
     <!-- Phone number + id User-->
-    <table class="fullwidth" cellspacing="0">
+    <table class="fullwidth" class="IdTable" cellspacing="0">
         <tr>
             <td>
-                <div class="info">
-                    <input class="md" type="tel" mdInput placeholder="Phone number" id="phoneNumber" name="phonenumber">
+                <div class="user">
+
+                    <label>phone</label><br>
+                    <span>{{ user.phone }}</span>
+
                 </div>
             </td>
             <td>
-                <div class="info">
-                    <input class="md" type="id" mdInput id="id" name="id">
-
+                <div class="user">
+                    <label>Id</label><br>
+                    <span>{{ user.id }}</span>
                 </div>
             </td>
         </tr>
@@ -105,4 +103,5 @@
 
 
 
-</form>
+
+</table>

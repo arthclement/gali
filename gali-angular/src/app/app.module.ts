@@ -5,13 +5,15 @@ import * as $ from 'jquery';
 // for the gesture
 import 'hammerjs';
 
+//import { Observable } from 'rxjs/Observable';
+
 //warning messages must install depedencies myself
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
-//form module
+//form module for the ngModel
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AgendaComponent } from './agenda/agenda.component';
@@ -20,7 +22,7 @@ import { BodyComponent } from './body/body.component';
 //form data entry
 //import { MdInputModule, MdButtonModule } from '@angular/material';
 
-//importting the HTTP request GET + POST
+//importing the HTTP request GET + POST == avoid
 //import { HttpClientModule } from '@angular/common/http';
 
 //routing
@@ -44,7 +46,8 @@ import { SliderComponent } from './slider/slider.component';
     SidebarComponent,
     BodyComponent,
     SliderComponent
-   // HttpClientModule
+    
+   
     
     
   ],
@@ -56,6 +59,7 @@ import { SliderComponent } from './slider/slider.component';
     //error message no exported member
    // MdInputModule,
     //MdButtonModule
+   // HttpClientModule, 
     RouterModule.forRoot([
       {
         path:'', component: AgendaComponent

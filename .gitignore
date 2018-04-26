@@ -11,3 +11,4 @@ composer.phar
 .buildpath
 .project
 .settings/
+/node_modules
