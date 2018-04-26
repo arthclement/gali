@@ -1,7 +1,4 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-//jquery import
-import * as $ from 'jquery';
-
 //Router for path
 import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from '../form/form.component';

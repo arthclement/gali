@@ -1,11 +1,13 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { NgModel, FormsModule } from '@angular/forms';
 import { User } from './../user';
+import { ApiService } from './../api.service';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
+  providers: [ApiService]
 })
 
 @NgModule({
@@ -18,18 +20,12 @@ import { User } from './../user';
 
 export class FormComponent implements OnInit {
 
-  currentUser = new User(
-    1,
-    'ROLE_USER',
-    'marie57',
-    'Marie',
-    'Marion',
-    false
-  );
-
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    // this.currentUser.email = 'arthclems@gmail.com';
+    let userCollection = this.apiService.getUsers();
+
+    let currentUsername = userCollection[0];
   }
 
 }

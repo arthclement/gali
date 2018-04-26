@@ -1,6 +1,15 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+angular:
+    path: /angular
+    controller: App\Controller\AngularController::index
+
+home_page:
+    path: /{_locale}
+    controller: App\Controller\HomePageController::getHomePage
+    defaults:
+        _locale: en
 
 api_professionals:
     path: /api/professionals
@@ -18,11 +27,6 @@ api_users:
     path: /api/users
     controller: App\Controller\ApiController::getUsers
     
-home_page:
-    path: /{_locale}
-    controller: App\Controller\HomePageController::getHomePage
-    defaults:
-        _locale: en
 
 user_register:
     path: /{_locale}/register
@@ -31,7 +35,7 @@ user_register:
         _locale: en
 
 login:
-    path: /{_locale}/login
+    path: /login
     controller: App\Controller\UserController::login
 
 logout:
