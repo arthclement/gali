@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Repository\AppointmentRepository;
 use Serializable;
 use Ramsey\Uuid\Uuid;
 use Doctrine\ORM\Mapping as ORM;
@@ -381,7 +382,7 @@ class User implements UserInterface, \Serializable
     /**
      * @return Collection|Appointment[]
      */
-    public function getAppointments(string $userId): Collection
+    public function getAppointments(): Collection
     {
         return $this->appointments;
     }
