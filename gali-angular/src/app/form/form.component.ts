@@ -7,7 +7,7 @@ import { ApiService } from './../api.service';
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
-  providers: [ApiService]
+  providers: [ ApiService ]
 })
 
 @NgModule({
@@ -20,12 +20,9 @@ import { ApiService } from './../api.service';
 
 export class FormComponent implements OnInit {
 
-  constructor(private apiService: ApiService) { }
+  constructor(public apiService: ApiService) { }
 
   ngOnInit() {
-    let userCollection = this.apiService.getUsers();
-
-    let currentUsername = userCollection[0];
   }
 
 }

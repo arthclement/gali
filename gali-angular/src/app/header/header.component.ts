@@ -1,21 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../api.service';
+import { User } from '../user';
+
 
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  providers: [ ApiService ]
 })
 export class HeaderComponent implements OnInit {
 
-  username: string = "User Example";
+  currentUser: any;
+  btnSubmit: string = 'Log Out';
 
-  // control the log out button
-  btnSubmit : string = 'Log Out';
-
-  constructor() { }
+  constructor(public apiService: ApiService) { }
 
   ngOnInit() {
+    this.currentUser = this.apiService.getUsers();
+    this.currentUser = this.currentUser[0];
   }
 
 }
