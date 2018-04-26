@@ -10,6 +10,8 @@ export class ApiService {
   apiResult;
 
   getUsers() {
+    let usersList = [];
+
     this.http.get('/api/users')
     .subscribe(data => this.apiResult = data);
 
@@ -22,13 +24,14 @@ export class ApiService {
         user['lastname'],
         user['gender']
       );
+      usersList.push(userToAppend);
     }
 
-    return this.usersList;
+    return usersList;
   }
 
   getProfessionals() {
-    let usersList = [];
+    let professionalsList = [];
 
     this.http.get('/api/professionals').
     subscribe(data => this.apiResult = data);
@@ -42,10 +45,11 @@ export class ApiService {
         professionals['lastname'],
         professionals['gender']
       );
-      usersList.push(professionalToAppend);
+
+      professionalsList.push(professionalToAppend);
     }
 
-    return usersList;
+    return professionalsList;
   }
 
   getAppointments(id) {
@@ -71,6 +75,7 @@ export class ApiService {
       appointmentList.push(appointmentsToAppend);
     }
 
+    return appointmentList;
   }
 
   constructor(private http: HttpClient) { }
