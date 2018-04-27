@@ -1,9 +1,10 @@
 import { User } from './user';
+import { Time } from '@angular/common';
 
 export class Appointment {
   id: number;
   startDate: Date;
-  endDate: Date;
+  duration: Time;
   professional: User;
   customer: User;
   description: string;
@@ -11,14 +12,14 @@ export class Appointment {
   constructor(
     id: number,
     startDate: Date,
-    endDate: Date,
+    duration: Time,
     // professional: User,
     // customer: User,
     description: string
   ) {
     this.id = id;
     this.startDate = startDate;
-    this.endDate = endDate;
+    this.duration = duration;
     // this.professional = professional;
     // this.customer = customer;
     this.description = description;

@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { User } from './user';
 import { Coiffeur } from './coiffeur';
 import { Appointment } from './appointment';
+import { Time } from '@angular/common';
+
 
 @Injectable()
 export class ApiService {
@@ -76,7 +78,10 @@ export class ApiService {
       let appointmentsToAppend = new Appointment(
         appointment['id'],
         new Date(appointment['startdate']),
-        new Date(appointment['enddate']),
+        {
+          hours: appointment['hours'],
+          minutes: appointment['minutes']
+        },
         appointment['description']
       );
       appointmentList.push(appointmentsToAppend);
