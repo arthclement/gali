@@ -6,8 +6,6 @@ import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-import {AppointmentsComponent} from "./appointments/appointments.component";
-
 import { Routes, RouterModule } from '@angular/router';
 import { ApiService } from './api.service';
 import { AppointmentsComponent } from './appointments/appointments.component';

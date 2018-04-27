@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GaliAngular</title>
+    <base href="/">
+    <!doctype html>
+    <html lang="en">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gali</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./scss/zmain.scss">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <app-root>
+<!--  ***************************************** Sidebar ***************** -->
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div>
+            <!--Link to agenda home page-->
+            <a class="navbar-brand" routerLink="/agenda">Gali </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="nav justify-content-end">
+        <!--User Account-->
+            <form class="form-inline my-2 my-lg-0">
+            <!--User Username or Login here-->
+            <!-- How to get rid of parentheses ????????-->
+                <p>Welcome <span>{{ currentUser.username }}</span></p>
+            <!-- Log out button must to be linked-->
+                <button class="btn" type="submit" routerLink="/logout" [value]="btnSubmit">Log Out</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!--  *****************************************  Sidebar ***********************-->
+<div id="sidebar">
+    <ul class="menu">
+        <li><a routerLink="/appointment">Appointments</a></li>
+        <li><a routerLink="/form">Happy Costumers</a></li>
+    </ul>
+</div>
+
+
+<app-root></app-root>
+<router-outlet></router-outlet>
+
+    </app-root>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+
+</html>
