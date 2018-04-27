@@ -23,19 +23,15 @@ api_file:
     prefix: '/api'
     
 home_page:
-    path: /{_locale}
+    path: /
     controller: App\Controller\HomePageController::getHomePage
-    defaults:
-        _locale: en
 
 user_register:
-    path: /{_locale}/register
+    path: /register
     controller: App\Controller\UserController::registerUser
-    defaults:
-        _locale: en
 
 login:
-    path: /{_locale}/login
+    path: /login
     controller: App\Controller\UserController::login
 
 logout:

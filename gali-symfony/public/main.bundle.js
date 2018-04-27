@@ -223,11 +223,13 @@ var AppointmentsService = /** @class */ (function () {
         this.http = http;
         //url to appointments api
         this.appointmentsUrl = 'api/appointments';
+        this.apiKey = '750cc940-49c8-11e8-be2e-0242ac120003';
         this.handleError = httpErrorHandler.createHandleError('AppointmentsService');
     }
     /** GET appointments from the server */
     AppointmentsService.prototype.getAppointments = function () {
-        return this.http.get(this.appointmentsUrl).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError('getAppointments', [])));
+        var param = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["e" /* HttpParams */]().set('auth-token', this.apiKey);
+        return this.http.get(this.appointmentsUrl, { params: param }).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError('getAppointments', [])));
     };
     AppointmentsService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),

@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aee5462-4aec-4ef0-9fc8-bb01cc79a3bb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/gali-angular/src/app/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gali-symfony/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gali-symfony/public/inline.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gali-symfony/public/main.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gali-symfony/public/polyfills.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gali-symfony/public/styles.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gali-symfony/public/vendor.bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/assets/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/assets/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-symfony/config/packages/gali_api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gali-symfony/config/packages/gali_api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/apache/apache.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/apache/apache.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/.angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/.angular-cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gali-symfony/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gali-symfony/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/Natsuki.b18725bc38ee745bc909.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/gali-symfony/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/inline.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/inline.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/js/js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/js/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/js/usernameValidator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/main.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/main.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/polyfills.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/polyfills.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/scripts.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/scripts.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/style/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/styles.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/styles.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/vendor.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/vendor.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/src/Migrations/Version20180426231914.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/src/Migrations/Version20180426233143.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,53 +45,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gali_api.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/gali_api.yaml">
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-angular/src/app/assets/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appointment.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Appointment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-symfony/src/Entity/Appointment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="453">
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
               <folding>
-                <element signature="e#30#62#0#PHP" expanded="true" />
+                <element signature="e#34#54#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appointments.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.ts">
+      <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Controller/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#44#71#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -81,8 +81,8 @@
       <file leaf-file-name="appointments.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="391">
+              <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -90,37 +90,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inline.bundle.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gali-symfony/public/inline.bundle.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-angular/src/app/auth.service.ts">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gali-symfony/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appointments.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gali-symfony/src/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-173">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="340">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
-                <element signature="e#30#71#0#PHP" expanded="true" />
+                <element signature="e#7#22#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="security.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/security.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gali-symfony/config/routes.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -178,10 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gali-symfony/src/Repository/RoleRepository.php" />
-        <option value="$PROJECT_DIR$/gali-symfony/src/Entity/Role.php" />
-        <option value="$PROJECT_DIR$/gali-symfony/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gali-symfony/templates/HomePage/homePage.html.twig" />
         <option value="$PROJECT_DIR$/gali-symfony/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/gali-symfony/templates/header.html.twig" />
@@ -203,24 +194,17 @@
         <option value="$PROJECT_DIR$/gali-angular/src/app/messages/messages.component.ts" />
         <option value="$PROJECT_DIR$/gali-angular/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/gali-symfony/src/Repository/AppointmentRepository.php" />
-        <option value="$PROJECT_DIR$/gali-symfony/src/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/PM/ApiBundle/Controller/ApiController.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/PM/ApiBundle/DependencyInjection/Configuration.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/PM/ApiBundle/Resources/config/product_routing.yaml" />
         <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/DependencyInjection/GALIApiExtension.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/product_routing.yaml" />
         <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/DependencyInjection/Configuration.php" />
-        <option value="$PROJECT_DIR$/gali-symfony/config/routes.yaml" />
         <option value="$PROJECT_DIR$/gali-symfony/src/Entity/Appointment.php" />
         <option value="$PROJECT_DIR$/gali-symfony/config/services.yaml" />
         <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Security/Authenticator/TokenAuthenticator.php" />
-        <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/GALIApiBundle.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/services.yaml" />
-        <option value="$PROJECT_DIR$/gali-symfony/config/bundles.php" />
         <option value="$PROJECT_DIR$/gali-symfony/composer.json" />
-        <option value="$PROJECT_DIR$/gali-symfony/.env" />
-        <option value="$PROJECT_DIR$/gali-symfony/config/packages/security.yaml" />
-        <option value="$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Controller/ApiController.php" />
         <option value="$PROJECT_DIR$/gali-symfony/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/gali-angular/src/app/auth.service.ts" />
@@ -228,7 +212,18 @@
         <option value="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html" />
         <option value="$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts" />
         <option value="$PROJECT_DIR$/gali-symfony/config/packages/gali_api.yaml" />
+        <option value="$PROJECT_DIR$/gali-angular/.angular-cli.json" />
+        <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/appointment_routing.yaml" />
+        <option value="$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/GALIApiBundle.php" />
+        <option value="$PROJECT_DIR$/gali-symfony/config/bundles.php" />
+        <option value="$PROJECT_DIR$/docker/apache/apache.conf" />
+        <option value="$PROJECT_DIR$/gali-symfony/.env" />
+        <option value="$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php" />
+        <option value="$PROJECT_DIR$/gali-symfony/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/gali-symfony/src/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts" />
+        <option value="$PROJECT_DIR$/gali-symfony/public/index.php" />
+        <option value="$PROJECT_DIR$/gali-symfony/config/packages/security.yaml" />
       </list>
     </option>
   </component>
@@ -348,6 +343,17 @@
             <path>
               <item name="gali" type="b2602c69:ProjectViewProjectNode" />
               <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="docker" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="apache" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="gali-angular" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -388,21 +394,73 @@
             <path>
               <item name="gali" type="b2602c69:ProjectViewProjectNode" />
               <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gali-angular" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="messages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="gali" type="b2602c69:ProjectViewProjectNode" />
               <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="gali" type="b2602c69:ProjectViewProjectNode" />
               <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="angular" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="homepage" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -416,7 +474,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/gali-angular/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -455,15 +513,16 @@
       <option name="presentableId" value="Default" />
       <updated>1524047386933</updated>
       <workItem from="1524047391579" duration="39669000" />
-      <workItem from="1524648947074" duration="49733000" />
+      <workItem from="1524648947074" duration="57248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135603000" />
+    <option name="totallyTimeSpent" value="143118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32932332" />
@@ -472,7 +531,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3292978" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17847222" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2361111" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32808718" />
@@ -511,74 +570,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/gali-angular/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/config/config.service.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/node_modules/protractor/built/configParser.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/config/config.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/config/config.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/professionals/coiffeur.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Repository/AppointmentRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -613,9 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/messages/messages.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -633,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/templates/homepage/homepage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1843">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/doctrine.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -647,48 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/HomePageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#33#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <folding>
-            <element signature="e#23#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/routing.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#7#22#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,30 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#34#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gali-symfony/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -733,83 +653,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/appointment_routing.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Security/Authenticator/TokenAuthenticator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-          <folding>
-            <element signature="e#56#120#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/GALIApiBundle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding>
-            <element signature="e#53#116#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Controller/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#44#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/prod/doctrine.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/DependencyInjection/GALIApiExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#53#116#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/app.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -818,13 +663,6 @@
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -855,13 +693,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Entity/Appointment.php">
+    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/public/vendor.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -879,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -893,28 +745,218 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.ts">
+    <entry file="file://$PROJECT_DIR$/gali-symfony/public/inline.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/public/main.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-angular/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/templates/angular/angular.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/templates/homepage/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/AngularController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Entity/Appointment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#30#62#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/HomePageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#33#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/GALIApiBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Security/Authenticator/TokenAuthenticator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding>
+            <element signature="e#56#120#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/apache/apache.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="222" column="18" lean-forward="true" selection-start-line="222" selection-start-column="18" selection-end-line="222" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#23#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/DependencyInjection/GALIApiExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <element signature="e#53#116#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#53#116#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Resources/config/appointment_routing.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding>
+            <element signature="e#34#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/GALI/ApiBundle/Controller/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="e#44#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/src/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="391">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gali-symfony/public/inline.bundle.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/gali-symfony/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="e#7#22#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gali-symfony/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

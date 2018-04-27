@@ -49,7 +49,6 @@ class ApiController extends Controller
     }
 
     /**
-
      * @param Request $request
      * @param UserRepository $userRepository
      * @param SerializerInterface $serializer
