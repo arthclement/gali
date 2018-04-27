@@ -141,11 +141,17 @@ class User implements UserInterface, \Serializable
         $this->apiKey = Uuid::uuid1();
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getId()
     {
         return $this->id;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getUsername(): ?string
     {
         return $this->username;
@@ -158,6 +164,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getEmail(): ?string
     {
         return $this->email;
@@ -182,6 +191,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getCreateTime(): ?\DateTimeInterface
     {
         return $this->create_time;
@@ -194,6 +206,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getIsActive(): ?bool
     {
         return $this->isActive;
@@ -206,6 +221,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getEmailToken(): ?string
     {
         return $this->emailToken;
@@ -218,6 +236,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getFirstname(): ?string
     {
         return $this->firstname;
@@ -230,6 +251,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getLastname(): ?string
     {
         return $this->lastname;
@@ -242,6 +266,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getBirthdate(): ?\DateTimeInterface
     {
         return $this->birthdate;
@@ -254,6 +281,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getAddress(): ?string
     {
         return $this->address;
@@ -266,6 +296,9 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
+    /**
+     * @Groups({"userInfo"})
+     */
     public function getPhone(): ?string
     {
         return $this->phone;

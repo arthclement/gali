@@ -145,12 +145,7 @@ class UserController extends Controller
         $mailer->send($message);
         $session->getFlashBag()->add('info', 'User successfully registered !');
 
-        return new JsonResponse(
-            [
-            'status' => 0,
-            'message' => 'User successfully created'
-            ]
-        );
+        return RedirectResponse('http://localhost');
     }
 
     public function login(AuthenticationUtils $authUtils)
@@ -164,7 +159,7 @@ class UserController extends Controller
         }
 
         //Redirection to the Angular application
-        return new RedirectResponse('/appointments.html');
+        return new RedirectResponse('http://locahost/angular');
     }
 
     public function usernameAvailable
