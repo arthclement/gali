@@ -2,10 +2,10 @@ import { Component, OnInit, NgModule } from '@angular/core';
 // Router for path
 import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from '../form/form.component';
-
 @NgModule({
   declarations: [
-    FormComponent
+    FormComponent,
+    SidebarComponent
   ],
   imports: [
     RouterModule,
