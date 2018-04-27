@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import all the existed components
 import { FormComponent } from './form/form.component';
-//import { AppointmentComponent } from './appointment/appointment.component';  
+// import { AppointmentComponent } from './appointment/appointment.component';  
 
 
 const routes: Routes = [
