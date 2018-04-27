@@ -86,7 +86,7 @@ class UserController extends Controller
         }
 
         if($confirmPasswordError) {
-            $formErrors['confirmPasswordError'] = "This value should not be blank.";
+            $formErrors['confirmPasswordError'] = "This value should be equal to password and not be blank.";
         }
 
         if($formErrors) {

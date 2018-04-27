@@ -1,0 +1,4 @@
+{
+  "appointmentsUrl": "localhost/api/appointments",
+  "professionalsUrl": "localhost/api/professionals"
+}

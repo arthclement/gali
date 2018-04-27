@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AppointmentRepository")
@@ -13,38 +14,45 @@ class Appointment
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"appointment.id"})
      */
     private $id;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="appointments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"appointment.customer"})
      */
     private $customer;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="appointments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"appointment.professional"})
      */
     private $professional;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"appointment.date"})
      */
     private $date;
 
     /**
      * @ORM\Column(type="time")
+     * @Groups({"appointment.duration"})
      */
     private $duration;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"appointment.description"})
      */
     private $description;
 
     /**
      * @ORM\Column(type="boolean")
+     * @Groups({"appointment.approved"})
      */
     private $approved;
 

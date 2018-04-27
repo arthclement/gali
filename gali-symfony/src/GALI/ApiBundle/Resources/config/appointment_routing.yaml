@@ -1,0 +1,7 @@
+api_appointment_list:
+    path: '/appointments'
+    controller: GALI\ApiBundle\Controller\ApiController::getAppointments
+
+api_appointment_create:
+    path: '/appointment'
+    controller: GALI\ApiBundle\Controller\ApiController::postAppointment
