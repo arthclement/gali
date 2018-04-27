@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Repository\AppointmentRepository;
 use Serializable;
 use Ramsey\Uuid\Uuid;
 use Doctrine\ORM\Mapping as ORM;
@@ -31,12 +32,14 @@ class User implements UserInterface, \Serializable
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"user.id"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
+     * @Groups({"user.username"})
      */
     private $username;
 
@@ -125,31 +128,29 @@ class User implements UserInterface, \Serializable
      */
     private $salt;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $apiKey;
+
     public function __construct()
     {
         $this->setEmailToken(Uuid::uuid1());
-        $this->roles = new ArrayCollection();
         $this->appointments = new ArrayCollection();
         $this->unavailabilities = new ArrayCollection();
+        $this->apiKey = Uuid::uuid1();
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getUsername(): ?string
     {
         return $this->username;
     }
 
-    
     public function setUsername(string $username): self
     {
         $this->username = $username;
@@ -157,9 +158,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getEmail(): ?string
     {
         return $this->email;
@@ -184,9 +182,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getCreateTime(): ?\DateTimeInterface
     {
         return $this->create_time;
@@ -199,9 +194,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getIsActive(): ?bool
     {
         return $this->isActive;
@@ -214,9 +206,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getEmailToken(): ?string
     {
         return $this->emailToken;
@@ -229,9 +218,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getFirstname(): ?string
     {
         return $this->firstname;
@@ -244,9 +230,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getLastname(): ?string
     {
         return $this->lastname;
@@ -259,9 +242,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getBirthdate(): ?\DateTimeInterface
     {
         return $this->birthdate;
@@ -274,9 +254,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getAddress(): ?string
     {
         return $this->address;
@@ -289,9 +266,6 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    /**
-     * @Groups({"userInfo"})
-     */
     public function getPhone(): ?string
     {
         return $this->phone;
@@ -475,6 +449,18 @@ class User implements UserInterface, \Serializable
        $this->gender = $gender;
 
        return $this;
+    }
+
+    public function getApiKey(): ?string
+    {
+        return $this->apiKey;
+    }
+
+    public function setApiKey(string $apiKey): self
+    {
+        $this->apiKey = $apiKey;
+
+        return $this;
     }
 }
     

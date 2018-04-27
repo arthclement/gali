@@ -1,0 +1,115 @@
+<!-- <p>
+  appointments works!
+</p>
+<input type="text" (keyup)="onNameKeyUp($event)">
+<button (click)="getProfile()">Get Profil</button>
+<br>
+<div *ngIf="found">
+  <span> {{name}}'s age is {{age}}</span>
+</div>
+
+
+
+<button (click)="postProfile()">Post Profil</button>
+<br>
+-->
+<section id="mainConteiner">
+  <form id="formRdv">
+    <h3>Book of appointments</h3>
+    <!-- ***********************************   begin  type Radio ***************************-->
+    <h5>Hairdresser ? </h5>
+    <!--<div class="form-check" id="hairdresser">-->
+      <!--<ul>-->
+        <!--<li *ngFor="let coiffeur of coiffeurs">-->
+          <!--<input class="form-check-input" type="radio" name="typeRadio" id="typeRadios1" value="option1" checked>-->
+          <!--<label class="form-check-label" for="typeRadio1"  >-->
+            <!--{{coiffeur.firstname}}-->
+          <!--</label>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<input class="form-check-input" type="radio" name="typeRadio" id="typeRadios2" value="option2">-->
+          <!--<label class="form-check-label" for="typeRadio2" >-->
+            <!--{{coiffeur.firstname}}-->
+          <!--</label>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<input class="form-check-input" type="radio" name="typeRadio" id="typeRadios3" value="option2">-->
+          <!--<label class="form-check-label" for="typeRadio3">-->
+            <!--{{coiffeur.firstname}}-->
+          <!--</label>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+
+    <br>
+    <!-- ********************************** end  type Radio ************-->
+
+    <!-- ********************************** Begin  DateTime  *********************************-->
+    <h5>Date and hour ?</h5>
+    <div class="row">
+      <div class="col">
+        <input type="date" class="form-control" id="datePicker" placeholder="time">
+      </div>
+      <div class="col">
+        <input type="time" class="form-control" id="time" placeholder="time">
+      </div>
+    </div>
+
+    <br>
+    <h5> Ooops! Unavailable !</h5>
+    <!-- ********************************** end  DateTime *********-->
+
+    <!-- ********************************** begin  Textarea and unavailability ******************************-->
+    <!-- <Span>{{coiffeur.unavailable}}</Span> -->
+    <ul>
+      <li>*** here display the unavailable hours of the hairdressers</li>
+    </ul>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Color? Cut? or a cup of café/thé and a head massage ?"></textarea>
+    </div>
+
+    <!-- ********************************** end Textarea  *********-->
+
+    <!-- ********************************** begin  input name client ******************************-->
+    <div class="row">
+      <div class="col">
+
+        <label for="formGroupExampleInput2">Firstname</label>
+        <input type="text" class="form-control" id="inputNameClient1" placeholder="Firstname">
+      </div>
+      <div class="col">
+        <label for="formGroupExampleInput2">Lastname</label>
+        <input type="text" class="form-control" id="inputNameClient2" placeholder="Lastname">
+      </div>
+    </div>
+    <br>
+    <!-- ********************************** end   input name client******************************-->
+
+
+    <!-- ********************************** begin Submit button ******************************-->
+
+    <button type="submit" (click)=postRdv() class="btn btn-primary" id="submitBouton">Create RDV</button>
+    <!-- ********************************** end Submit button  ******************************-->
+  </form>
+
+  <!-- ********************************  Begin  Table  display RDV  ************************* -->
+  <table id="tableRdv">
+    <tr>
+      <th>Hairdresser</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Approved</th>
+      <th>Description</th>
+    </tr>
+
+    <tr *ngFor="let appointment of appointments">
+      <td>{{appointment.id}}</td>
+      <td>{{appointment.professional.id}}</td>
+      <td>{{appointment.date}}</td>
+      <td>{{appointment.duration}}</td>
+      <td>{{appointment.description}}</td>
+    </tr>
+
+  </table>
+</section>

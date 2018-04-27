@@ -19,6 +19,17 @@ class AppointmentRepository extends ServiceEntityRepository
         parent::__construct($registry, Appointment::class);
     }
 
+    public function getByCustomerId(string $customerId) {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder->select('a')
+            ->where('a.customer = :customerId')
+            ->setParameter('customerId', $customerId);
+
+            $result = $queryBuilder->getQuery()->getArrayResult();
+            var_dump($result);
+            die;
+    }
+
 //    /**
 //     * @return Appointment[] Returns an array of Appointment objects
 //     */

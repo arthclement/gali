@@ -4,10 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Role;
 use App\Entity\User;
+use App\Repository\AppointmentRepository;
 use App\Repository\RoleRepository;
 use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -46,9 +48,11 @@ class ApiController extends Controller
         );
     }
 
-
     /**
-     * @Route("/api/appointments", name="appointments")
+     * @param Request $request
+     * @param UserRepository $userRepository
+     * @param SerializerInterface $serializer
+     * @return JsonResponse
      */
     public function getAppointments(
         Request $request,
@@ -56,15 +60,19 @@ class ApiController extends Controller
         SerializerInterface $serializer
     ) {
         $userID = $request->query->get('id'); // /api/appointments?id=1
-        $repoUser = $this->getDoctrine()->getRepository(User::class);
-        $user = $repoUser->find($userID);
+
+        $user = $userRepository->find($userID);
+        if(!$user) {
+            throw new NotFoundHttpException("User $userID was not found in the DB");
+        }
 
         $appointments = $user->getAppointments();
-
+        
         return new JsonResponse(
             $serializer->serialize(
                 $appointments,
-                'json'
+                'json',
+                ['groups' => ['appointmentInfo']]
             ),
             200,
             [],
