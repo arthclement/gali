@@ -8,11 +8,18 @@ import { Appointment } from './appointment';
 @Injectable()
 export class ApiService {
   apiResult: any;
+  AuthKey = '';
+
+  getAuthKey() {
+    let param = new HttpParams().set('auth-token', this.AuthKey);
+
+    return { params: param };
+  }
 
   getUsers() {
     let usersList = [];
 
-    this.http.get('/api/users')
+    this.http.get('/api/users', this.getAuthKey())
     .subscribe((data: any) => this.apiResult = data);
 
     for (const user of this.apiResult) {
@@ -33,7 +40,7 @@ export class ApiService {
   getProfessionals() {
     let professionalsList = [];
 
-    this.http.get('/api/professionals')
+    this.http.get('/api/professionals', this.getAuthKey())
     .subscribe((data: any) => this.apiResult = data);
 
     for (const professionals of this.apiResult) {
@@ -53,13 +60,13 @@ export class ApiService {
   }
 
   getAppointments(id) {
-    let params = new HttpParams().set('id', id);
+    let param = new HttpParams().set('id', id).set('auth-token', this.AuthKey);
     let appointmentList = [];
 
     this.http.get(
       '/api/appointments',
       {
-        params: params
+        params: param
       }
     ).subscribe(
       (data: any) => this.apiResult = data
@@ -79,7 +86,7 @@ export class ApiService {
   }
 
   getConnectedUser() {
-    this.http.get('/api/lastuser')
+    this.http.get('/api/lastuser', this.getAuthKey())
     .subscribe((data: any) => this.apiResult = data);
 
     let lastUser = new User(
