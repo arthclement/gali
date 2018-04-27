@@ -2,10 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aee5462-4aec-4ef0-9fc8-bb01cc79a3bb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/appointment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/appointment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/app/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/app/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-angular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gali-angular/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/assets/Images/coiffeur1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/assets/Images/coiffeur2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/assets/Images/coiffeur3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/inline.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/inline.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/main.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/main.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/polyfills.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/polyfills.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/scripts.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/scripts.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/styles.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/styles.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/vendor.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gali-symfony/public/vendor.bundle.js.map" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
-              <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+              <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -68,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -327,6 +347,58 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="angular" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="gali" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gali" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="gali-symfony" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="homepage" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -378,16 +450,15 @@
       <option name="presentableId" value="Default" />
       <updated>1524047386933</updated>
       <workItem from="1524047391579" duration="39669000" />
-      <workItem from="1524648947074" duration="58569000" />
+      <workItem from="1524648947074" duration="58746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144439000" />
+    <option name="totallyTimeSpent" value="144616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32932332" />
@@ -812,14 +883,14 @@
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointments.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
-          <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gali-angular/src/app/appointments/appointment.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
