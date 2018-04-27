@@ -8,6 +8,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { Routes, RouterModule } from '@angular/router';
 import { ApiService } from './api.service';
+import { AppointmentsComponent } from './appointments/appointments.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { ApiService } from './api.service';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    AppointmentsComponent,
     RouterModule
   ],
   providers: [ ApiService ],

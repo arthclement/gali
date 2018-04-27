@@ -13,13 +13,14 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./scss/zmain.scss">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <app-root>
-<!--  ***************************************** Navbar ***************** -->
+<!--  ***************************************** Sidebar ***************** -->
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -53,6 +54,10 @@
         <li><a routerLink="/form">Happy Costumers</a></li>
     </ul>
 </div>
+
+
+<app-root></app-root>
+<router-outlet></router-outlet>
 
     </app-root>
 </body>

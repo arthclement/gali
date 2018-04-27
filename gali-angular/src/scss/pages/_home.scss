@@ -1,3 +1,117 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+/* ********************************** sidebar */
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+
+
+/**format taille vw */
+
+#sidebar {
+    position: fixed;
+    width: 151px;
+    height: 100%;
+    background: #EAF2F8;
+}
+
+
+#sidebar ul li {
+    color: #4D5656;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid #AED6F1;
+}
+
+
+.menu li:hover {
+    background: #AED6F1;
+  
+    border-left: 5px solid #A9CCE3;
+}
+
+.active a {
+    text-decoration: none;
+    color: #4D5656;
+}
+
+/* ********************************** header  */
+
+//fonts
+//logo
+
+
+//text
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+// body
+* {
+    color: #4D5656;
+    font-family: 'Poiret One', cursive;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/**Logo  bleu chaise ??*/
+
+.navbar-brand {
+    color: #4bcffa;
+    font-family: 'Natsuki';
+    font-size: 400%;
+    padding: 5px;
+}
+
+
+
+
+nav {
+    background-color: #EAF2F8;
+    padding: 20px;
+}
+
+
+/** header right */
+
+
+/** Welcome + user Loggedin */
+
+p {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+
+/** Log Out */
+
+
+/** test button background color
+#D6EAF8 = light
+
+*/
+
+.btn {
+    background-color: #A9CCE3;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.btn :hover {
+    background-color: #7FB3D5;
+}
+
+.nav justify-content-end {
+    font-weight: bold;
+}
+

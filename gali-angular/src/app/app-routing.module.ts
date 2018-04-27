@@ -3,14 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import all the existed components
 import { FormComponent } from './form/form.component';
-// import { AppointmentComponent } from './appointment/appointment.component';  
-
+import { AppointmentsComponent } from './appointments/appointments.component';
 
 const routes: Routes = [
-    /*{
+    {
         path: '',
-        component: AppointmentComponent
-    },*/
+        component: AppointmentsComponent
+    },
     {
         path: '/form',
         component: FormComponent
