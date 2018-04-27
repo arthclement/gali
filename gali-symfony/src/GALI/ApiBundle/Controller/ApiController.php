@@ -3,8 +3,19 @@ namespace GALI\ApiBundle\Controller;
 
 use App\Entity\Appointment;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use App\Entity\Role;
+use App\Entity\User;
+use App\Repository\AppointmentRepository;
+use App\Repository\RoleRepository;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class ApiController extends Controller
 {
@@ -24,7 +35,90 @@ class ApiController extends Controller
             true
         );
     }
-    
+
+    public function getProfessionals(
+        UserRepository $repoUser,
+        RoleRepository $repoRole,
+        SerializerInterface $serializer
+    ) {
+        $repoUser = $this->getDoctrine()->getRepository(User::class);
+        $repoRole = $this->getDoctrine()->getRepository(Role::class);
+
+        $role = $repoRole->findOneBy(['role' => 'ROLE_COIFFEUR']);
+
+        $professionals = $repoUser->findByRole($role);
+
+        return new JsonResponse(
+            $serializer->serialize(
+                $professionals,
+                'json',
+                ['groups' => ['userInfo']]
+            ),
+            200,
+            [],
+            true
+        );
+    }
+
+    public function getUnavailability(
+        Request $request,
+        UserRepository $userRepository,
+        SerializerInterface $serializer
+    ) {
+        $userID = $request->query->get('id');
+        $repoUser = $this->getDoctrine()->getRepository(User::class);
+        $user = $repoUser->find($userID);
+
+        $unavailability = $user->getUnavailabilities();
+
+        return new JsonResponse(
+            $serializer->serialize(
+                $unavailability,
+                'json'
+            ),
+            200,
+            [],
+            true
+        );
+    }
+
+    public function getUsers(
+        Request $request,
+        UserRepository $userRepository,
+        SerializerInterface $serializer
+    ) {
+        $repoUser = $this->getDoctrine()->getRepository(User::class);
+        $userList = $repoUser->findAll();
+
+        return new JsonResponse(
+            $serializer->serialize(
+                $userList, 
+                'json',
+                ['groups' => ['userInfo']]
+            ),
+            200,
+            [],
+            true
+        );
+    }
+
+    public function getLastUser(
+        Request $request,
+        SerializerInterface $serializer
+    ) {
+        $lastUser = $this->getUser();
+
+        return new JsonResponse(
+            $serializer->serialize(
+                $lastUser,
+                'json',
+                ['groups' => ['userInfo']]
+            ),
+            200,
+            [],
+            true
+        );
+    }
 //    public function postProduct(Request $request)
 //    {
 //        $product = new Product();

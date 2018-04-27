@@ -5,3 +5,11 @@ api_appointment_list:
 api_appointment_create:
     path: '/appointment'
     controller: GALI\ApiBundle\Controller\ApiController::postAppointment
+
+api_professionals_list:
+    path: /professionals
+    controller: GALI\ApiBundle\Controller\ApiController::getProfessionals
+
+api_users_list:
+    path: /users
+    controller: GALI\ApiBundle\Controller\ApiController::getUsers
