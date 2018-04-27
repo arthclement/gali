@@ -4,7 +4,6 @@ import { User } from '../user';
 import { Routes, RouterModule } from '@angular/router';
 
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -14,9 +13,9 @@ import { Routes, RouterModule } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   // currentUser: any;
-  btnSubmit: string = 'Log Out';
+  btnSubmit = 'Log Out';
 
-  constructor(private apiService: ApiService) { }
+  constructor() { }
 
   ngOnInit() {
     // this.currentUser = this.apiService.getUsers();
