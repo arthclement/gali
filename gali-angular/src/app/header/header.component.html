@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div>
+            <!--Link to agenda home page-->
+            <a class="navbar-brand" routerLink="/agenda">Gali </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="nav justify-content-end">
+        <!--User Account-->
+            <form class="form-inline my-2 my-lg-0">
+            <!--User Username or Login here-->
+            <!-- How to get rid of parentheses ????????-->
+                <p>Welcome <span>{{ currentUser.username }}</span></p>
+            <!-- Log out button must to be linked-->
+                <button class="btn" type="submit" routerLink="/logout" [value]="btnSubmit">Log Out</button>
+            </form>
+        </div>
+    </div>
+</nav>

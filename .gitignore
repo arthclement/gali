@@ -11,5 +11,4 @@ composer.phar
 .buildpath
 .project
 .settings/
-/test
-gali-symfony/config/packages/swiftmailer.yaml
+/node_modules

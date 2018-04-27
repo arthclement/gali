@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
 class ApiController extends Controller
@@ -112,14 +113,34 @@ class ApiController extends Controller
         Request $request,
         UserRepository $userRepository,
         SerializerInterface $serializer
-    )
-    {
+    ) {
         $repoUser = $this->getDoctrine()->getRepository(User::class);
         $userList = $repoUser->findAll();
 
         return new JsonResponse(
             $serializer->serialize(
                 $userList, 
+                'json',
+                ['groups' => ['userInfo']]
+            ),
+            200,
+            [],
+            true
+        );
+    }
+
+    /**
+     * @Route("/api/lastuser", name="lastuser")
+     */
+    public function getLastUser(
+        Request $request,
+        SerializerInterface $serializer
+    ) {
+        $lastUser = $this->getUser();
+
+        return new JsonResponse(
+            $serializer->serialize(
+                $lastUser,
                 'json',
                 ['groups' => ['userInfo']]
             ),

@@ -7,7 +7,7 @@
     <!-- <CSS imports > -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
                             <!--LogIn Form -->
-                            <form id="loginForm" action="http://localhost/en/login" method="POST">
+                            <form id="loginForm" action="http://localhost/login" method="POST">
                                 <div class="form-group">
                                     <label for="username">Username or @email</label>
                                     <input type="text" class="form-control" id="username" name="_username" aria-describedby="emailHelp" placeholder="Enter your Username or @email">
@@ -75,7 +75,7 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
                             <!--Register Form -->
-                            <form id="RegistrationForm" action="http://localhost/en/register" method="POST">
+                            <form id="RegistrationForm" action="http://localhost/register" method="POST">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <!--username register-->
@@ -105,7 +105,7 @@
                                                 <input type="radio" name="_gender" value="female"> Female</label>
                                         </div>
                                     </div>
-                                    <!--lastname register-->
+                                    <!-- ********************************************lastname register-->
                                     <div class="form-group col-md-6">
                                         <label for="lastname">Lastname</label>
                                         <input type="text" class="form-control" id="lastname" name="_lastname" placeholder="Lastname">
@@ -114,7 +114,7 @@
                                             <h4>The lastname must be fulfilled</h4>
                                         </div>
                                     </div>
-                                    <!--email register-->
+                                    <!--********************************************email register-->
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="_email" placeholder="Email">
@@ -160,7 +160,7 @@
             </nav>
             <!-- End of nav bar-->
         </header>
-        <!--  sous navbar -->
+        <!--  *************************************sous navbar -->
         <article class="sousNavBar">
             <ul>
                 <li class="menu">
@@ -179,9 +179,43 @@
     <main>
         <!-- MAIN - Containers Paragraphe et Photo -->
 
+        <!--Beginning Espace à conserver idees : photo - text -->
 
 
-        <!-- ******************************  Premier Container-->
+
+        <!-- ************************** Slider Bootstrap ***************** -->
+
+        <div id="myCaroussell" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="../img/imgCheveuBleuProfileGrd.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../img/imgBleuProfileGrd.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../img/imgCheveuxBleu.jpg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
+
+
+        <!-- **********************************************  Premier Container-->
         <!-- 1gros cube + 4petits cubes-->
 
         <section id="aboutUs" class="container-fluid row">
@@ -190,11 +224,7 @@
                 <div class="bigCube-p-h3-1">
                     <h3>About Us</h3>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias eius voluptatum dolorum dolor doloribus
-                        illo, reprehenderit blanditiis. Sapiente incidunt asperiores error fugiat voluptas ut aliquid perspiciatptas
-                        ut aliquid perspiciatis fuga harum amet.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi alias eius voluptatum dolorum dolor doloribus illo, reprehenderit blanditiis. Sapiente incidunt
-                        asperiores error fugiat voluptas ut aliquid perspiciatis fuga harum amet.</p>
+                    <p class="cubeP">GALI : Gabriel, Arthur, Leslie, Ivan. <br> Multi Colors,  <br>Multi Cultural,  <br> Multi Minds, <br> Multi Problems? No! <br>Only Multi Solutions  </p>
                 </div>
             </div>
             <!-- end big cube-->
@@ -203,10 +233,10 @@
             <div class="col-xs-12 col-lg-4">
                 <div class="row">
                     <div class="col-xs-6 p-1">
-                        <img src="img/imggabriel.jpg" class="img-fluid">
+                        <img src="../img/imgDuoPhoto.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgarthur.jpg" class="img-fluid">
+                        <img src="../img/imgMeches2.jpg" class="img-fluid">
                     </div>
                 </div>
 
@@ -215,10 +245,10 @@
 
                 <div class="row">
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgleslie.jpg" class="img-fluid">
+                        <img src="../img/imgMultiPphoto.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgivan.jpg" class="img-fluid">
+                        <img src="../img/imgCheveuxBleu.jpg" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -230,12 +260,12 @@
         <!--Beginning Espace à conserver idees : photo - text -->
         <div class="sectionMilieu">
             <div>
-                <h3> GALI is Awsome - GALI is Awsome - GALI is Awsome </h3>
+                <h3 id="galiMilieu"> GALI helps you </h3>
             </div>
         </div>
 
 
-        <!--*****************************  Deuxieme Container-->
+        <!--******************************************************  Deuxieme Container-->
 
         <!-- 1gros cube + 4petits cubes-->
         <section class="container-fluid row" id="galiServices">
@@ -245,19 +275,19 @@
             <div class="col-xs-12 col-lg-4">
                 <div class="row">
                     <div class="col-xs-6 p-1">
-                        <img src="img/imggabriel.jpg" class="img-fluid">
+                        <img src="../img/imgMeches4.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgarthur.jpg" class="img-fluid">
+                        <img src="../img/imgHomme.jpg" class="img-fluid">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgleslie.jpg" class="img-fluid">
+                        <img src="../img/imgCheveuxBleu.jpg" class="img-fluid">
                     </div>
                     <div class="col-xs-6 p-1">
-                        <img src="img/imgivan.jpg" class="img-fluid">
+                        <img src="../img/imgMeches2.jpg" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -267,15 +297,19 @@
                 <div class="bigCube-p-h3-2">
                     <h3>The Services of GALI</h3>
                     <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi alias eius voluptatum dolorum dolor doloribus
-                        illo, reprehenderit blanditiis. Sapiente incidunt asperiores error fugiat voluptas ut aliquid perspiciatptas
-                        ut aliquid perspiciatis fuga harum amet.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi alias eius voluptatum dolorum dolor doloribus illo, reprehenderit blanditiis. Sapiente incidunt
-                        asperiores error fugiat voluptas ut aliquid perspiciatis fuga harum amet.</p>
+                    <p class="cubeP"> Gali is a customer management tool for hairdressers. <br>The objective of the project is to create an adaptable plateform for professionnal, easy to use and to embedded to any existing website. The idea is to create a customer interface, entirely customisable by the professionnal.
+
+                    </p>
                 </div>
             </div>
             <!-- end big cube-->
         </section>
+        <!--Beginning Espace à conserver idees : photo - text -->
+        <div class="sectionMilieu">
+            <div>
+                <h3 id="galiMilieu">  GALI is your friend </h3>
+            </div>
+        </div>
 
 
     </main>
@@ -303,17 +337,8 @@
         var validator = new UsernameValidator('#username-reg', 'http://localhost/username/available', 'POST');
         validator.setCallback(usernameValidatorCallback);
         validator.setBefore(beforeValidate);
-
-        $('#username-reg').on('change', function () { validator.validate(); });
-        $('#username-reg').on('keyup', function () { validator.validate(); });
-        $('#username-reg').on('paste', function () { validator.validate(); });
-        $('#username-reg').on('drop', function (data) {
-            data.originalEvent.preventDefault();
-            $('#username-reg').val(data.originalEvent.dataTransfer.getData("Text"));
-            validator.validate();
-        });
     </script>
-    <script src="js/js.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
