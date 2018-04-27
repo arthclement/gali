@@ -7,10 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { BodyComponent } from './body/body.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ApiService } from './api.service';
 @NgModule({
   declarations: [
@@ -19,13 +18,13 @@ import { ApiService } from './api.service';
     HeaderComponent,
     AgendaComponent,
     SidebarComponent,
-    BodyComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    RouterModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -39,10 +38,6 @@ import { ApiService } from './api.service';
       {
         path: 'form',
         component: FormComponent
-      },
-      {
-        path: 'body',
-        component: BodyComponent
       },
     ])
   ],
