@@ -1,0 +1,9 @@
+gali_api:
+    groups:
+        - "appointment.id"
+        - "appointment.customer"
+        - "appointment.professional"
+        - "appointment.date"
+        - "appointment.duration"
+        - "appointment.description"
+        - "user.id"

@@ -14,44 +14,48 @@ class Appointment
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"appointment.id"})
      */
     private $id;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="appointments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"appointment.customer"})
      */
     private $customer;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="appointments")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"appointment.professional"})
      */
     private $professional;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"appointment.date"})
      */
     private $date;
 
     /**
      * @ORM\Column(type="time")
+     * @Groups({"appointment.duration"})
      */
     private $duration;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Groups({"appointment.description"})
      */
     private $description;
 
     /**
      * @ORM\Column(type="boolean")
+     * @Groups({"appointment.approved"})
      */
     private $approved;
 
-    /**
-     * @Groups({"appointmentInfo"})
-     */
     public function getId()
     {
         return $this->id;
@@ -81,9 +85,6 @@ class Appointment
         return $this;
     }
 
-    /**
-     * @Groups({"appointmentInfo"})
-     */
     public function getDate(): ?\DateTimeInterface
     {
         return $this->date;
@@ -96,9 +97,6 @@ class Appointment
         return $this;
     }
 
-    /**
-     * @Groups({"appointmentInfo"})
-     */
     public function getDuration(): ?\DateTimeInterface
     {
         return $this->duration;
@@ -111,9 +109,6 @@ class Appointment
         return $this;
     }
 
-    /**
-     * @Groups({"appointmentInfo"})
-     */
     public function getDescription(): ?string
     {
         return $this->description;
@@ -126,9 +121,6 @@ class Appointment
         return $this;
     }
 
-    /**
-     * @Groups({"appointmentInfo"})
-     */
     public function getApproved(): ?bool
     {
         return $this->approved;

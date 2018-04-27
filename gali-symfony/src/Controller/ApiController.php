@@ -47,22 +47,22 @@ class ApiController extends Controller
         );
     }
 
-
     /**
-     * @Route("/api/appointments", name="appointments")
+
+     * @param Request $request
+     * @param UserRepository $userRepository
+     * @param SerializerInterface $serializer
+     * @return JsonResponse
      */
     public function getAppointments(
         Request $request,
         UserRepository $userRepository,
-        AppointmentRepository $appointmentRepository,
         SerializerInterface $serializer
     ) {
         $userID = $request->query->get('id'); // /api/appointments?id=1
-        //$repoUser = $this->getDoctrine()->getRepository(User::class);
-        //$user = $repoUser->find($userID);
 
         $user = $userRepository->find($userID);
-        if(is_null($user)) {
+        if(!$user) {
             throw new NotFoundHttpException("User $userID was not found in the DB");
         }
 
