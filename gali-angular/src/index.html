@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <app-root>
+  
 <!--  ***************************************** Sidebar ***************** -->
 
 <nav class="navbar navbar-default">
@@ -39,7 +39,7 @@
             <form class="form-inline my-2 my-lg-0">
             <!--User Username or Login here-->
             <!-- How to get rid of parentheses ????????-->
-                <p>Welcome <span>Marie</span></p>
+                <p>Welcome </p>
             <!-- Log out button must to be linked-->
                 <button class="btn" type="submit" routerLink="/logout" [value]="btnSubmit">Log Out</button>
             </form>
@@ -56,10 +56,11 @@
 </div>
 
 
-<app-root></app-root>
+
 <router-outlet></router-outlet>
 
-    </app-root>
+<app-root> </app-root>
+    
 </body>
 
 </html>

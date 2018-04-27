@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError } from 'rxjs/operators';
 
-import { Appointment } from './appointment';
+
 import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 
 const httpOptions = {
