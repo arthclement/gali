@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './../api.service';
 import { User } from '../user';
+import { Routes, RouterModule } from '@angular/router';
 
 
 
@@ -12,14 +13,14 @@ import { User } from '../user';
 })
 export class HeaderComponent implements OnInit {
 
-  currentUser: any;
+  // currentUser: any;
   btnSubmit: string = 'Log Out';
 
-  constructor(public apiService: ApiService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.currentUser = this.apiService.getUsers();
-    this.currentUser = this.currentUser[0];
+    // this.currentUser = this.apiService.getUsers();
+    // this.currentUser = this.currentUser[0];
   }
 
 }
