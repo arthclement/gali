@@ -1,11 +1,11 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-//Router for path
+// Router for path
 import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from '../form/form.component';
 
 import { AgendaComponent } from '../agenda/agenda.component';
 
-//config for categories navigation
+// config for categories navigation
 
 @NgModule({
   declarations: [
