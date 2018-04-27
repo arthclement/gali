@@ -12,7 +12,7 @@ class ApiController extends Controller
     {
         $repo = $this->getDoctrine()->getRepository(Appointment::class);
         $appointments = $repo->findAll();
-        
+
         return new JsonResponse(
             $this->get('serializer')->serialize(
                 $appointments,

@@ -6,4 +6,5 @@ gali_api:
         - "appointment.date"
         - "appointment.duration"
         - "appointment.description"
+        - "appointment.approved"
         - "user.username"
