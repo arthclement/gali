@@ -1,9 +1,7 @@
 export interface Appointment {
-    id: number;
     hairdresser: string;
-    firstname: string;
-    lastname: string;
-    date: string;
-    hour: string;
+    date:string;
+    time:string;
+    approved: boolean;
     description: string;
 }

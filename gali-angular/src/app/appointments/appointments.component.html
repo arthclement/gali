@@ -18,28 +18,28 @@
     <h3>Book of appointments</h3>
     <!-- ***********************************   begin  type Radio ***************************-->
     <h5>Hairdresser ? </h5>
-    <div class="form-check" id="hairdresser">
-      <ul>
-        <li *ngFor="let coiffeur of coiffeurs">
-          <input class="form-check-input" type="radio" name="typeRadio" id="typeRadios1" value="option1" checked>
-          <label class="form-check-label" for="typeRadio1"  >
-            {{coiffeur.firstname}}
-          </label>
-        </li>
-        <li>
-          <input class="form-check-input" type="radio" name="typeRadio" id="typeRadios2" value="option2">
-          <label class="form-check-label" for="typeRadio2" >
-            {{coiffeur.firstname}}
-          </label>
-        </li>
-        <li>
-          <input class="form-check-input" type="radio" name="typeRadio" id="typeRadios3" value="option2">
-          <label class="form-check-label" for="typeRadio3">
-            {{coiffeur.firstname}}
-          </label>
-        </li>
-      </ul>
-    </div>
+    <!--<div class="form-check" id="hairdresser">-->
+      <!--<ul>-->
+        <!--<li *ngFor="let coiffeur of coiffeurs">-->
+          <!--<input class="form-check-input" type="radio" name="typeRadio" id="typeRadios1" value="option1" checked>-->
+          <!--<label class="form-check-label" for="typeRadio1"  >-->
+            <!--{{coiffeur.firstname}}-->
+          <!--</label>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<input class="form-check-input" type="radio" name="typeRadio" id="typeRadios2" value="option2">-->
+          <!--<label class="form-check-label" for="typeRadio2" >-->
+            <!--{{coiffeur.firstname}}-->
+          <!--</label>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<input class="form-check-input" type="radio" name="typeRadio" id="typeRadios3" value="option2">-->
+          <!--<label class="form-check-label" for="typeRadio3">-->
+            <!--{{coiffeur.firstname}}-->
+          <!--</label>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
 
     <br>
     <!-- ********************************** end  type Radio ************-->
@@ -97,19 +97,17 @@
   <table id="tableRdv">
     <tr>
       <th>Hairdresser</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
       <th>Date</th>
-      <th>Hour</th>
+      <th>Time</th>
+      <th>Approved</th>
       <th>Description</th>
     </tr>
 
     <tr *ngFor="let appointment of appointments">
-      <td>{{appointment.hairdresser}}</td>
-      <td>{{appointment.firstname}}</td>
-      <td>{{appointment.lastname}}</td>
+      <td>{{appointment.id}}</td>
+      <td>{{appointment.professional.id}}</td>
       <td>{{appointment.date}}</td>
-      <td>{{appointment.hour}}</td>
+      <td>{{appointment.duration}}</td>
       <td>{{appointment.description}}</td>
     </tr>
 
