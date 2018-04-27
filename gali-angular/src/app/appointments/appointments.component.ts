@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Appointment } from './appointment';
 import {AppointmentsService} from "./appointments.service";
 
-
 @Component({
   selector: 'app-rdv',
   templateUrl: './appointments.component.html',

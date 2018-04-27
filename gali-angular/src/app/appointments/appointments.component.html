@@ -104,10 +104,9 @@
     </tr>
 
     <tr *ngFor="let appointment of appointments">
-      <td>{{appointment.id}}</td>
-      <td>{{appointment.professional.id}}</td>
       <td>{{appointment.date}}</td>
       <td>{{appointment.duration}}</td>
+      <td>{{appointment.approved}}</td>
       <td>{{appointment.description}}</td>
     </tr>
 
