@@ -1,8 +1,6 @@
 /** Body */
 
-
 /* #18bef0 */
-
 
 /*rgb(24, 190, 240)*/
 
@@ -10,7 +8,6 @@
     box-sizing: border-box;
     transition-duration: 0.3s;
 }
-
 
 /** Navigation bar + Menu */
 
@@ -32,7 +29,6 @@
     color: #18bef0;
 }
 
-
 /** Nav */
 
 .title {
@@ -41,7 +37,7 @@
     text-align: center;
     position: -webkit-sticky;
     margin-right: 10%;
-    margin-left:10%;
+    margin-left: 10%;
     top: 0;
     position: sticky;
     margin-bottom: 15px;
@@ -57,10 +53,10 @@
 }
 
 /*   ************************slide bar*/
-#myCaroussell{
+
+#myCaroussell {
     width: 50%;
     margin: auto;
-    
 }
 
 /** entre nav et photo */
@@ -85,15 +81,11 @@ span {
     background-color: white;
 }
 
-
 /* INPUT Navbar*/
-
 
 /** **********************Form***************** */
 
-
 /***LOG IN FORM *******************/
-
 
 /** Log In page =  username + password */
 
@@ -104,9 +96,7 @@ span {
     display: none;
 }
 
-
 /***********************REGISTRATION FORM *****************/
-
 
 /**  Registration page  = Firstname + Lastname + Username + Validation Form = display with jQuery */
 
@@ -117,9 +107,7 @@ span {
     color: #19B5FE;
 }
 
-
 /** password validation message */
-
 
 /** Disable the display : addClass jQuery */
 
@@ -155,7 +143,6 @@ span {
     text-align: center;
 }
 
-
 /*** classes of the defined checked input */
 
 .invalid {
@@ -169,7 +156,6 @@ span {
     line-height: 24px;
     color: #3a7d34;
 }
-
 
 /*  Bouton*/
 
@@ -204,9 +190,7 @@ span {
     color: #18bef0;
 }
 
-
 /* Middle Section */
-
 
 /* MAIN */
 
@@ -215,25 +199,19 @@ main {
     margin-right: 12.5%;
 }
 
-#galiMilieu{
+#galiMilieu {
     color: rgba(24, 190, 240, 0.2)
-    
 }
-
 
 .sectionMilieu div h3 {
     font-size: 8vw;
     text-align: center;
     margin: 8vw 0 8vw 0;
-    
 }
 
-.cubeP{
+.cubeP {
     font-size: 1.5vw;
 }
-
-
-
 
 /* Beggining Big Cube Faire CSS identitque */
 
@@ -245,7 +223,6 @@ main {
 .bigCube-p-h3-2 {
     padding: 50px;
 }
-
 
 /*End Big cube Faire CSS identitque*/
 
@@ -260,7 +237,6 @@ main {
     box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
     background-color: #f7faff;
     border-radius: 8px;
-   
 }
 
 section {
@@ -299,9 +275,9 @@ section {
     border: 1px solid red;
 }
 
-
 footer {
-    background: linear-gradient(to bottom, #00c4ff 0%, #18bef0 100%); ;
+    background: linear-gradient(to bottom, #00c4ff 0%, #18bef0 100%);
+    ;
     padding: 50px 0 50px 0px;
     border-radius: 10px;
     color: #fff;
@@ -310,4 +286,3 @@ footer {
     padding-left: 50px;
     box-shadow: 1px 1px 8px 15px rgba(24, 190, 240, 0.2);
 }
-
