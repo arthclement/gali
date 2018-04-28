@@ -1,8 +1,54 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="layout">
+    <nav class="navbar navbar-light bg-light">
+
+        <a class="navbar-brand">GaliLogo</a>
+        <!-- Logo Gali à animer ?? fontawesome-->
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="login" placeholder="User Login" aria-label="Log Out">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+        </form>
+    </nav>
+    <!-- Create a sidenavbar for the calendar + cardex layout -->
+
+
+    <aside id="sideNavBar">
+        <div id="page_contents">
+            <nav>
+                <!--a supprimer ??-->
+                <h3>Categories</h3>
+                <ul>
+                    <!--app Agenda-->
+                    <li>
+                        <!-- links in angular mode to do-->
+                        <!--routed views-->
+
+
+                        <!--<app-agenda></app-agenda>-->
+
+                    </li>
+                    <!--app Cardex-->
+                    <li>
+
+                        <!-- links in angular mode to do-->
+                        <app-cardex></app-cardex>
+
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="content">
+                <!--view App-->
+
+                <!--have to create a new component for activate/desactive one of the two-->
+                <app-agenda></app-agenda>
+                <app-cardex></app-cardex>
+            </div>
+        </div>
+
+    </aside>
 
 
 
 
-
-<app-agenda></app-agenda>
-<app-cardex></app-cardex>
+</div>
+<!--Routing / path-->
